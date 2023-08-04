@@ -1,3 +1,3 @@
 # Finite_Math
 
-This is the fimite math book that i am trying to create using quarto.
+This is the finite math book that i am trying to create using quarto.
