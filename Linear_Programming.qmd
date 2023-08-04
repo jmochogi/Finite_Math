@@ -1,0 +1,13 @@
+---
+title: "Linear_Programming"
+---
+
+## Introduction to linear Programming
+
+
+
+## The Geometric Method
+
+## The Simplex Method
+
+## The Transportation Problem

@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Finite Mathematics",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Linear_Functions.html",
+    "href": "Linear_Functions.html",
+    "title": "2  Linear Functions/Equations and Rates of Change",
+    "section": "",
+    "text": "3 Definitions and Notation for Linear Functions"
+  },
+  {
+    "objectID": "Linear_Functions.html#definitions-and-notation-for-linear-functions",
+    "href": "Linear_Functions.html#definitions-and-notation-for-linear-functions",
+    "title": "2  Linear Functions/Equations and Rates of Change",
+    "section": "2.1 Definitions and Notation for Linear Functions",
+    "text": "2.1 Definitions and Notation for Linear Functions\nAs you hop into a taxicab in Allentown, the meter will immediately read $3.30; this is the “drop” charge made when the taximeter is activated. After that initial fee, the taximeter will add $2.40 for each mile the taxi drives. In this scenario, the total taxi fare depends upon the number o| miles ridden in the taxi, and we can ask whether it is possible to model this type of scenario with a function. Using descriptive variables, we choose \\(m\\) for miles and \\(C\\) for Cost in dollars as a function of miles: \\(C(m)\\).\nHere, \\(C(0)\\) means the cost for travelling 0 miles (assuming you have entered the taxi). This cost is \\(\\$3.3\\). We can write this mathematically as\nC(0)=3.3\nSimilarly, \\(C(2)\\) means the cost of travelling 2 miles and can be computed as\nC(2) = 3.3 + (2.4 x 2)=8.1\nHere, we take the base charge of \\(\\$3.3\\) and add it to the charge for riding 2 miles to get a grand total of 8.1.\nIn general, if we travel \\(m\\) miles, we can compute the cost as\nC(m)=3.3 + 2.4m\nWe call a relationship such as this, a FUNCTION of \\(m\\). This function takes \\(m\\) (the miles traveled) as the INPUT and produces \\(C(m)\\) (the cost of travelling \\(m\\) miles) as the OUTPUT. As you will learn shortly, this is an example of a LINEAR FUNCTION. There are other types of functions (e.g., exponential, quadratic, etc.). Our focus will be on linear functions.\nNotice that we can use this relationship to compute the cost o"
+  },
+  {
+    "objectID": "Linear_Programming.html#introduction-to-linear-programming",
+    "href": "Linear_Programming.html#introduction-to-linear-programming",
+    "title": "3  Linear_Programming",
+    "section": "3.1 Introduction to linear Programming",
+    "text": "3.1 Introduction to linear Programming"
+  },
+  {
+    "objectID": "Linear_Programming.html#the-geometric-method",
+    "href": "Linear_Programming.html#the-geometric-method",
+    "title": "3  Linear_Programming",
+    "section": "3.2 The Geometric Method",
+    "text": "3.2 The Geometric Method"
+  },
+  {
+    "objectID": "Linear_Programming.html#the-simplex-method",
+    "href": "Linear_Programming.html#the-simplex-method",
+    "title": "3  Linear_Programming",
+    "section": "3.3 The Simplex Method",
+    "text": "3.3 The Simplex Method"
+  },
+  {
+    "objectID": "Linear_Programming.html#the-transportation-problem",
+    "href": "Linear_Programming.html#the-transportation-problem",
+    "title": "3  Linear_Programming",
+    "section": "3.4 The Transportation Problem",
+    "text": "3.4 The Transportation Problem"
+  },
+  {
+    "objectID": "Financial_Math.html#simple-interest",
+    "href": "Financial_Math.html#simple-interest",
+    "title": "4  Basic Financial Mathematics",
+    "section": "4.1 Simple Interest",
+    "text": "4.1 Simple Interest"
+  },
+  {
+    "objectID": "Financial_Math.html#compopund-interest",
+    "href": "Financial_Math.html#compopund-interest",
+    "title": "4  Basic Financial Mathematics",
+    "section": "4.2 Compopund Interest",
+    "text": "4.2 Compopund Interest"
+  },
+  {
+    "objectID": "Financial_Math.html#annuities",
+    "href": "Financial_Math.html#annuities",
+    "title": "4  Basic Financial Mathematics",
+    "section": "4.3 Annuities",
+    "text": "4.3 Annuities"
+  }
+]

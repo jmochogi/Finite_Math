@@ -2,12 +2,15 @@ project:
   type: book
 
 book:
-  title: "finite"
-  author: "Norah Jones"
+  title: "Finite Mathematics"
+  author: "Joash Geteregechi"
   date: "8/4/2023"
   chapters:
     - index.qmd
     - intro.qmd
+    - Linear_Functions.qmd
+    - Linear_Programming.qmd
+    - Financial_Math.qmd
     - summary.qmd
     - references.qmd
 

@@ -1,0 +1,9 @@
+---
+title: " Basic Financial Mathematics"
+---
+
+## Simple Interest
+
+## Compopund Interest
+
+## Annuities

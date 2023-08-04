@@ -1,0 +1,31 @@
+---
+title: "Linear Functions/Equations and Rates of Change"
+---
+## Definitions and Notation for Linear Functions
+
+As you hop into a taxicab in Allentown, the meter will immediately read \$3.30; this is the "drop" charge made when the taximeter is activated. After that initial fee, the taximeter will add \$2.40 for each mile the taxi drives. In this scenario, the total taxi fare depends upon the number o|
+miles ridden in the taxi, and we can ask whether it is possible to model this type of scenario with a function. Using descriptive variables, we choose $m$ for miles and $C$ for Cost in dollars as a function of miles: $C(m)$.
+
+Here, $C(0)$ means the cost for travelling 0 miles (assuming you have entered the taxi). This cost is $\$3.3$. We can write this mathematically as
+
+``` toml
+C(0)=3.3
+```
+
+Similarly, $C(2)$ means the cost of travelling 2 miles and can be computed as
+
+``` toml
+C(2) = 3.3 + (2.4 x 2)=8.1
+```
+
+Here, we take the base charge of $\$3.3$ and add it to the charge for riding 2 miles to get a grand total of 8.1.
+
+In general, if we travel $m$ miles, we can compute the cost as
+
+```toml
+C(m)=3.3 + 2.4m
+```
+
+We call a relationship such as this, a ***FUNCTION*** of $m$. This function takes $m$ (the miles traveled) as the ***INPUT*** and produces $C(m)$ (the cost of travelling $m$ miles) as the ***OUTPUT***. As you will learn shortly, this is an example of a ***LINEAR FUNCTION***. There are other types of functions (e.g., exponential, quadratic, etc.). Our focus will be on linear functions. 
+
+Notice that we can use this relationship to compute the cost o
