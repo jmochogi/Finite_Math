@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Finite Mathematics - 4&nbsp; Linear Functions and Rates of Change</title>
+<title>Finite Mathematics - 3&nbsp; Rate of Change</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Intro_LP.html" rel="next">
-<link href="./ROC.html" rel="prev">
+<link href="./LF_Applications.html" rel="next">
+<link href="./Intro_LF.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -109,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Linear_Functions.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Linear Functions and Rates of Change</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Intro_LF.html">Linear Functions</a></li><li class="breadcrumb-item"><a href="./ROC.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,18 +129,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ROC.html" class="sidebar-item-text sidebar-link">
+  <a href="./ROC.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LF_Applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications</span></span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Linear_Functions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Linear Functions and Rates of Change</span></span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
@@ -261,16 +227,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#definitions-and-notation-for-linear-functions" id="toc-definitions-and-notation-for-linear-functions" class="nav-link active" data-scroll-target="#definitions-and-notation-for-linear-functions"><span class="header-section-number">4.1</span> Definitions and Notation for Linear Functions</a></li>
-  <li><a href="#function-representations" id="toc-function-representations" class="nav-link" data-scroll-target="#function-representations"><span class="header-section-number">4.2</span> Function Representations</a></li>
-  <li><a href="#increasing-and-decreasing-functions" id="toc-increasing-and-decreasing-functions" class="nav-link" data-scroll-target="#increasing-and-decreasing-functions"><span class="header-section-number">4.3</span> Increasing and Decreasing Functions</a></li>
-  <li><a href="#calculating-rate-of-change" id="toc-calculating-rate-of-change" class="nav-link" data-scroll-target="#calculating-rate-of-change"><span class="header-section-number">4.4</span> Calculating Rate of Change</a>
+  <li><a href="#calculating-rate-of-change" id="toc-calculating-rate-of-change" class="nav-link active" data-scroll-target="#calculating-rate-of-change"><span class="header-section-number">3.1</span> Calculating Rate of Change</a>
   <ul class="collapse">
-  <li><a href="#a-formula-for-roc" id="toc-a-formula-for-roc" class="nav-link" data-scroll-target="#a-formula-for-roc"><span class="header-section-number">4.4.1</span> A Formula For ROC</a></li>
+  <li><a href="#a-formula-for-roc" id="toc-a-formula-for-roc" class="nav-link" data-scroll-target="#a-formula-for-roc"><span class="header-section-number">3.1.1</span> A Formula For ROC</a></li>
   </ul></li>
-  <li><a href="#point-slope-equation-format" id="toc-point-slope-equation-format" class="nav-link" data-scroll-target="#point-slope-equation-format"><span class="header-section-number">4.5</span> Point-Slope Equation Format</a></li>
-  <li><a href="#intersecting-lines" id="toc-intersecting-lines" class="nav-link" data-scroll-target="#intersecting-lines"><span class="header-section-number">4.6</span> Intersecting Lines</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">4.7</span> Exercises</a></li>
+  <li><a href="#point-slope-equation-format" id="toc-point-slope-equation-format" class="nav-link" data-scroll-target="#point-slope-equation-format"><span class="header-section-number">3.2</span> Point-Slope Equation Format</a></li>
   </ul>
 </nav>
     </div>
@@ -279,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Linear Functions and Rates of Change</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></h1>
 </div>
 
 
@@ -294,51 +255,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="definitions-and-notation-for-linear-functions" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="definitions-and-notation-for-linear-functions"><span class="header-section-number">4.1</span> Definitions and Notation for Linear Functions</h2>
-<p>As you hop into a taxicab in Allentown, the meter will immediately read $3.30; this is the “drop” charge made when the taximeter is activated. After that initial fee, the taximeter will add $2.40 for each mile the taxi drives. In this scenario, the total taxi fare depends upon the number of miles ridden in the taxi, and we can ask whether it is possible to model this type of scenario with a function. Using descriptive variables, we choose <span class="math inline">\(m\)</span> for miles and <span class="math inline">\(C\)</span> for Cost in dollars as a function of miles: <span class="math inline">\(C(m)\)</span>.</p>
-<p>Here, <span class="math inline">\(C(0)\)</span> means the cost for travelling 0 miles (assuming you have entered the taxi). This cost is <span class="math inline">\(\$3.3\)</span>. We can write this mathematically as</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">C</span><span class="er">(</span><span class="dt">0</span><span class="er">)</span><span class="op">=</span><span class="fl">3.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Similarly, <span class="math inline">\(C(2)\)</span> is the cost of travelling 2 miles and can be computed as</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">C</span><span class="er">(</span><span class="dt">2</span><span class="er">)</span> <span class="op">=</span> <span class="fl">3.3</span> <span class="er">+</span> <span class="er">(</span><span class="dt">2</span><span class="kw">.</span><span class="dt">4</span> <span class="dt">x</span> <span class="dt">2</span><span class="er">)</span> <span class="op">=</span> <span class="fl">8.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Here, we take the base charge of <span class="math inline">\(\$3.3\)</span> and add it to the charge for riding 2 miles to get a grand total of 8.1.</p>
-<p>In general, if we travel <span class="math inline">\(m\)</span> miles, we can compute the cost as</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">C</span><span class="er">(</span><span class="dt">m</span><span class="er">)</span><span class="op">=</span><span class="fl">3.3</span> <span class="er">+</span> <span class="dt">2</span><span class="kw">.</span><span class="dt">4m</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It is often useful to think carefully about the units of each component and how they relate. The expression below shows how this plays out in our taxi context:</p>
-<p><span class="math display">\[C(m)=3.3 \hspace{.1in} dollars + 2.4 \hspace{.08in} \frac{dollars}{mile} \times m\hspace{.1in} miles\]</span></p>
-<p>When dollars per mile are multiplied by a number of miles, the result is a number of dollars, matching the units on the 3.30, and matching the desired units for the C function. This means the units for the output, C(m), will be dollars.</p>
-<p>We call a relationship such as this, a <strong><em>Function</em></strong> of <span class="math inline">\(m\)</span>. This function takes <span class="math inline">\(m\)</span> (the miles traveled) as the <strong><em>Input</em></strong> and produces <span class="math inline">\(C(m)\)</span> (the cost of travelling <span class="math inline">\(m\)</span> miles) as the <strong><em>Output</em></strong>. As you will learn shortly, this is an example of a <strong><em>Linear Function</em></strong>. There are other types of functions (e.g., exponential, quadratic, etc.). In this course, the main focus is on linear functions. We will learn how to model real life situations and find their solutions by leveraging the ideas learned under linear functions.</p>
-<p>There are two parts to the function, the first part (3.3) represents the FIXED charge while the VARIABLE part, <span class="math inline">\(2.4m\)</span> which represents the charge for m miles. The cost of a ride, <span class="math inline">\(C(m)\)</span> will vary as the number of miles, <span class="math inline">\(m\)</span> varies. Furthermore, this cost varies by a factor of 2.4 which means that for every additional mile you ride, you will pay <span class="math inline">\(\$ 2.4\)</span> more. We call the value <span class="math inline">\(2.4\)</span> a <strong><em>Rate of Change</em></strong> for the function <span class="math inline">\(C(m)\)</span>. Since this rate of change stays the same over any interval, we say that the rate is <strong><em>Constant</em></strong>.</p>
-</section>
-<section id="function-representations" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="function-representations"><span class="header-section-number">4.2</span> Function Representations</h2>
-<p>In the above section, we described the taxi cost function using words and represented it using a formula. Functions can also be represented using tables and graphs.</p>
-<p>Consider the table below:</p>
-<p><strong><em>Have table here</em></strong></p>
-<p>We can also represent the function using a graph as shown below:</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="Linear_Functions_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>In the graph, we place the miles on the horizontal axis and the cost on the vertical axis axis. Since the cost is dependent on the miles traveled, we call it a <strong><em>Dependent Variable</em></strong>. Similarly, we call the miles, an <strong><em>Independent Variable</em></strong>.</p>
-<p>If you ride 0 miles, the cost is $3.30, giving the point (0, 3.30) on the graph. We call this, the vertical or C(m)-intercept (or y-intercept in a general graph using x and y). In many applications, the y-intercept often means the initial value (e.g., cost) when the x value (in this case miles) is zero.</p>
-<p>We call the above function, a <strong><em>Linear Function</em></strong> because its graph produces a straight line. In general, linear functions take the form <span class="math inline">\(f(x)=mx+b\)</span> where <span class="math inline">\(m\)</span> is the <strong><em>Slope</em></strong> (or rate of change) and <span class="math inline">\(b\)</span> is the y-intercept. Note that <span class="math inline">\(b\)</span> and/or <span class="math inline">\(m\)</span> can take any values including zero.</p>
-<p>By convention, we place the output values on the vertical (<span class="math inline">\(y\)</span>) axis and so, <span class="math inline">\(y\)</span> can be used in place of <span class="math inline">\(f(x)\)</span>. Hence, we can rewrite the above function as an equation: <span class="math display">\[y=mx+b\]</span></p>
-</section>
-<section id="increasing-and-decreasing-functions" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="increasing-and-decreasing-functions"><span class="header-section-number">4.3</span> Increasing and Decreasing Functions</h2>
-<p>Notice in the above example that as you increase the number of miles, the cost of the ride goes up. This is because the rate of change (m) is positive.</p>
-<p>Since as you increase the input value, the output value increases, we say that the function <span class="math inline">\(C(m)\)</span> is an increasing function. As can be seen on the graph, the line is rising from left to right. This is because the rate of change value is positive.</p>
-<p>Generally, a linear function is said to be <strong><em>increasing</em></strong> if the slope <span class="math inline">\(m\)</span> is positive and</p>
-<p><strong><em>decreasing</em></strong> if it is negative.</p>
-<p><strong>EXERCISE</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">1</span><span class="kw">.</span> <span class="dt">Create</span> <span class="dt">a</span> <span class="dt">real-life</span> <span class="dt">scenario</span> <span class="dt">that</span> <span class="dt">can</span> <span class="dt">be</span> <span class="dt">modelled</span> <span class="dt">by</span> <span class="dt">a</span> <span class="dt">decreasing</span> <span class="dt">linear</span> <span class="dt">function</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">2</span><span class="kw">.</span> <span class="dt">Write</span> <span class="dt">the</span> <span class="dt">formula</span> <span class="dt">for</span> <span class="dt">the</span> <span class="dt">function</span> <span class="dt">and</span> <span class="dt">graph</span> <span class="dt">it</span><span class="kw">.</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">3</span><span class="kw">.</span> <span class="dt">What</span> <span class="dt">would</span> <span class="dt">the</span> <span class="dt">graph</span> <span class="dt">of</span> <span class="dt">the</span> <span class="dt">function</span><span class="er">,</span> <span class="dt">f</span><span class="er">(</span><span class="dt">x</span><span class="er">)</span><span class="op">=</span> <span class="dv">0</span><span class="dt">x</span><span class="er">+</span><span class="dt">5</span> <span class="dt">look</span> <span class="dt">like</span><span class="er">?</span> <span class="dt">Notice</span> <span class="dt">here</span> <span class="dt">m</span> <span class="op">=</span> <span class="dv">0</span><span class="kw">.</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="calculating-rate-of-change" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="calculating-rate-of-change"><span class="header-section-number">4.4</span> Calculating Rate of Change</h2>
+<section id="calculating-rate-of-change" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="calculating-rate-of-change"><span class="header-section-number">3.1</span> Calculating Rate of Change</h2>
 <p>The rate of change (ROC) is perhaps the most important component of any linear function. As we have seen, it can tell you whether the function is increasing or decreasing and can be used to create a linear model for a given real life situation. The question that arises is, “how can we compute the rate of change from given data?”. In the earlier taxi example, suppose, we did not know the rate of change but knew the cots of riding 4 miles and 7 miles. How can we use this information together with the fact that the function is linear to find the rate of change?</p>
 <p>In the following examples we explore ways of finding the rate of change and how to use it to create the linear function/model for given real-life situations.</p>
 <p><strong>Example 1</strong></p>
@@ -398,8 +316,8 @@ Rate\hspace{.04in} of\hspace{.04in} change &amp;=  \frac{Coverage \hspace{.04in}
   t&amp;=\frac{-1951}{-56.57}\\
   t&amp;=34.49 \hspace{0.04in} years
   \end{align}\]</span>
-<section id="a-formula-for-roc" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="a-formula-for-roc"><span class="header-section-number">4.4.1</span> A Formula For ROC</h3>
+<section id="a-formula-for-roc" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="a-formula-for-roc"><span class="header-section-number">3.1.1</span> A Formula For ROC</h3>
 <p>From the foregoing examples, it should be readily clear that, on any interval <span class="math inline">\((x_1,x_2)\)</span> where <span class="math inline">\(x_1\neq x_2\)</span>,</p>
 <span class="math display">\[\begin{align}
   Rate \hspace{0.04in}of\hspace{0.04in} Change                         
@@ -427,8 +345,8 @@ b&amp;=1-\frac{24}{5}\\
 <p><span class="math display">\[f(x)=\frac{3}{5}x-\frac{19}{5}\]</span></p>
 </section>
 </section>
-<section id="point-slope-equation-format" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="point-slope-equation-format"><span class="header-section-number">4.5</span> Point-Slope Equation Format</h2>
+<section id="point-slope-equation-format" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="point-slope-equation-format"><span class="header-section-number">3.2</span> Point-Slope Equation Format</h2>
 <p>The equation <span class="math inline">\(y=mx+b\)</span> is called the slope-intercept form of a linear function (equation). In cases where you only know one of the points, say <span class="math inline">\((x_1,y_1)\)</span> and the slope <span class="math inline">\(m\)</span> you can express the equation of the line as follows:</p>
 <p><span class="math display">\[y-y_1=m(x-x_1)\]</span> Where, <span class="math inline">\((x_1,y_1)\)</span> is the KNOWN point.</p>
 <p>After this, you can then rearrange the equation into the slope-intercept format. You just need to be careful with your algebraic manipulation when doing this. See example below:</p>
@@ -446,69 +364,6 @@ y&amp;=2500x-20000+296,000\\
 y&amp;=2500x+276,000
 \end{align}\]</span>
 <p>Note that in the above equation, <span class="math inline">\(y=C(x)\)</span>. So we are done. As a bonus, we know the cost of the house was $276,000 eight years ago.</p>
-</section>
-<section id="intersecting-lines" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="intersecting-lines"><span class="header-section-number">4.6</span> Intersecting Lines</h2>
-<p>As you saw earlier, we can represent linear functions using graphs. By examining graphs of linear functions, we are able to tell whether the function is increasing (positive slope), decreasing (negative slope) or neither (zero slope).</p>
-<p>What would happen if you graph two lines with the same slope but different vertical (y) intercepts? What would the lines look like?</p>
-<p><strong>Here is a claim:</strong> If two linear functions have different slopes, then, their lines must intersect at some point. Do you think this claim is true? Why or why not?</p>
-<p>Supply and demand problems are sometimes modeled using linear functions. When the demand and supply meet (intersect) we have an equilibrium point. Consider the following example:</p>
-<p><strong>Example 5</strong></p>
-<p>The supply, in thousands of items, for custom phone cases can be modeled by the equation, <span class="math inline">\(s(p)=0.5+1.2p\)</span> while the demand can be modeled by <span class="math inline">\(d(p)=8.7−0.7p\)</span>, where p is in the price in dollars. Find the equilibrium price and quantity, the intersection of the supply and demand curves.</p>
-<p><strong><em>Solution</em></strong></p>
-<p>There are two ways to solve this problem. First, you can set up <span class="math inline">\(s(p)=d(p)\)</span> then solve algebraically for <span class="math inline">\(p\)</span> or simply graph the two functions then look at the point of intersection.</p>
-<p>Let us do both.</p>
-<p><em>Algebraic solution</em> :</p>
-<span class="math display">\[\begin{align}
-  0.5+1.2p&amp;=8.7−0.7p\\
-  1.2p+0.7p&amp;=8.7-0.5\\
-  1.9p&amp;=8.2\\
-  p&amp;=\frac{8.2}{1.9}\\
-  &amp;=4.32
-\end{align}\]</span>
-<p>Thus, the equilibrium price is approximately $4.32.</p>
-<p>To find the quantity, use any of the two functions to evaluate the output at <span class="math inline">\(p=4.32\)</span>. Note that the answers will be the same same the two functions intersect when <span class="math inline">\(p=4.32\)</span>.</p>
-<span class="math display">\[\begin{align}
-s(4.32)&amp;=0.5+(1.2\times 4.32)\\
-&amp;= 5.68
-\end{align}\]</span>
-<p><em>Graphical solution</em> :</p>
-<p>For the graphical solution, you simply graph the two functions and read out the cordinates of the intersection point.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="Linear_Functions_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>The approximate point of intersection for the graphs is <span class="math inline">\((4.3,5.6)\)</span>. You can get more accurate values using technology. This intersection is a pair <span class="math inline">\((x,y)\)</span> where the first number is the price (input) and the second if the quantity (output). Thus, the equilibrium price is $4.3 and the quantity is 5.6 units. This answer is the same as the one using the algebraic approach.</p>
-</section>
-<section id="exercises" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.7</span> Exercises</h2>
-<ol type="1">
-<li><p>A report by the US Geological Survey indicates that glaciers in Glacier National Park, Montana, are shrinking. Recent estimates indicate the area covered by glaciers has decreased from over <span class="math inline">\(25.5 \hspace{.04in} km^2\)</span> in <span class="math inline">\(1850\)</span> to about <span class="math inline">\(16.5\hspace{.04in}km^2\)</span> in <span class="math inline">\(1995\)</span>. Let <span class="math inline">\(A=f(t)\)</span> give the area (in square km) <span class="math inline">\(t\)</span> years after 2000, and assume <span class="math inline">\(f(t)=16.2-0.062t\)</span>. <br></p>
-<ol type="a">
-<li>Find and explain the meaning of the slope. <br> <br></li>
-<li>Find and explain the meaning of the A-intercept. <br> <br></li>
-<li>What does <span class="math inline">\(f(17)\)</span> mean? Write in full sentence and include units. <br> <br></li>
-<li>Solve <span class="math inline">\(f(t)=9\)</span> for <span class="math inline">\(t\)</span> and explain what it means in context. Include units in your explanation. <br> <br></li>
-</ol></li>
-<li><p>A town has a population of <span class="math inline">\(2000\)</span> people at time <span class="math inline">\(t=0\)</span>. In each of the following cases, write a formula for the population <span class="math inline">\(P\)</span>,of the town as a function of year <span class="math inline">\(t\)</span>. <br></p>
-<ol type="a">
-<li>The population increases by 90 people per year. <br> <br></li>
-<li>The population increases by 1 percent per year. <br> <br></li>
-</ol></li>
-<li><p>Marcus currently owns 200 songs in his iTunes collection. Every month, he adds 15 new songs. Write a formula for the number of songs, <span class="math inline">\(N\)</span>, in his iTunes collection as a function of the number of months, <span class="math inline">\(m\)</span>. How many songs will he own in a year? <br> <br></p></li>
-<li><p>Working as an insurance salesperson, Ilya earns a base salary and a commission on each new policy, so Ilya’s weekly income, <span class="math inline">\(I\)</span>, depends on the number of new policies, <span class="math inline">\(n\)</span>, he sells during the week. Last week he sold 3 new policies, and earned $760 for the week. The week before, he sold 5 new policies, and earned $920. Find an equation for <span class="math inline">\(I(n)\)</span>, and interpret the meaning of the components of the equation. <br> <br></p></li>
-<li><p>Find the slope of the line connecting the points <span class="math inline">\((2,7)\)</span> and <span class="math inline">\((6,11)\)</span>. <br> <br></p></li>
-<li><p>Find the equation of the line in number 4 above.<br> <br></p></li>
-<li><p>Find a formula for the linear equation graphed below. You can enlarge the graph by clicking on it. <br> <br></p></li>
-<li><p>An apartment manager keeps careful record of how the rent charged per unit corresponds to the number of occupied units in a large complex. The collected data is shown in the table below: <br> <br> <strong><em>Table Here</em></strong></p>
-<ol type="a">
-<li>Why is it reasonable to say that the number of occupied apartments is a linear function of rent? <br> <br></li>
-<li>Let <span class="math inline">\(A\)</span> be the number of occupied apartments and <span class="math inline">\(R\)</span> the monthly rent charged (in dollars). If we let <span class="math inline">\(A=f(R)\)</span> ,what is the slope of the linear function <span class="math inline">\(f(R)\)</span>? What is the meaning of the slope in the context of this question? <br> <br></li>
-<li>Determine a formula for <span class="math inline">\(A=f(R)\)</span>. <br> <br></li>
-<li>If the rent were to be increased to $1000, how many occupied apartments should the apartment manager expect? How much total revenue would the manager collect in a given month when rent is set at $1000?</li>
-</ol></li>
-</ol>
 
 
 </section>
@@ -749,13 +604,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ROC.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></span>
+      <a href="./Intro_LF.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intro to Linear Functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Intro_LP.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./LF_Applications.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Finite Mathematics - 3&nbsp; Linear Programming</title>
+<title>Finite Mathematics - 5&nbsp; Geometric Method</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./LP_Simplex.html" rel="next">
-<link href="./Linear_Functions.html" rel="prev">
+<link href="./Intro_LP.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Linear_Programming.html">Linear Programming</a></li><li class="breadcrumb-item"><a href="./Linear_Programming.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Linear Programming</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Intro_LP.html">Linear Programming</a></li><li class="breadcrumb-item"><a href="./Geometric_Method.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -146,16 +146,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Linear_Functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Linear Functions and Rates of Change</span></span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Linear Programming</span></a>
+ <span class="menu-text">Linear Functions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -163,20 +157,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Linear_Programming.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Linear Programming</span></span></a>
+  <a href="./Intro_LF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intro to Linear Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Linear Programming: Simplex Method</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Transportation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
+  <a href="./ROC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></span></a>
   </div>
 </li>
       </ul>
@@ -184,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Mathematics of Finance</span></a>
+ <span class="menu-text">Linear Programming</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -192,20 +180,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Intro_LP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Transportation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Mathematics of Finance</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Simple_Interest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Compound_Interest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Annuities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
   </div>
 </li>
       </ul>
@@ -213,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,18 +255,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-to-linear-programming" id="toc-introduction-to-linear-programming" class="nav-link active" data-scroll-target="#introduction-to-linear-programming"><span class="header-section-number">3.1</span> Introduction to linear Programming</a></li>
-  <li><a href="#mixture-problems-charts" id="toc-mixture-problems-charts" class="nav-link" data-scroll-target="#mixture-problems-charts"><span class="header-section-number">3.2</span> Mixture Problems &amp; Charts</a></li>
-  <li><a href="#the-geometric-method" id="toc-the-geometric-method" class="nav-link" data-scroll-target="#the-geometric-method"><span class="header-section-number">3.3</span> The Geometric Method</a>
+  <li><a href="#introduction-to-linear-programming" id="toc-introduction-to-linear-programming" class="nav-link active" data-scroll-target="#introduction-to-linear-programming"><span class="header-section-number">5.1</span> Introduction to linear Programming</a></li>
+  <li><a href="#mixture-problems-charts" id="toc-mixture-problems-charts" class="nav-link" data-scroll-target="#mixture-problems-charts"><span class="header-section-number">5.2</span> Mixture Problems &amp; Charts</a></li>
+  <li><a href="#the-geometric-method" id="toc-the-geometric-method" class="nav-link" data-scroll-target="#the-geometric-method"><span class="header-section-number">5.3</span> The Geometric Method</a>
   <ul class="collapse">
-  <li><a href="#convering-mixture-chart-into-mathematical-form" id="toc-convering-mixture-chart-into-mathematical-form" class="nav-link" data-scroll-target="#convering-mixture-chart-into-mathematical-form"><span class="header-section-number">3.3.1</span> Convering Mixture Chart into Mathematical Form</a></li>
-  <li><a href="#representing-the-feasible-region" id="toc-representing-the-feasible-region" class="nav-link" data-scroll-target="#representing-the-feasible-region"><span class="header-section-number">3.3.2</span> Representing the Feasible Region</a></li>
-  <li><a href="#the-corner-point-principle" id="toc-the-corner-point-principle" class="nav-link" data-scroll-target="#the-corner-point-principle"><span class="header-section-number">3.3.3</span> The Corner Point Principle</a></li>
-  <li><a href="#summary-of-the-geometric-method" id="toc-summary-of-the-geometric-method" class="nav-link" data-scroll-target="#summary-of-the-geometric-method"><span class="header-section-number">3.3.4</span> Summary of the Geometric Method</a></li>
-  <li><a href="#section-exercises" id="toc-section-exercises" class="nav-link" data-scroll-target="#section-exercises"><span class="header-section-number">3.3.5</span> Section Exercises</a></li>
+  <li><a href="#convering-mixture-chart-into-mathematical-form" id="toc-convering-mixture-chart-into-mathematical-form" class="nav-link" data-scroll-target="#convering-mixture-chart-into-mathematical-form"><span class="header-section-number">5.3.1</span> Convering Mixture Chart into Mathematical Form</a></li>
+  <li><a href="#representing-the-feasible-region" id="toc-representing-the-feasible-region" class="nav-link" data-scroll-target="#representing-the-feasible-region"><span class="header-section-number">5.3.2</span> Representing the Feasible Region</a></li>
+  <li><a href="#the-corner-point-principle" id="toc-the-corner-point-principle" class="nav-link" data-scroll-target="#the-corner-point-principle"><span class="header-section-number">5.3.3</span> The Corner Point Principle</a></li>
+  <li><a href="#summary-of-the-geometric-method" id="toc-summary-of-the-geometric-method" class="nav-link" data-scroll-target="#summary-of-the-geometric-method"><span class="header-section-number">5.3.4</span> Summary of the Geometric Method</a></li>
+  <li><a href="#section-exercises" id="toc-section-exercises" class="nav-link" data-scroll-target="#section-exercises"><span class="header-section-number">5.3.5</span> Section Exercises</a></li>
   </ul></li>
-  <li><a href="#the-simplex-method" id="toc-the-simplex-method" class="nav-link" data-scroll-target="#the-simplex-method"><span class="header-section-number">3.4</span> The Simplex Method</a></li>
-  <li><a href="#the-transportation-problem" id="toc-the-transportation-problem" class="nav-link" data-scroll-target="#the-transportation-problem"><span class="header-section-number">3.5</span> The Transportation Problem</a></li>
+  <li><a href="#the-simplex-method" id="toc-the-simplex-method" class="nav-link" data-scroll-target="#the-simplex-method"><span class="header-section-number">5.4</span> The Simplex Method</a></li>
+  <li><a href="#the-transportation-problem" id="toc-the-transportation-problem" class="nav-link" data-scroll-target="#the-transportation-problem"><span class="header-section-number">5.5</span> The Transportation Problem</a></li>
   </ul>
 </nav>
     </div>
@@ -252,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Linear Programming</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></h1>
 </div>
 
 
@@ -267,13 +290,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="introduction-to-linear-programming" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introduction-to-linear-programming"><span class="header-section-number">3.1</span> Introduction to linear Programming</h2>
+<section id="introduction-to-linear-programming" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="introduction-to-linear-programming"><span class="header-section-number">5.1</span> Introduction to linear Programming</h2>
 <p>Managers are often called upon to make complicated decisions. For example, production managers often make decisions on what products to manufacture and in what quantities. In making such decisions, the manager must consider the available resources and how to utilize them for maximum profit. Note that resources are not limited to raw materials. They can include labor (human hours), farmland, machinery, etc. Resources, in general, are always limited and management must decide how to allocate them in order to get the maximum possible profit.</p>
 <p>Linear programming (LP) is one of the most important methods used in management science to solve problems of the kind describe above. LP involves maximizing or minimizing a quantity, usually profit or cost, under some given constraints.</p>
 </section>
-<section id="mixture-problems-charts" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="mixture-problems-charts"><span class="header-section-number">3.2</span> Mixture Problems &amp; Charts</h2>
+<section id="mixture-problems-charts" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="mixture-problems-charts"><span class="header-section-number">5.2</span> Mixture Problems &amp; Charts</h2>
 <p>A mixture problem is a problem which includes combining limited resources to manufacture products that will generate maximum profit for the company.</p>
 <p>These problems are common because most products that we use involve combining multiple resources in their production. Although there are other considerations in making production decisions, availability of resources is on of the most important constraints.</p>
 <p>An <strong><em>optimal production policy (OPP)</em></strong> is a policy that,</p>
@@ -297,9 +320,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <table class="table">
 <caption><strong>Mixture Chart for dolls and skateboards problem</strong></caption>
 <colgroup>
-<col style="width: 32%">
-<col style="width: 57%">
-<col style="width: 10%">
+<col style="width: 27%">
+<col style="width: 51%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -331,13 +354,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>There are several methods solving linear programming problems. We will start with the geometric method, then look at the simplex method, and finally MS excel. We will talk about the pros and cons of each method.</p>
 </section>
-<section id="the-geometric-method" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="the-geometric-method"><span class="header-section-number">3.3</span> The Geometric Method</h2>
+<section id="the-geometric-method" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="the-geometric-method"><span class="header-section-number">5.3</span> The Geometric Method</h2>
 <p>The geometric method of solving linear programming problems involves creating a graph to visualize the <strong>feasible region</strong> (the set of likely solutions) and then identifying a solution from the feasible region.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">A</span> <span class="dt">feasible</span> <span class="dt">set</span> <span class="er">(</span><span class="dt">region</span><span class="er">)</span> <span class="dt">for</span> <span class="dt">an</span> <span class="dt">LP</span> <span class="dt">problem</span> <span class="dt">is</span> <span class="dt">the</span> <span class="dt">collection</span> <span class="dt">of</span> <span class="dt">all</span> <span class="dt">physical</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">possible</span> <span class="dt">solution</span> <span class="dt">choices</span> <span class="dt">that</span> <span class="dt">can</span> <span class="dt">be</span> <span class="dt">made</span><span class="kw">.</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="convering-mixture-chart-into-mathematical-form" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="convering-mixture-chart-into-mathematical-form"><span class="header-section-number">3.3.1</span> Convering Mixture Chart into Mathematical Form</h3>
+<section id="convering-mixture-chart-into-mathematical-form" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="convering-mixture-chart-into-mathematical-form"><span class="header-section-number">5.3.1</span> Convering Mixture Chart into Mathematical Form</h3>
 <p>First, we know that the we cannot manufacture negative number of objects (skateboards of dolls). So, negative numbers are not permitted in this context. Note however, that 0 is a possible number. Thus, we have two inequalities;</p>
 <p><span class="math display">\[x \ge 0 \hspace{.04in} \text{and} \hspace{.04in} y \ge 0\]</span></p>
 <p>The symbol <span class="math inline">\(&gt;\)</span> means grater than while <span class="math inline">\(\ge\)</span> means greater than or equal to.</p>
@@ -349,8 +372,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The last step in formulating the mathematical model is to make the <strong>objective function</strong>. This is the the function that connects the profit to the resources. Since we know that each skateboard results in $1.00 profit, we know that x dolls will result in a profit of <span class="math inline">\(\$1x\)</span> and y dolls will result in a profit of <span class="math inline">\(\$0.55x\)</span>. We do not know what the profit is but we know it is a function of both dolls and skateboards. We can denote the profit as <span class="math inline">\(P\)</span>. So, we have the equation,</p>
 <p><span class="math display">\[P=1x+0.55y\]</span> Notice that the objective function is an <strong>equation</strong> (not inequality) that gives a <strong>specific</strong> amount of profit as we vary the number of skateboards and dolls. In other words, <span class="math inline">\(P\)</span> changes as we change <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So we can determine the value of <span class="math inline">\(x\)</span> and<span class="math inline">\(y\)</span> that would produce maximum <span class="math inline">\(P\)</span>.</p>
 </section>
-<section id="representing-the-feasible-region" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="representing-the-feasible-region"><span class="header-section-number">3.3.2</span> Representing the Feasible Region</h3>
+<section id="representing-the-feasible-region" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="representing-the-feasible-region"><span class="header-section-number">5.3.2</span> Representing the Feasible Region</h3>
 <p>After creating the inequalities from the mixture chart, we can draw a helpful picture to help us visualize the feasible region geometrically. Graphs are the most commonly used tools for visualizing the feasible region.</p>
 <p>Notice that all the three inequalities (i.e., the minimum and resource constraints) are linear in the sense that when you graph them (assuming an equal sign) you will get a straight line. To take care of the fact that the inequalities admit a broad range of values, we,</p>
 <ol type="a">
@@ -382,8 +405,8 @@ P&amp;=1.00 x+0.55y\\
 \end{align}\]</span>
 <p>Choosing the point in the feasible region that would result in maximum profit (optimal production policy) is not a trivial task. However, there is an genius technique known as <strong><em>The Corner Point Principle</em></strong> which we discuss next:</p>
 </section>
-<section id="the-corner-point-principle" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="the-corner-point-principle"><span class="header-section-number">3.3.3</span> The Corner Point Principle</h3>
+<section id="the-corner-point-principle" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="the-corner-point-principle"><span class="header-section-number">5.3.3</span> The Corner Point Principle</h3>
 <p>The corner point principle has been touted as one of the most important insights into the theory of linear programming. The principle states that,</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">In</span> <span class="dt">a</span> <span class="dt">linear</span> <span class="dt">programming</span> <span class="dt">problem</span><span class="er">,</span> <span class="dt">the</span> <span class="dt">maximum</span> <span class="dt">value</span> <span class="dt">for</span> <span class="dt">the</span> <span class="dt">profit</span> <span class="dt">formula</span> <span class="dt">always</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">corresponds</span> <span class="dt">to</span> <span class="dt">a</span> <span class="dt">corner</span> <span class="dt">point</span> <span class="dt">of</span> <span class="dt">the</span> <span class="dt">feasible</span> <span class="dt">region</span><span class="kw">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -394,8 +417,8 @@ P&amp;=1.00 x+0.55y\\
 <p>Therefore, the <strong><em>optimal production policy</em></strong> would be to manufacture 0 skateboards and 30 dolls.</p>
 <p><strong>NOTE</strong>: In the real world, there would be a lot more corners which would make this process cumbersome. However, as you may have guessed, there are computer programs that can do the job faster and more efficiently than humans.</p>
 </section>
-<section id="summary-of-the-geometric-method" class="level3" data-number="3.3.4">
-<h3 data-number="3.3.4" class="anchored" data-anchor-id="summary-of-the-geometric-method"><span class="header-section-number">3.3.4</span> Summary of the Geometric Method</h3>
+<section id="summary-of-the-geometric-method" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="summary-of-the-geometric-method"><span class="header-section-number">5.3.4</span> Summary of the Geometric Method</h3>
 <ol type="1">
 <li>Read the problem carefully to identify resources and products.</li>
 <li>Make a mixture chart for the problem.</li>
@@ -417,10 +440,10 @@ P&amp;=1.00 x+0.55y\\
 </ol>
 <table class="table">
 <colgroup>
-<col style="width: 31%">
-<col style="width: 22%">
-<col style="width: 22%">
-<col style="width: 22%">
+<col style="width: 29%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -465,8 +488,8 @@ P&amp;=1.00 x+0.55y\\
 <p>For <span class="math inline">\((12,0\)</span>, the profit would be, <span class="math inline">\(P=1.00 (12)x+0.55(0)=\$12.00\)</span></p>
 <p>Thus, in this new problem, the optimal production policy is 6 skateboards and 15 dolls for a maximum profit of $ 14.50.</p>
 </section>
-<section id="section-exercises" class="level3" data-number="3.3.5">
-<h3 data-number="3.3.5" class="anchored" data-anchor-id="section-exercises"><span class="header-section-number">3.3.5</span> Section Exercises</h3>
+<section id="section-exercises" class="level3" data-number="5.3.5">
+<h3 data-number="5.3.5" class="anchored" data-anchor-id="section-exercises"><span class="header-section-number">5.3.5</span> Section Exercises</h3>
 <p>For each description in exercises 1-4,create a mixture table and write one or more resource constraint inequalities. The unknown to use for each product is given in parenthesis:</p>
 <ol type="1">
 <li>Manufacturing one package of hot dogs(x) requires 6 oz of beef, and manufacturing one package of bologna (y) requires 4 oz of beef. There are 300 oz of beef available. <br> <br></li>
@@ -493,12 +516,12 @@ P&amp;=1.00 x+0.55y\\
 </ol>
 </section>
 </section>
-<section id="the-simplex-method" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="the-simplex-method"><span class="header-section-number">3.4</span> The Simplex Method</h2>
+<section id="the-simplex-method" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="the-simplex-method"><span class="header-section-number">5.4</span> The Simplex Method</h2>
 <p>Before we introduce the</p>
 </section>
-<section id="the-transportation-problem" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="the-transportation-problem"><span class="header-section-number">3.5</span> The Transportation Problem</h2>
+<section id="the-transportation-problem" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="the-transportation-problem"><span class="header-section-number">5.5</span> The Transportation Problem</h2>
 
 
 </section>
@@ -739,13 +762,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Linear_Functions.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Linear Functions and Rates of Change</span></span>
+      <a href="./Intro_LP.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./LP_Simplex.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Linear Programming: Simplex Method</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
