@@ -20,33 +20,42 @@ C(2) = 3.3 + (2.4 x 2) = 8.1
 
 Here, we take the base charge of $\$3.3$ and add it to the charge for riding 2 miles to get a grand total of 8.1.
 
-In general, if we travel $m$ miles, we can compute the cost as
+In general, if you travel $m$ miles, the cost, $C(m)$, can be computed as follows:
 
 ``` toml
 C(m)=3.3 + 2.4m
 ```
 
-It is often useful to think carefully about the units of each component and how they relate. The expression below shows how this plays out in our taxi context:
+It is crucial to think carefully about the units of each component and how they relate. The expression below shows how this plays out in our taxi context:
 
 $$C(m)=3.3 \hspace{.1in} dollars + 2.4 \hspace{.08in} \frac{dollars}{mile} \times m\hspace{.1in} miles$$
 
-When dollars per mile are multiplied by a number of miles, the result is a number of dollars, matching the units on the 3.30, and matching the desired units for the C function. This means the units for the output, C(m), will be dollars.
+When dollars per mile are multiplied by a number of miles, the result is a number of dollars, matching the units on the 3.30, and matching the desired units for the cost, $C(m)$, of the ride (i.e., dollars).
 
-We call a relationship such as this, a ***Function*** of $m$. This function takes $m$ (the miles traveled) as the ***Input*** and produces $C(m)$ (the cost of travelling $m$ miles) as the ***Output***. As you will learn shortly, this is an example of a ***Linear Function***. There are other types of functions (e.g., exponential, quadratic, etc.). In this course, the main focus is on linear functions. We will learn how to model real life situations and find their solutions by leveraging the ideas learned under linear functions.
+We call a relationship such as this, a ***Function*** of $m$. The above function takes $m$ (the miles traveled) as the ***Input*** and returns $C(m)$ (the cost of travelling $m$ miles) as the ***Output***. As you will learn shortly, this is an example of a ***Linear Function***. There are many **types of functions** in mathematics and they are often named based on how the output values change in relation to changes in the input values. The function given above is called a \***linear function** because the output values change proportionately to the input values.
 
-There are two parts to the function, the first part (3.3) represents the FIXED charge while the VARIABLE part, $2.4m$ which represents the charge for m miles. The cost of a ride, $C(m)$ will vary as the number of miles, $m$ varies. Furthermore, this cost varies by a factor of 2.4 which means that for every additional mile you ride, you will pay $\$ 2.4$ more. We call the value $2.4$ a ***Rate of Change*** for the function $C(m)$. Since this rate of change stays the same over any interval, we say that the rate is ***Constant***.
+## Anatomy of a Linear Function
+
+There are two parts to the function above; the first part (3.3) is FIXED while the second part, $2.4m$, VARIES depending on the value of $m$. While the fixed part of the function is important in determining the cost, it is the second part that plays an important role if we wanted to understand how "fast" the cost changes (in this case increases). As we will see later, the value $2.4$ is known as the ***Rate of Change*** for the function $C(m)$. It tells us how fast, $C(m)$ changes as we change $m$. Furthermore, since this rate of change stays the same regardless of the value of $m$, we say that the rate is ***Constant*** which means that the cost changes at a constant rate.
+
+In summary, a linear function has the following structure, where $b$ is the fixed part, and $mx$ is the variable part.
+
+$$f(x)=b+mx$$
+
+The higher the rate of change, the faster the output values change. For example, if we adjust the rate of change to 3.5 from 2.4 in the above scenario, you can expect the cost of riding to increase faster as you increase $m$.
 
 ## Function Representations
 
-In the above section, we described the taxi cost function using words and represented it using a formula. Functions can also be represented using tables and graphs.
+In the above section, we described the taxi cost function using words and represented it using a formula. Other tools for representing functions are tables and graphs.
 
-Consider the table below:
+Below is a table for the function above:
+![](images/i.jpeg){width=90%}
 
-***Have table here***
+**Question:** What are the advantages and disadvantages of using a table instead of a formula or verbal description?
 
-We can also represent the function using a graph as shown below:
+We can also represent the function above using a graph. See below:
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE}
 library(ggplot2)
 
 # Generate x values
@@ -57,20 +66,21 @@ data <- data.frame(x = x, y = 2.4 * x + 3.3)
 
 # Create the plot using ggplot with custom y scale
 ggplot(data, aes(x, y)) +
-  geom_line(color = "blue", size = 1) +
-  labs(x = "miles", y = "Cost", title = "Graph of C(m) = 2.4m + 3.3") +
-  scale_y_continuous(limits = c(0, 30))  # Set y-axis limits
-
+  geom_line(color = "blue", linewidth = .7) +
+  labs(x = "Miles", y = "Cost", title = "Graph of C(m) = 2.4m + 3.3") +
+  scale_y_continuous(limits = c(0, 30)) +
+  theme_minimal() +  # Apply a minimalistic theme
+  theme(axis.title = element_text(size = 12),  # Adjust axis title font size
+        axis.text = element_text(size = 10))   # Adjust axis label font size
 ```
 
-In the graph, we place the miles on the horizontal axis and the cost on the vertical axis axis. Since the cost is dependent on the miles traveled, we call it a ***Dependent Variable***. Similarly, we call the miles, an ***Independent Variable***.
+Since the cost is dependent on the miles traveled, we call it a ***Dependent Variable***. We call the miles $(m)$ an ***Independent Variable***. By convention, we place the dependent variable on the horizontal axis (x-axis) and the dependent variable on the vertical axis (y-axis).
 
-If you ride 0 miles, the cost is \$3.30, giving the point (0, 3.30) on the graph. We call this, the vertical or C(m)-intercept (or y-intercept in a general graph using x and y). In many applications, the y-intercept often means the initial value (e.g., cost) when the x value (in this case miles) is zero.
+If you ride 0 miles, the cost is \$3.30, giving the coordinate $(m, C(m))=(0, 3.30)$ on the graph. We call this point, the vertical or $C(m)-intercept$ (or $y-intercept$ in a general graph using $x$ and $y$).
 
-We call the above function, a ***Linear Function*** because its graph produces a straight line. In general, linear functions take the form $f(x)=mx+b$ where $m$ is the ***Slope*** (or rate of change) and $b$ is the y-intercept. Note that $b$ and/or $m$ can take any values including zero.
+We call the above function, a ***Linear Function*** because its graph produces a straight line. This straight line results because the change in cost is consistent on any intervals of miles.
 
-By convention, we place the output values on the vertical ($y$) axis and so, $y$ can be used in place of $f(x)$. Hence, we can rewrite the above function as an equation: $$y=mx+b$$
-
+In a graph of any linear function, the rate of change is often referred to as ***Slope*** because it tells us how steep the line is. If the rate of change in the taxi scenario given above were, say, 5 dollars per mile, instead of 2.4, the line would be much steeper than it is. When a linear function is expressed in the form $f(x)=mx+b$, we call it ***slope-intercept form***. This form is the most common because it makes it easier to spot the $slope$ and the $y-intercept$ which are important characteristics of linear functions.
 
 ## Increasing and Decreasing Functions
 
@@ -78,14 +88,32 @@ Notice in the above example that as you increase the number of miles, the cost o
 
 Since as you increase the input value, the output value increases, we say that the function $C(m)$ is an increasing function. As can be seen on the graph, the line is rising from left to right. This is because the rate of change value is positive.
 
-Generally, a linear function is said to be ***increasing*** if the slope $m$ is positive and
+Generally, a linear function is said to be ***increasing*** if the slope $m$ is positive and ***decreasing*** if the slope is negative.
 
-***decreasing*** if it is negative.
+## Exercises
 
-**EXERCISE**
+1.  Create a real-life scenario that can be modeled by a decreasing linear function.<br><br>
+2.  Write the formula for the function in exercise 1 above.<br><br>
+3.  Describe how the graph of the function in exercise 2 would look like.<br><br>
+4.  What would the graph of the function, $f(x)= 0x+3$ look like?<br><br>
+5. Find the formula for the linear function, $y=f(x)$, graphed below:
+```{r, echo=FALSE}
+library(ggplot2)
 
-``` toml
-1. Create a real-life scenario that can be modelled by a decreasing linear function
-2. Write the formula for the function and graph it.
-3. What would the graph of the function, f(x)= 0x+5 look like? Notice here m = 0. 
+# Generate x values
+x <- seq(0, 10, by = 1)
+
+# Create a data frame with x and y values
+data <- data.frame(x = x, y = 10-2 * x )
+
+# Create the plot using ggplot with custom y scale
+ggplot(data, aes(x, y)) +
+  geom_line(color = "purple", linewidth = .7) +
+  labs(x = "x", y = "y", title = "")  +
+  theme_minimal() +  # Apply a minimalist theme
+  theme(axis.title = element_text(size = 12),  # Adjust axis title font size
+        axis.text = element_text(size = 10))   # Adjust axis label font size
 ```
+6. Find the $y-intercept$ of a linear function whose rate of change is 2.5 and passes through the point $(3,9)$.
+
+7.  Marcus currently owns 200 songs in his iTunes collection. Every month, he adds 15 new songs. Write a formula for the number of songs, $N$, in his iTunes collection as a function of the number of months, $m$. How many songs will he own in a year if the trend continues? <br> <br>

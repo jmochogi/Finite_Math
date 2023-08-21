@@ -15,7 +15,6 @@ book:
       - LF_Applications.qmd
     - part: "Linear Programming"
       chapters: 
-      - Intro_LP.qmd
       - Geometric_Method.qmd
       - LP_Simplex.qmd
       - Transportation.qmd

@@ -186,26 +186,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Intro_LP.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geometric Method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Transportation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
   </div>
 </li>
       </ul>
@@ -222,19 +216,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Simple_Interest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Compound_Interest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Annuities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
   </div>
 </li>
       </ul>
@@ -242,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -262,8 +256,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#definitions-and-notation-for-linear-functions" id="toc-definitions-and-notation-for-linear-functions" class="nav-link active" data-scroll-target="#definitions-and-notation-for-linear-functions"><span class="header-section-number">2.1</span> Definitions and Notation for Linear Functions</a></li>
-  <li><a href="#function-representations" id="toc-function-representations" class="nav-link" data-scroll-target="#function-representations"><span class="header-section-number">2.2</span> Function Representations</a></li>
-  <li><a href="#increasing-and-decreasing-functions" id="toc-increasing-and-decreasing-functions" class="nav-link" data-scroll-target="#increasing-and-decreasing-functions"><span class="header-section-number">2.3</span> Increasing and Decreasing Functions</a></li>
+  <li><a href="#anatomy-of-a-linear-function" id="toc-anatomy-of-a-linear-function" class="nav-link" data-scroll-target="#anatomy-of-a-linear-function"><span class="header-section-number">2.2</span> Anatomy of a Linear Function</a></li>
+  <li><a href="#function-representations" id="toc-function-representations" class="nav-link" data-scroll-target="#function-representations"><span class="header-section-number">2.3</span> Function Representations</a></li>
+  <li><a href="#increasing-and-decreasing-functions" id="toc-increasing-and-decreasing-functions" class="nav-link" data-scroll-target="#increasing-and-decreasing-functions"><span class="header-section-number">2.4</span> Increasing and Decreasing Functions</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">2.5</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -295,40 +291,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Similarly, <span class="math inline">\(C(2)\)</span> is the cost of travelling 2 miles and can be computed as</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">C</span><span class="er">(</span><span class="dt">2</span><span class="er">)</span> <span class="op">=</span> <span class="fl">3.3</span> <span class="er">+</span> <span class="er">(</span><span class="dt">2</span><span class="kw">.</span><span class="dt">4</span> <span class="dt">x</span> <span class="dt">2</span><span class="er">)</span> <span class="op">=</span> <span class="fl">8.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Here, we take the base charge of <span class="math inline">\(\$3.3\)</span> and add it to the charge for riding 2 miles to get a grand total of 8.1.</p>
-<p>In general, if we travel <span class="math inline">\(m\)</span> miles, we can compute the cost as</p>
+<p>In general, if you travel <span class="math inline">\(m\)</span> miles, the cost, <span class="math inline">\(C(m)\)</span>, can be computed as follows:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">C</span><span class="er">(</span><span class="dt">m</span><span class="er">)</span><span class="op">=</span><span class="fl">3.3</span> <span class="er">+</span> <span class="dt">2</span><span class="kw">.</span><span class="dt">4m</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It is often useful to think carefully about the units of each component and how they relate. The expression below shows how this plays out in our taxi context:</p>
+<p>It is crucial to think carefully about the units of each component and how they relate. The expression below shows how this plays out in our taxi context:</p>
 <p><span class="math display">\[C(m)=3.3 \hspace{.1in} dollars + 2.4 \hspace{.08in} \frac{dollars}{mile} \times m\hspace{.1in} miles\]</span></p>
-<p>When dollars per mile are multiplied by a number of miles, the result is a number of dollars, matching the units on the 3.30, and matching the desired units for the C function. This means the units for the output, C(m), will be dollars.</p>
-<p>We call a relationship such as this, a <strong><em>Function</em></strong> of <span class="math inline">\(m\)</span>. This function takes <span class="math inline">\(m\)</span> (the miles traveled) as the <strong><em>Input</em></strong> and produces <span class="math inline">\(C(m)\)</span> (the cost of travelling <span class="math inline">\(m\)</span> miles) as the <strong><em>Output</em></strong>. As you will learn shortly, this is an example of a <strong><em>Linear Function</em></strong>. There are other types of functions (e.g., exponential, quadratic, etc.). In this course, the main focus is on linear functions. We will learn how to model real life situations and find their solutions by leveraging the ideas learned under linear functions.</p>
-<p>There are two parts to the function, the first part (3.3) represents the FIXED charge while the VARIABLE part, <span class="math inline">\(2.4m\)</span> which represents the charge for m miles. The cost of a ride, <span class="math inline">\(C(m)\)</span> will vary as the number of miles, <span class="math inline">\(m\)</span> varies. Furthermore, this cost varies by a factor of 2.4 which means that for every additional mile you ride, you will pay <span class="math inline">\(\$ 2.4\)</span> more. We call the value <span class="math inline">\(2.4\)</span> a <strong><em>Rate of Change</em></strong> for the function <span class="math inline">\(C(m)\)</span>. Since this rate of change stays the same over any interval, we say that the rate is <strong><em>Constant</em></strong>.</p>
+<p>When dollars per mile are multiplied by a number of miles, the result is a number of dollars, matching the units on the 3.30, and matching the desired units for the cost, <span class="math inline">\(C(m)\)</span>, of the ride (i.e., dollars).</p>
+<p>We call a relationship such as this, a <strong><em>Function</em></strong> of <span class="math inline">\(m\)</span>. The above function takes <span class="math inline">\(m\)</span> (the miles traveled) as the <strong><em>Input</em></strong> and returns <span class="math inline">\(C(m)\)</span> (the cost of travelling <span class="math inline">\(m\)</span> miles) as the <strong><em>Output</em></strong>. As you will learn shortly, this is an example of a <strong><em>Linear Function</em></strong>. There are many <strong>types of functions</strong> in mathematics and they are often named based on how the output values change in relation to changes in the input values. The function given above is called a *<strong>linear function</strong> because the output values change proportionately to the input values.</p>
 </section>
-<section id="function-representations" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="function-representations"><span class="header-section-number">2.2</span> Function Representations</h2>
-<p>In the above section, we described the taxi cost function using words and represented it using a formula. Functions can also be represented using tables and graphs.</p>
-<p>Consider the table below:</p>
-<p><strong><em>Have table here</em></strong></p>
-<p>We can also represent the function using a graph as shown below:</p>
+<section id="anatomy-of-a-linear-function" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="anatomy-of-a-linear-function"><span class="header-section-number">2.2</span> Anatomy of a Linear Function</h2>
+<p>There are two parts to the function above; the first part (3.3) is FIXED while the second part, <span class="math inline">\(2.4m\)</span>, VARIES depending on the value of <span class="math inline">\(m\)</span>. While the fixed part of the function is important in determining the cost, it is the second part that plays an important role if we wanted to understand how “fast” the cost changes (in this case increases). As we will see later, the value <span class="math inline">\(2.4\)</span> is known as the <strong><em>Rate of Change</em></strong> for the function <span class="math inline">\(C(m)\)</span>. It tells us how fast, <span class="math inline">\(C(m)\)</span> changes as we change <span class="math inline">\(m\)</span>. Furthermore, since this rate of change stays the same regardless of the value of <span class="math inline">\(m\)</span>, we say that the rate is <strong><em>Constant</em></strong> which means that the cost changes at a constant rate.</p>
+<p>In summary, a linear function has the following structure, where <span class="math inline">\(b\)</span> is the fixed part, and <span class="math inline">\(mx\)</span> is the variable part.</p>
+<p><span class="math display">\[f(x)=b+mx\]</span></p>
+<p>The higher the rate of change, the faster the output values change. For example, if we adjust the rate of change to 3.5 from 2.4 in the above scenario, you can expect the cost of riding to increase faster as you increase <span class="math inline">\(m\)</span>.</p>
+</section>
+<section id="function-representations" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="function-representations"><span class="header-section-number">2.3</span> Function Representations</h2>
+<p>In the above section, we described the taxi cost function using words and represented it using a formula. Other tools for representing functions are tables and graphs.</p>
+<p>Below is a table for the function above: <img src="images/i.jpeg" class="img-fluid" style="width:90.0%"></p>
+<p><strong>Question:</strong> What are the advantages and disadvantages of using a table instead of a formula or verbal description?</p>
+<p>We can also represent the function above using a graph. See below:</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="Intro_LF_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>In the graph, we place the miles on the horizontal axis and the cost on the vertical axis axis. Since the cost is dependent on the miles traveled, we call it a <strong><em>Dependent Variable</em></strong>. Similarly, we call the miles, an <strong><em>Independent Variable</em></strong>.</p>
-<p>If you ride 0 miles, the cost is $3.30, giving the point (0, 3.30) on the graph. We call this, the vertical or C(m)-intercept (or y-intercept in a general graph using x and y). In many applications, the y-intercept often means the initial value (e.g., cost) when the x value (in this case miles) is zero.</p>
-<p>We call the above function, a <strong><em>Linear Function</em></strong> because its graph produces a straight line. In general, linear functions take the form <span class="math inline">\(f(x)=mx+b\)</span> where <span class="math inline">\(m\)</span> is the <strong><em>Slope</em></strong> (or rate of change) and <span class="math inline">\(b\)</span> is the y-intercept. Note that <span class="math inline">\(b\)</span> and/or <span class="math inline">\(m\)</span> can take any values including zero.</p>
-<p>By convention, we place the output values on the vertical (<span class="math inline">\(y\)</span>) axis and so, <span class="math inline">\(y\)</span> can be used in place of <span class="math inline">\(f(x)\)</span>. Hence, we can rewrite the above function as an equation: <span class="math display">\[y=mx+b\]</span></p>
+<p>Since the cost is dependent on the miles traveled, we call it a <strong><em>Dependent Variable</em></strong>. We call the miles <span class="math inline">\((m)\)</span> an <strong><em>Independent Variable</em></strong>. By convention, we place the dependent variable on the horizontal axis (x-axis) and the dependent variable on the vertical axis (y-axis).</p>
+<p>If you ride 0 miles, the cost is $3.30, giving the coordinate <span class="math inline">\((m, C(m))=(0, 3.30)\)</span> on the graph. We call this point, the vertical or <span class="math inline">\(C(m)-intercept\)</span> (or <span class="math inline">\(y-intercept\)</span> in a general graph using <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>).</p>
+<p>We call the above function, a <strong><em>Linear Function</em></strong> because its graph produces a straight line. This straight line results because the change in cost is consistent on any intervals of miles.</p>
+<p>In a graph of any linear function, the rate of change is often referred to as <strong><em>Slope</em></strong> because it tells us how steep the line is. If the rate of change in the taxi scenario given above were, say, 5 dollars per mile, instead of 2.4, the line would be much steeper than it is. When a linear function is expressed in the form <span class="math inline">\(f(x)=mx+b\)</span>, we call it <strong><em>slope-intercept form</em></strong>. This form is the most common because it makes it easier to spot the <span class="math inline">\(slope\)</span> and the <span class="math inline">\(y-intercept\)</span> which are important characteristics of linear functions.</p>
 </section>
-<section id="increasing-and-decreasing-functions" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="increasing-and-decreasing-functions"><span class="header-section-number">2.3</span> Increasing and Decreasing Functions</h2>
+<section id="increasing-and-decreasing-functions" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="increasing-and-decreasing-functions"><span class="header-section-number">2.4</span> Increasing and Decreasing Functions</h2>
 <p>Notice in the above example that as you increase the number of miles, the cost of the ride goes up. This is because the rate of change (m) is positive.</p>
 <p>Since as you increase the input value, the output value increases, we say that the function <span class="math inline">\(C(m)\)</span> is an increasing function. As can be seen on the graph, the line is rising from left to right. This is because the rate of change value is positive.</p>
-<p>Generally, a linear function is said to be <strong><em>increasing</em></strong> if the slope <span class="math inline">\(m\)</span> is positive and</p>
-<p><strong><em>decreasing</em></strong> if it is negative.</p>
-<p><strong>EXERCISE</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">1</span><span class="kw">.</span> <span class="dt">Create</span> <span class="dt">a</span> <span class="dt">real-life</span> <span class="dt">scenario</span> <span class="dt">that</span> <span class="dt">can</span> <span class="dt">be</span> <span class="dt">modelled</span> <span class="dt">by</span> <span class="dt">a</span> <span class="dt">decreasing</span> <span class="dt">linear</span> <span class="dt">function</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">2</span><span class="kw">.</span> <span class="dt">Write</span> <span class="dt">the</span> <span class="dt">formula</span> <span class="dt">for</span> <span class="dt">the</span> <span class="dt">function</span> <span class="dt">and</span> <span class="dt">graph</span> <span class="dt">it</span><span class="kw">.</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">3</span><span class="kw">.</span> <span class="dt">What</span> <span class="dt">would</span> <span class="dt">the</span> <span class="dt">graph</span> <span class="dt">of</span> <span class="dt">the</span> <span class="dt">function</span><span class="er">,</span> <span class="dt">f</span><span class="er">(</span><span class="dt">x</span><span class="er">)</span><span class="op">=</span> <span class="dv">0</span><span class="dt">x</span><span class="er">+</span><span class="dt">5</span> <span class="dt">look</span> <span class="dt">like</span><span class="er">?</span> <span class="dt">Notice</span> <span class="dt">here</span> <span class="dt">m</span> <span class="op">=</span> <span class="dv">0</span><span class="kw">.</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Generally, a linear function is said to be <strong><em>increasing</em></strong> if the slope <span class="math inline">\(m\)</span> is positive and <strong><em>decreasing</em></strong> if the slope is negative.</p>
+</section>
+<section id="exercises" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.5</span> Exercises</h2>
+<ol type="1">
+<li>Create a real-life scenario that can be modeled by a decreasing linear function.<br><br></li>
+<li>Write the formula for the function in exercise 1 above.<br><br></li>
+<li>Describe how the graph of the function in exercise 2 would look like.<br><br></li>
+<li>What would the graph of the function, <span class="math inline">\(f(x)= 0x+3\)</span> look like?<br><br></li>
+<li>Find the formula for the linear function, <span class="math inline">\(y=f(x)\)</span>, graphed below:</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Intro_LF_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol start="6" type="1">
+<li><p>Find the <span class="math inline">\(y-intercept\)</span> of a linear function whose rate of change is 2.5 and passes through the point <span class="math inline">\((3,9)\)</span>.</p></li>
+<li><p>Marcus currently owns 200 songs in his iTunes collection. Every month, he adds 15 new songs. Write a formula for the number of songs, <span class="math inline">\(N\)</span>, in his iTunes collection as a function of the number of months, <span class="math inline">\(m\)</span>. How many songs will he own in a year if the trend continues? <br> <br></p></li>
+</ol>
 
 
 </section>

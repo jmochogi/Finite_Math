@@ -12,13 +12,13 @@ Linear programming (LP) is one of the most important methods used in management 
 
 A mixture problem is a problem which includes combining limited resources to manufacture products that will generate maximum profit for the company.
 
-These problems are common because most products that we use involve combining multiple resources in their production. Although there are other considerations in making production decisions, availability of resources is on of the most important constraints.
+These problems are common because most products that we use involve combining multiple resources in their production. Although there are other considerations in making production decisions, availability of resources is one of the most important constraints.
 
 An ***optimal production policy (OPP)*** is a policy that,
 
 ``` toml
-(i) does not violate the constraints under which the comany operates and,
-(ii) gives maximum profit.
+(i) does not violate the constraints under which the company operates and,
+(ii) yields maximum profit.
 ```
 
 **Example 1**
@@ -36,41 +36,43 @@ Before we solve this problem, note that it is a mixture problem because:
 
 ***Solution***
 
-a)  A mixture is a simple table that shows the resources, products, and profit. The chart displays the "verbal" information into a format that makes it easier to convert the problem to mathematical form (equations) that we can then solve it. The rows of the mixture chart contain the products while the columns contain the resources and the profit margin. See below:
+a)  A mixture is a simple table that shows the resources, products, and profit. The chart displays the "verbal" information into a format that makes it easier to convert the problem to mathematical form (equations) that we can then solve. The rows of the mixture chart contain the products while the columns contain the resources and the profit margin. <br>
+Below is a mixture chart for the problem above:
 
-|         Products          | Resource(s):<br> Containers of plastic:<br> 60 |  Profit |
-|:------------------:|:-----------------------------------:|--------------:|
+|         Products          | Resource(s):<br> Containers of plastic:<br> 60 |  Profit (per unit) |
+|:-----------------:|:---------------------------------:|:----------------:|
 | Skateboard <br> (x units) |                       5                        | \$ 1.00 |
 |    Dolls<br>(y units)     |                       2                        | \$ 0.55 |
 
 : **Mixture Chart for dolls and skateboards problem**
 
-b)  To solve this problem, we will have to follow a series of steps which include:
+b)  There are several methods of solving linear programming problems such as the one provided above. Many of the methods follow the following general steps:
 
     -   Translating the problem into a mathematical form,
     -   Identifying a set of possible solutions (feasible region) and,
     -   Identifying a solution that would give us maximum profit, i.e., the optimal b production policy.
 
-There are several methods solving linear programming problems. We will start with the geometric method, then look at the simplex method, and finally MS excel. We will talk about the pros and cons of each method.
+    We will consider the geometric approach first and discuss its advantages as well as limitations then present a more general method in the next chapter. After you have understood how these methods work, you will have an opportunity to use technology (e.g., Excel spreadsheets, and web applications) to solve LP problems. Note, however, that technology may not help you in translating the problem into mathematical terms. That part is done by humans (YOU).
 
 ## The Geometric Method
 
-The geometric method of solving linear programming problems involves creating a graph to visualize the **feasible region** (the set of likely solutions) and then identifying a solution from the feasible region.
+The geometric method of solving linear programming problems involves creating a graph to visualize the **feasible region** (the set of likely solutions) and then identifying the correct solution from the feasible region. Since the inequalities involve linear functions, the feasible region is polygonal in shape. The type of polygon formed (triangle, quadrilateral, pentagon, etc) depends on the number of constraints you have. 
 
 ``` toml
 A feasible set (region) for an LP problem is the collection of all physical
 possible solution choices that can be made. 
 ```
+Let us proceed with the solution to Example 1. We will start by converting the problem into mathematical terms (inequalities and equations), creating a feasible region, and then use a technique called the **corner point principle** to choose the best solution from the feasible region.  
 
 ### Convering Mixture Chart into Mathematical Form
 
-First, we know that the we cannot manufacture negative number of objects (skateboards of dolls). So, negative numbers are not permitted in this context. Note however, that 0 is a possible number. Thus, we have two inequalities;
+First, we know that we cannot manufacture negative number of objects (skateboards of dolls). So, negative numbers are not permitted in this context. Note however, that 0 is a possible number. Thus, we have two inequalities;
 
 $$x \ge 0 \hspace{.04in} \text{and} \hspace{.04in} y \ge 0$$
 
 The symbol $>$ means grater than while $\ge$ means greater than or equal to.
 
-We call the above two inequalities ***minimum constraints*** because they tell us the minimum that we can have for each object.
+We call the above two inequalities ***minimum constraints*** because they tell us the minimum that we can have for each product.
 
 Since we have a limited supply of resources (in this case 60 units of plastic) we must also have inequalities for ***resource constraints***. Since we need 5 units of plastic to manufacture ONE skateboard, we will need $5x$ units to manufacture x units of skateboards. Similarly, we will need $2y$ units of plastic to manufacture y dolls. In total, we need $5x+2y$ units of plastic to manufacture the dolls and skateboard. This value must not exceed 60. Thus, we have the inequality,
 
@@ -80,26 +82,26 @@ Notice that this time, we use the symbol for less than or equal to.
 
 In this problem, we only have 3 inequalities but in a realistic problem, there would be hundreds or even thousands of them.
 
-The last step in formulating the mathematical model is to make the **objective function**. This is the the function that connects the profit to the resources. Since we know that each skateboard results in \$1.00 profit, we know that x dolls will result in a profit of $\$1x$ and y dolls will result in a profit of $\$0.55x$. We do not know what the profit is but we know it is a function of both dolls and skateboards. We can denote the profit as $P$. So, we have the equation,
+The last step in formulating the mathematical model is to make the **objective function**. This is the function that connects the profit to the resources. Since we know that each skateboard results in \$1.00 profit, we know that x dolls will result in a profit of $\$1x$ and y dolls will result in a profit of $\$0.55x$. We do not know what the profit is but we know it is a function of both dolls and skateboards. We can denote the profit as $P$. So, we have the equation,
 
 $$P=1x+0.55y$$ Notice that the objective function is an **equation** (not inequality) that gives a **specific** amount of profit as we vary the number of skateboards and dolls. In other words, $P$ changes as we change $x$ and $y$. So we can determine the value of $x$ and$y$ that would produce maximum $P$.
 
 ### Representing the Feasible Region
 
-After creating the inequalities from the mixture chart, we can draw a helpful picture to help us visualize the feasible region geometrically. Graphs are the most commonly used tools for visualizing the feasible region.
+After creating the inequalities from the mixture chart, we can draw a picture to help us visualize the feasible region geometrically. Graphs are the most commonly used tools for visualizing the feasible region.
 
 Notice that all the three inequalities (i.e., the minimum and resource constraints) are linear in the sense that when you graph them (assuming an equal sign) you will get a straight line. To take care of the fact that the inequalities admit a broad range of values, we,
 
-a)  Use a dotted line if the inequality is strictly less $(<)$ or greater $(>)$ and shade the region representing the constraints. For example, $x>0$, represents the $y-axis$ so we draw a dotted line there and shade the right side of the line (i.e., values for which $x>0$.
-b)  Use a bold line if the inequality allows equality (e.g., $x\ge0$). In this case, we would draw the same line as (a) above but without dotting it (i.e, a continuous line.
+a)  Use a dotted line if the inequality is strictly less $(<)$ or greater $(>)$ and shade the region representing the constraints. For example, if $y>2$, we draw a dotted line for $y=2$ and shade the region **above** the line on the graph (this is the region that obeys the constraint).
+b)  Use a bold line if the inequality allows equality. 
 
-Below is a graph of the feasible region for our problem above
+Below is a graph of the feasible region for our problem above. We have shaded the region where x values and y values are greater than 0, as well as the region where $5x+2y$ is less than or equal to 60.
 
 ```{r , echo=FALSE, fig.cap="Graph of the Feasible Region", out.width = '80%'}
 knitr::include_graphics("/Users/joashmochogi/Desktop/Finite_Math/images/a.jpeg")
 ```
 
-All points within the region labelled "feasible region" are possible solution to our problem in the sense that they do not violate the constraints. For example, if we take the point $(8,4$ as the solution, the company would need to manufacture 8 skateboards and 4 dolls We can use the profit function to compute the profit associated with this choice as follows:
+All points within the region labelled "feasible region" are possible solutions to our problem in the sense that they do not violate the constraints. For example, the feasible point $(8,4)$ requires the company to manufacture 8 skateboards and 4 dolls. This "solution" does not violate any of the constraints given in the problem. To find the profit associated with this point, we use the objective (profit) function to compute the profit as follows:
 
 ```{=tex}
 \begin{align}
@@ -108,7 +110,7 @@ P&=x+0.55y\\
 &=\$10.20
 \end{align}
 ```
-Although this solution does not violate the constraints, it is easy to show that there is another point that would yield a higher profit while still obeying the constraints. Take, for example, the point $(2,14)$ which means 2 skateboards and 20 dolls. The profit for this choice would be higher. See below:
+Now, it is easy to show that there is a different point within the feasible region that would yield a higher profit while still obeying the constraints. Take, for example, the point $(2,20)$ which means 2 skateboards and 20 dolls. The profit for this choice would be higher. See below:
 
 ```{=tex}
 \begin{align}
@@ -117,7 +119,7 @@ P&=1.00 x+0.55y\\
 &=\$13.0
 \end{align}
 ```
-Choosing the point in the feasible region that would result in maximum profit (optimal production policy) is not a trivial task. However, there is an genius technique known as ***The Corner Point Principle*** which we discuss next:
+Choosing a point in the feasible region that would result in maximum profit (optimal production policy) is not a trivial task. However, there is an genius technique known as ***The Corner Point Principle*** which we discuss next.
 
 ### The Corner Point Principle
 
@@ -128,17 +130,17 @@ In a linear programming problem, the maximum value for the profit formula always
 corresponds to a corner point of the feasible region.
 ```
 
-For our linear programming problem above, there are three corners with cor=ordinates $(0,0)$, $(0,30$, and $(12,0)$. So, we can compute the profit associated with these 3 points and choose the highest as our optimal production policy:
+For our feasible region above, there are **three corners**. These corners have coordinates $(0,0)$, $(0,30$, and $(12,0)$. So, we use the profit function to compute the profit associated with each of these 3 points and choose the highest as our optimal production policy. See the calculations below:
 
-For $(0,0)$, the profit would be $\$0$.
+For $(0,0)$, the profit would be $P=1.00 (0)x+0.55(0)=\$0.00$
 
-For $(0,30$, the profit would be, $P=1.00 (0)x+0.55(30)=\$16.5$
+For $(0,30)$, the profit would be, $P=1.00 (0)x+0.55(30)=\$16.50$
 
-For $(12,0$, the profit would be, $P=1.00 (12)x+0.55(0)=\$12.00$
+For $(12,0)$, the profit would be, $P=1.00 (12)x+0.55(0)=\$12.00$
 
 Therefore, the ***optimal production policy*** would be to manufacture 0 skateboards and 30 dolls.
 
-**NOTE**: In the real world, there would be a lot more corners which would make this process cumbersome. However, as you may have guessed, there are computer programs that can do the job faster and more efficiently than humans.
+**NOTE**: In the real world, there would be a lot more corners which would make this process cumbersome. However, as mentioned earlier, there are computer programs that can do the job faster and more efficiently than humans.
 
 ### Summary of the Geometric Method
 
@@ -163,15 +165,13 @@ A toy manufacturer can manufacture only skateboards and, only dolls, or some kin
 a)  Below is the new mixture chart,
 
 |         Products          | Resource 1:<br> Plastic:<br> 60 | Resource 2: person-minutes <br> 360 |  Profit |
-|:-------------------:|:---------------:|:---------------:|----------------:|
+|:------------------:|:----------------:|:----------------:|-----------------:|
 | Skateboard <br> (x units) |                5                |                 15                  | \$ 1.00 |
 |    Dolls<br>(y units)     |                2                |                 18                  | \$ 0.55 |
 
-b)  We start by writing down the inequalities (constraints) and the profit function. <br>We still have the same minimum constraints as from example 1: $$x \ge 0 \hspace{.04in} \text{and} \hspace{.04in} y \ge 0$$ For the resource constraints, we have two inequalities because we have two resources: <br>For the plastic, we have $$5x+2y\le60$$ <br> For the person hours, we have, $$15x + 18y \le 360$$ <br> The profit function stays the same: $$P=1x+0.55y$$ <br> Next, we create a feasible region by graphing the inequalities. Notice that this new feasible region is smaller than the first and it has four corner points. The fourth point is as a result of the new inequality created by the additional resource constraints. As indicated earlier, the more resources you have, the more the corner points you expect.
+b)  We start by writing down the inequalities (constraints) and the profit function. <br>We still have the same minimum constraints as from example 1: $$x \ge 0 \hspace{.04in} \text{and} \hspace{.04in} y \ge 0$$ For the resource constraints, we have two inequalities because we have two resources: <br>For the plastic, we have $$5x+2y\le60$$ <br> For the person hours, we have, $$15x + 18y \le 360$$ <br> The profit function stays the same: $$P=1x+0.55y$$ <br> Next, we create a feasible region by graphing the inequalities. Notice that this new feasible region is smaller than the first and it has four corner points. The fourth point is as a result of the new inequality created by the additional resource constraints. As indicated earlier, the more resources you have, the more the corner points you expect.<br>
 
-```{r , echo=FALSE, fig.cap="Updated Feasible Region", out.width = '80%'}
-knitr::include_graphics("/Users/joashmochogi/Desktop/Finite_Math/images/b.jpeg")
-```
+![Updated Feasible Region](images/b.jpeg){width=90%}
 
 The last step is to use the corner principle to find the optimal production policy: We check the profits for each of the corner:
 
@@ -185,9 +185,9 @@ For $(12,0$, the profit would be, $P=1.00 (12)x+0.55(0)=\$12.00$
 
 Thus, in this new problem, the optimal production policy is 6 skateboards and 15 dolls for a maximum profit of \$ 14.50.
 
-### Section Exercises
+## Exercises
 
-For each description in exercises 1-4,create a mixture table and write one or more resource constraint inequalities. The unknown to use for each product is given in parenthesis:
+For each description in exercises 1-4, create a mixture table and write one or more resource constraint inequalities. The unknown to use for each product is given in parenthesis:
 
 1.  Manufacturing one package of hot dogs(x) requires 6 oz of beef, and manufacturing one package of bologna (y) requires 4 oz of beef. There are 300 oz of beef available. <br> <br>
 2.  It takes 30 ft of 12-in. board to make one bookcase (x); it takes 72 ft of 12-in. board to make one table(y). There are 420 ft of 12-in. board available.<br> <br>
@@ -218,10 +218,5 @@ For each of the following exercises, graph the feasible region, label each line 
 
 13. A paper recycling company uses scrap cloth and scrap paper to make two different grades of recycled paper. A single batch of grade A recycled paper is made from 25 lb of scrap cloth and 10 lb of scrap paper, whereas one batch of grade B recycled paper is made from 10 lb of scrap cloth and 20 lb of scrap paper. The company has 100 lb of scrap cloth and 120 lb of scrap paper on hand. A batch of grade A paper brings a profit of \$500, whereas a batch of grade B paper brings a profit of \$250. What amounts of each grade should be made? How, if at all, do the maximum profit and optimal production policy change if the company is required to produce at least one batch of each type?<br><br>
 
-14. Courtesy Calls makes telephone calls for businesses and charities. A profit of \$0.50 is made for each business calls and \$0.40 for each charity call.It takes 4 min (on average) to make a business call and 6 min (on average) to make a charity call. If there are 240 min of calling time to be distributed each day, how should that time be spent so that Courtesy Calls makes a maximum profit? What changes, if any, occur in the maximum profit and optimal production policy if they must make at least 12 business calls and 10 charity call every day?
-
-## The Simplex Method
-
-Before we introduce the
-
-## The Transportation Problem
+14. Courtesy Calls makes telephone calls for businesses and charities. A profit of \$0.50 is made for each business calls and \$0.40 for each charity call.It takes 4 min (on average) to make a business call and 6 min (on average) to make a charity call. If there are 240 min of calling time to be distributed each day, how should that time be spent so that Courtesy Calls makes a maximum profit? What changes, if any, occur in the maximum profit and optimal production policy if they must make at least 12 business calls and 10 charity call every day?<br><br>
+15. A factory manufactures chairs and tables, each requiring the use of three operations: Cutting, Assembly, and Finishing. The first operation can be used at most 39 hours; the second at most 42 hours; and the third at most 23 hours. A chair requires 1 hour of cutting, 2 hours of assembly, and 1 hour of finishing; a table needs 2 hours of cutting, 1 hour of assembly, and 1 hour of finishing. If the profit is \$20 per unit for a chair and \$30 for a table, how many units of each should be manufactured to maximize profit?

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -61,6 +95,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -73,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Intro_LP.html">Linear Programming</a></li><li class="breadcrumb-item"><a href="./Transportation.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Geometric_Method.html">Linear Programming</a></li><li class="breadcrumb-item"><a href="./Transportation.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,6 +167,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LF_Applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -142,12 +184,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Intro_LP.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link">
@@ -215,7 +251,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">7.1</span> Introduction</a></li>
+  <li><a href="#the-northwest-corner-rule" id="toc-the-northwest-corner-rule" class="nav-link" data-scroll-target="#the-northwest-corner-rule"><span class="header-section-number">7.2</span> The Northwest Corner Rule</a></li>
+  <li><a href="#the-stepping-stone-method" id="toc-the-stepping-stone-method" class="nav-link" data-scroll-target="#the-stepping-stone-method"><span class="header-section-number">7.3</span> The Stepping Stone Method</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">7.4</span> Exercises</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -237,8 +282,225 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="introduction" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">7.1</span> Introduction</h2>
+<p>Consider the following scenarios:</p>
+<p><strong>Scenario 1:</strong> After a long weekend holiday in your city, a scooter company has extra scooters in some part of the city and too few in others. The company is faced with the problem of reshuffling the scooters at a minimal cost so that each part of the city has the right number for their clients.</p>
+<p><strong>Scenario 2:</strong> A college has many campuses in a given state and materials (such as books) are often shared among the campuses. Because the calendars for each campus differs slightly, there are more resources in some campuses than others at some given point. The college needs to transport the resources between campuses to ensure student needs at each campus are met while keeping the transportation cost as low as possible.</p>
+<p><strong>Scenario 3:</strong> A huge car manufacturer has three manufacturing plants and several sales outlets at various locations in the country. Each outlet needs a specific number of cars. The cost of transporting the cars from different plants to different sales outlets is known. How should the company transport the cars while inuring minimum cost?</p>
+<p><strong><em>Definitions</em></strong></p>
+<p>Problems of the kind given in the three scenarios above are called <strong>Transportation problems</strong>. Companies often face such kind of problems on a day to day basis. Transportation problems (TPs) are a special type of linear programming problems where the goal is to minimize cost of transporting goods/services from a number of sources/origins (such as manufacturing plants) to a number of destinations/outlets (such as stores).</p>
+<ul>
+<li><p><strong>Supply:</strong> This refers to the maximum number of products that can be shipped from the sources. Different sources may supply different amounts of a product.</p></li>
+<li><p><strong>Demand:</strong> this refers to the minimum number of products that the destinations/outlets require. Again, different outlet often have different demands.</p></li>
+<li><p><strong>Rim conditions:</strong> We use the term <strong>rim conditions</strong> to refer to this situation where a specific number can be supplied from different sources and a specific number is required at different destinations. The rim conditions are satisfied when all units that can be supplied have been supplied and all demand requirements for each outlet have been met.</p></li>
+<li><p><strong>TP Tableau:</strong> A transportation problem tableau is a table showing the sources, supply quantities for each source, destinations, demands for each destination, and the costs for shipping between each source and destination. The more units you ship the higher the cost.</p></li>
+<li><p><strong>Feasible solution:</strong> A solution for a transportation problem that does not violate the rim conditions. In other words, all units are supplied out and all stores’ demands are met.</p></li>
+<li><p><strong>Optimal Solution:</strong> A feasible solution that guarantees the minimum cost of transportation.</p></li>
+</ul>
+<p>We will solve problems for which the rim conditions are satisfied. There are methods for solving conditions where the rim conditions are not satisfied but those are beyond the scope of the course.</p>
+<p><strong>Example 1</strong> (Adopted from COMAP, 10th edition)</p>
+<p>Imagine that we have three bakeries (I, II, and III) and three stores (1, 2, and 3), though the ideas that we develop will solve problems where the number of of stores and bakeries are not the same. The three stores require 3 dozen, 7 doze, and 1 dozen loaves of bread, respectively, while the three bakeries can supply 8 dozen, 1 dozen, and 2 dozen loaves, respectively. The shipping costs from bakery I to store 1, 2, and 3 are $8, $9, and $3 respectively. The the shipping costs from bakery II to stores 1, 2, and 3 are $15, $1, and $12 respectively. Finally, the shipping cost from bakery III to stores 1, 2, and 3 are $1, $3, and $5 respectively.</p>
+<ol type="a">
+<li>Create a tableau to show the costs and rim conditions for the problem.</li>
+<li>Find a feasible solution (shipment plan) for this transportation cost. Is this solution optimal?</li>
+</ol>
+<p><strong><em>Solution</em></strong></p>
+<ol type="a">
+<li><p>Below is the tableau showing the rims conditions and the costs. <img src="images/j.jpeg" class="img-fluid" alt="First tableau"> The supply available is shown on the right side (8,1, and 2) while the demand is shown on the bottom side (3, 7, and 1) of the tableau. The supply adds up to 11 and so does the demand. Thus, the rim conditions are satisfied. <br> Each square on the tableau is called a cell and it shows the transportation cost. For example, the transportation cost from bakery I to store 2 is 9 units. We reference this cell as <span class="math inline">\((I,2)\)</span>. Similarly, in cell <span class="math inline">\((III,2)\)</span> we see that the cost of transporting a dozen of bread from bakery III to store 2 is 5 units.</p></li>
+<li><p>Before you learn about an algorithm that guarantees an optimal solution, let us look at one possible solution (feasible solution). Take a look at the tableau below:</p></li>
+</ol>
+<p><img src="images/k.jpeg" class="img-fluid" alt="First tableau"> Here are important things to note about this new tablea:</p>
+<ul>
+<li><p>We have new numbers (circled) added in different cells of the tableau. These numbers show the amount that we plan to ship. For example, the circled 6 in cell <span class="math inline">\((I,2)\)</span> means we plan to ship 6 units from bakery I to store 2.</p></li>
+<li><p>When you add the circled numbers across rows, you get the number of supply for that bakery For example, the sum of the numbers in row 1 (bakery I) is <span class="math inline">\(2+6=8\)</span> which equals the supply that can come from store I.</p></li>
+<li><p>When you add the circled numbers along columns, you get the number demanded by that store. For example, the sum of the circled numbers in column 3 is <span class="math inline">\(6+1=7\)</span> which equals the demand for store 2.</p></li>
+<li><p>There are only 5 circled numbers and the table has 3 columns and 3 rows for a total of - This will always be true for any feasible solution.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Any</span> <span class="dt">feasible</span> <span class="dt">solution</span> <span class="dt">for</span> <span class="dt">a</span> <span class="dt">tableau</span> <span class="dt">with</span> <span class="dt">m</span> <span class="dt">rows</span> <span class="dt">and</span> <span class="dt">n</span> <span class="dt">columns</span> <span class="dt">will</span> <span class="dt">ship</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">through</span> <span class="er">(</span><span class="dt">m</span><span class="er">+</span><span class="dt">n</span><span class="er">)</span><span class="dt">-1</span> <span class="dt">cells</span><span class="kw">.</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>Thus, the above shipment plan is feasible. The cost associated with the plan is <span class="math display">\[\begin{align}
+Shipment \hspace{.05in}Cost&amp;= 2(8)+6(9)+1(15)+1(3)+1(5)\\
+&amp;=16+54+15+3+5\\
+&amp;=93
+\end{align}\]</span></p>
+<p>In case you are wondering how we came up with the above shipment plan, it means you are paying close attention. That is a good thing. The next section presents a method know as <strong>Northwest corner rule</strong> that we can use to find a feasible solution. the method does not use the associated costs and so may not guarantee an optimal solution.</p>
+</section>
+<section id="the-northwest-corner-rule" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="the-northwest-corner-rule"><span class="header-section-number">7.2</span> The Northwest Corner Rule</h2>
+<p>The northwest corner rule (NWCR) leverages the geometry of the table to identify a feasible shipment plan. It works by reducing the initial tableau step by step until one cell remains. Below are the steps of the rule:</p>
+<ul>
+<li>On the initial tableau, locate the cell that is as far to the top and to the left as possible (northwest). Ship via this cell the smaller of the two rim values (call this <span class="math inline">\(s\)</span>) associated with the row and column of the cell. Put a circled entry (the <span class="math inline">\(s\)</span>) in this cell to indicate that it is in use.<br><br></li>
+<li>Cross out the column or row that had the value <span class="math inline">\(s\)</span> and reduce the other rim value by <span class="math inline">\(s\)</span>.<br><br></li>
+<li>When a single cell remains, there will be a tie for the rim conditions of both the row and the column involved, and this amount is entered into the cell and circled.</li>
+</ul>
+<p><strong>Example 2</strong></p>
+<p>Use the <strong>northwest corner rule</strong> to find a feasible solution for the tableau in example 1 above.</p>
+<p><strong><em>Solution</em></strong></p>
+<p>First, recall that the NWCR ignores the costs. So, we first rewrite the tableau without the costs. We have also removed the tableau labels for simplicity, <img src="images/l.jpeg" class="img-fluid" alt="First tableau"></p>
+<p>Here is an explanation of every step:</p>
+<ul>
+<li><p><strong><em>Step 1:</em></strong> Locate the northwest corner cell on the initial tableau and ship 3 units through it. We choose 3 because it is the less of 3 and 8. We erase column 1 and reduce the 8 by 3.</p></li>
+<li><p><strong><em>Step 2:</em></strong> For our new tableau (without column 1), we ship 5 units through the northwest cell. Delete the row and subtract 5 from 7 to get 2.</p></li>
+<li><p><strong><em>Step 3:</em></strong> Ship one unit through the cell shown and subtract the 1 from 2. Delete the row.</p></li>
+<li><p><strong><em>step 4:</em></strong> Ship 1 unit through the northwest cell and erase the column. Reduce the row value by 1 to get 1. Now you are left with only one cell through which you ship 1 unit. You are done!</p></li>
+<li><p><strong><em>step 5:</em></strong> Rebuild the tables with the shipments above.</p></li>
+</ul>
+<p>Observe that there are exactly 5 cells through which we are shipping. This is one less than 6, which is the total number of rows and columns.</p>
+<p>The cost of this new shipment plan is,</p>
+<span class="math display">\[\begin{align}
+Shipment \hspace{.05in}Cost&amp;= 3(8)+5(9)+1(1)+1(3)+1(5)\\
+&amp;=24+45+1+3+5\\
+&amp;=78
+\end{align}\]</span>
+<p>Notice that this cost is smaller than what we had earlier (93). The question that still remains is,</p>
+<p><strong><em>Is this the cheapest solution? How can we be absolutely sure about this?</em></strong></p>
+<p>It turns out that this is still <strong><em>not the cheapest</em></strong>. There is an algorithm called the <strong><em>Stepping Stone Method</em></strong> that will guarantee an optimal solution (i.e., the cheapest shipment plan).</p>
+</section>
+<section id="the-stepping-stone-method" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="the-stepping-stone-method"><span class="header-section-number">7.3</span> The Stepping Stone Method</h2>
+<p>Before we look at the stepping stone method, we define the term <strong><em>indicator value</em></strong>.</p>
+<p><strong><em>Definition:</em></strong></p>
+<p>The indicator values of a cell, <span class="math inline">\(C\)</span> not currently circled is the cost change associated with increasing or decreasing the amounts shipped in a circuit of cells starting at cell <span class="math inline">\(C\)</span>. It is computed by summing with alternating signs the cost of the cells in the circuit.</p>
+<p><strong><em>Example 3</em></strong></p>
+<p>Since our ultimate goal is to improve the solution in the previous example, we are going to use the final tableau earlier (left side of figure below) to compute the indicator value. Suppose we want the indicator value for cell <span class="math inline">\((I, 3)\)</span>. Notice that this cell is currently not circled.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/m.jpeg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">First tableau</figcaption>
+</figure>
+</div>
+<p>Notice that the circuit has alternating <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span> signs. We can ship <span class="math inline">\(1\)</span> unit through cell <span class="math inline">\((I,3)\)</span> and then reduce the amount being shipped in cell <span class="math inline">\((III,3)\)</span> by <span class="math inline">\(1\)</span>. This means we reduce the amount in cell <span class="math inline">\((I,2)\)</span> by <span class="math inline">\(1\)</span> and then increase the amount being shipped in cell <span class="math inline">\((III,2)\)</span> by <span class="math inline">\(1\)</span> unit. Doing this does not affect the <strong><em>rim conditions</em></strong> (look at the new tableau).</p>
+<p>By using this alternative tableau, we get a cost of <span class="math inline">\(70\)</span>. See below:</p>
+<span class="math display">\[\begin{align}
+Shipment \hspace{.05in}Cost&amp;= 3(8)+4(9)+1(1)+2(3)+1(3)\\
+&amp;=24+36+1+6+3\\
+&amp;=70
+\end{align}\]</span>
+<p>The difference in cost between this new tableau and the original one is <span class="math inline">\(-8\)</span>. Thus, the indicator value of this cell is <span class="math inline">\(-8\)</span>.</p>
+<p>Alternatively, we can compute the indicator values directly from the circuit as follows:</p>
+<span class="math display">\[\begin{align}
+Indicator \hspace{.05in}Value&amp;= 1(3)-1(9)+1(3)-1(5)\\
+&amp;=3-9+3-5\\
+&amp;=-8
+\end{align}\]</span>
+<p>We use 1 unit for each cell cost because that is the amount we are moving around thr circuit.</p>
+<p>Some things to Note;</p>
+<ul>
+<li>Example 3 above shows that by moving things around via the indicator value, we can save on the transportation cost.</li>
+<li>The maximum amount you can move around is capped on the amount that can be shipped via a given cell. In our example above, we moved only 1 because that is the maximum that can be shipped via cell <span class="math inline">\((I,3)\)</span>. If you move 2 for example, you will violate the rim conditions.</li>
+<li>The indicator value of a cell tells you the amount by which the cost decreases or increases if you ship via that cell.</li>
+<li>You start with an empty cell but all the other three cells in the circuit must have some shipment already.</li>
+<li>In some cases, we can ship 0 quantities through a cell.</li>
+</ul>
+<p>Now, we need to compute the indicator values for the rest of the cells.</p>
+<p>Indicator value computation for cell <span class="math inline">\((II,3)\)</span> is shown below: <img src="images/n.jpeg" class="img-fluid" alt="First tableau"></p>
+<span class="math display">\[\begin{align}
+Indicator \hspace{.05in}Value&amp;= 1(12)-1(1)+1(3)-1(5)\\
+&amp;=12-1+3-5\\
+&amp;=+9
+\end{align}\]</span>
+<p>The positive indicator value means that shipping through that cell adds the cost. So, this does not help.</p>
+<p>Notice that the indicator values for the other two cells based on our initial tableau are also positive. So, our best tableau at the moment is the second figure in example 3 above. We ask ourselves, can we improve this tableau any further? It turns out that the only cell with negative indicator value based this new tableau is <span class="math inline">\((III, 1)\)</span>. See figure below:</p>
+<p><img src="images/o.jpeg" class="img-fluid" alt="First tableau"> Notice that we moved 2 units around this time.</p>
+<p>With this new tableau, all the empty cells have positive indicator values and so we cannot improve any further. We now have an <strong><em>optimal shipping plan</em></strong>. The cost of the plan is</p>
+<span class="math display">\[\begin{align}
+Shipment \hspace{.05in}Cost&amp;= 1(8)+6(9)+1(3)+1(1)+2(1)\\
+&amp;=8+54+3+1+2\\
+&amp;=68
+\end{align}\]</span>
+<p>The above process is called the <strong><em>stepping stone method</em></strong>. You check indicator values at every step until all cells have positive indicators values, which means the solution cannot be improved any further.</p>
+<p><strong>Example 4</strong> (Adopted from <em>For All Practical Purposes, 10th Edition</em>)</p>
+<p>Two dairies supply three supermarket chains with the demands for sour cream as shown in the tableau below. Also indicated in the cells is the cost of shipping between pairs of sites.</p>
+<p><img src="images/p.jpeg" class="img-fluid" style="width:70.0%"></p>
+<p>a) Use the Northwest Corner Rule to obtain a feasible solution, and compute the cost of this feasible solution.</p>
+<p>b) If the feasible solution in part (a) is not optimal, find an optimal solution.</p>
+<p><strong><em>Solution</em></strong></p>
+<p>Applying the northwest corner rule, we get the following tableau: <img src="images/q.jpeg" class="img-fluid" style="width:70.0%" alt="First tableau"></p>
+<p>a) Note that the rim conditions are satisfied. The solution for this shipping plan would be <span class="math display">\[\begin{align}
+Cost&amp;=2(6)+3(9)+2(3)+4(5)\\
+&amp;= 12+27+6+20\\
+&amp;=65
+\end{align}\]</span></p>
+<p>b) To determine whether the solution in (a) is optimal, we compute the indicator values for each of the empty cells:</p>
+<p>For cell <span class="math inline">\((II,1)\)</span>,</p>
+<span class="math display">\[\begin{align}
+Indicator \hspace{.05in}Value
+&amp;=+1-6+3-5\\
+&amp;=-7
+\end{align}\]</span>
+<p>For cell <span class="math inline">\((II,2)\)</span>,</p>
+<span class="math display">\[\begin{align}
+Indicator \hspace{.05in}Value
+&amp;=+7-5+3-9\\
+&amp;=-4
+\end{align}\]</span>
+<p>The negative indicator values mean that the solution we have is not optimal. We can improve it.</p>
+<p>Let us ship via <span class="math inline">\((II,1)\)</span>. The new tableau for this plan is, <img src="images/s.jpeg" class="img-fluid" style="width:70.0%" alt="First tableau"></p>
+<p>And the associated cost is,</p>
+<span class="math display">\[\begin{align}
+Shipment \hspace{.05in}Cost
+&amp;=2(1)+2(5)+5(3)+3(9)\\
+&amp;=51
+\end{align}\]</span>
+<p>Although this is an improved solution, the indicator value for cell <span class="math inline">\((II,2)\)</span> is negative <span class="math inline">\((7-5+3-9=-4)\)</span>, which means we can do better.</p>
+<p>Let us improve this by shipping via cell <span class="math inline">\((II,2)\)</span>. The new tableau becomes, <img src="images/r.jpeg" class="img-fluid" style="width:70.0%" data-fig-align="center" alt="First tableau"></p>
+<p>Notice that with this new tableau, all empty cells have positive indicator values. Hence, this is the best shipment plan that we can get and thus is the optimal solution.</p>
+<p>The cost associated with this plan is,</p>
+<span class="math display">\[\begin{align}
+Shipment \hspace{.05in}Cost
+&amp;=2(1)+2(7)+6(3)+1(9)\\
+&amp;=43
+\end{align}\]</span>
+</section>
+<section id="exercises" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">7.4</span> Exercises</h2>
+<ol type="1">
+<li>For each of the following tableaux, create a possible real-world setting for the problem.</li>
+</ol>
+<!-- -->
+<ol type="a">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/t1.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/t2.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>Use the northwest corner rule to find a feasible solution for each tableau in problem 1 above. Note that the solution need not be optimal.</p></li>
+<li><p>The following tableau represents the shipping costs and supply-and-demand constraints for supplies of oranges to juice manufacturing companies.<br><img src="images/t3.jpeg" class="img-fluid" style="width:60.0%" data-fig-align="center"><br></p>
+<ol type="a">
+<li>Using the northwest corner rule, find the initial solution.<br><br></li>
+<li>Calculate the indicator value for each non-circled cell. <br><br></li>
+<li>Is the current solution optimal?<br><br></li>
+<li>If your answer to part (c) above is “NO”, find an optimal solution.</li>
+</ol></li>
+<li><p>The following tableau shows the cost of returning cars from cities that have more cars than necessary to cities that have too few cars.<br><img src="images/t4.jpeg" class="img-fluid" style="width:60.0%" data-fig-align="center"><br></p>
+<ol type="a">
+<li>Find an initial shipment plan<br><br></li>
+<li>Compute the cost of the plan in (a) above. <br><br></li>
+<li>Determine if the solution found in (b) is optimal. If the solution is not optimal, find an optimal solution.</li>
+</ol></li>
+<li><p>Consider the tableau below<br><br> <img src="images/t5.jpeg" class="img-fluid" style="width:60.0%" data-fig-align="center"><br></p>
+<ol type="a">
+<li>Apply the northwest corner rule to the following tableau<br><br></li>
+<li>Find the cost associated with the solution in (a) above. <br><br></li>
+<li>Compute the indicator value for each non circled cell.<br><br></li>
+<li>Is the solution found in part (b) optimal? If not, find an optimal solution.</li>
+</ol></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

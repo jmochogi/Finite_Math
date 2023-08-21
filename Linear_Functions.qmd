@@ -302,35 +302,32 @@ The approximate point of intersection for the graphs is $(4.3,5.6)$. You can get
 
 ## Exercises
 
-1. A report by the US Geological Survey indicates that glaciers in Glacier National Park, Montana, are shrinking. Recent estimates indicate the area covered by glaciers has decreased from over $25.5 \hspace{.04in} km^2$ in $1850$ to about $16.5\hspace{.04in}km^2$ in $1995$. Let $A=f(t)$ give the area (in square km) $t$ years after 2000, and assume $f(t)=16.2-0.062t$. <br>
-    a. Find and explain the meaning of the slope. <br> <br>
-    b. Find and explain the meaning of the A-intercept. <br> <br>
-    c. What does $f(17)$ mean? Write in full sentence and include units. <br> <br>
-    d. Solve $f(t)=9$ for $t$ and explain what it means in context. Include units in your explanation. <br> <br>
-    
-    
-2. A town has a population of $2000$ people at time $t=0$. In each of the following cases, write a formula for the population $P$,of the town as a function of year $t$. <br>
-    a. The population increases by 90 people per year. <br> <br>
-    b. The population increases by 1 percent per year. <br> <br>
- 
-3. Marcus currently owns 200 songs in his iTunes collection. Every month, he adds 15 new songs. Write a formula for the number of songs, $N$, in his iTunes collection as a function of the number of months, $m$. How many songs will he own in a year? <br> <br>
+1.  A report by the US Geological Survey indicates that glaciers in Glacier National Park, Montana, are shrinking. Recent estimates indicate the area covered by glaciers has decreased from over $25.5 \hspace{.04in} km^2$ in $1850$ to about $16.5\hspace{.04in}km^2$ in $1995$. Let $A=f(t)$ give the area (in square km) $t$ years after 2000, and assume $f(t)=16.2-0.062t$. <br>
 
+    a.  Find and explain the meaning of the slope. <br> <br>
+    b.  Find and explain the meaning of the A-intercept. <br> <br>
+    c.  What does $f(17)$ mean? Write in full sentence and include units. <br> <br>
+    d.  Solve $f(t)=9$ for $t$ and explain what it means in context. Include units in your explanation. <br> <br>
 
-4. Working as an insurance salesperson, Ilya earns a base salary and a commission on each new policy, so Ilya’s weekly income, $I$, depends on the number of new policies, $n$, he sells during the week. Last week he sold 3 new policies, and earned \$760 for the week. The week before, he sold 5 new policies, and earned \$920. Find an equation for $I(n)$, and interpret the meaning of the components of the equation. <br> <br>
+2.  A town has a population of $2000$ people at time $t=0$. In each of the following cases, write a formula for the population $P$,of the town as a function of year $t$. <br>
 
-5. Find the slope of the line connecting the points $(2,7)$ and $(6,11)$. <br> <br>
+    a.  The population increases by 90 people per year. <br> <br>
+    b.  The population increases by 1 percent per year. <br> <br>
 
-6. Find the equation of the line in number 4 above.<br> <br>
+3.  Marcus currently owns 200 songs in his iTunes collection. Every month, he adds 15 new songs. Write a formula for the number of songs, $N$, in his iTunes collection as a function of the number of months, $m$. How many songs will he own in a year? <br> <br>
 
-7. Find a formula for the linear equation graphed below. You can enlarge the graph by clicking on it. <br> <br>
+4.  Working as an insurance salesperson, Ilya earns a base salary and a commission on each new policy, so Ilya's weekly income, $I$, depends on the number of new policies, $n$, he sells during the week. Last week he sold 3 new policies, and earned \$760 for the week. The week before, he sold 5 new policies, and earned \$920. Find an equation for $I(n)$, and interpret the meaning of the components of the equation. <br> <br>
 
-8. An apartment manager keeps careful record of how the rent charged per unit corresponds to the number of occupied units in a large complex. The collected data is shown in the table below: <br> <br>
-***Table Here***
-   a. Why is it reasonable to say that the number of occupied apartments is a linear function of rent? <br> <br>
-   b. Let $A$ be the number of occupied apartments and $R$ the monthly rent charged (in dollars). If we let $A=f(R)$ ,what is the slope of the linear function $f(R)$? What is the meaning of the slope in the context of this question? <br> <br>
-   c. Determine a formula for $A=f(R)$. <br> <br>
-   d. If the rent were to be increased to \$1000, how many occupied apartments should the apartment manager expect? How much total revenue would the manager collect in a given month when rent is set at \$1000?
+5.  Find the slope of the line connecting the points $(2,7)$ and $(6,11)$. <br> <br>
 
+6.  Find the equation of the line in number 4 above.<br> <br>
 
+7.  Find a formula for the linear equation graphed below. You can enlarge the graph by clicking on it. <br> <br>
 
- 
+8.  An apartment manager keeps careful record of how the rent charged per unit corresponds to the number of occupied units in a large complex. The collected data is shown in the table below: <br> <br> ***Table Here***
+![Elephant](images/h.jpeg)
+
+    a.  Why is it reasonable to say that the number of occupied apartments is a linear function of rent? <br> <br>
+    b.  Let $A$ be the number of occupied apartments and $R$ the monthly rent charged (in dollars). If we let $A=f(R)$ ,what is the slope of the linear function $f(R)$? What is the meaning of the slope in the context of this question? <br> <br>
+    c.  Determine a formula for $A=f(R)$. <br> <br>
+    d.  If the rent were to be increased to \$1000, how many occupied apartments should the apartment manager expect? How much total revenue would the manager collect in a given month when rent is set at \$1000?

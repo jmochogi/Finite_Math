@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Intro_LP.html">Linear Programming</a></li><li class="breadcrumb-item"><a href="./LP_Simplex.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Geometric_Method.html">Linear Programming</a></li><li class="breadcrumb-item"><a href="./LP_Simplex.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,6 +133,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LF_Applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -144,12 +150,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Intro_LP.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link">
@@ -222,7 +222,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction-to-simplex-method" id="toc-introduction-to-simplex-method" class="nav-link active" data-scroll-target="#introduction-to-simplex-method"><span class="header-section-number">6.1</span> Introduction to Simplex Method</a></li>
-  <li><a href="#step-by-step-simplex-method" id="toc-step-by-step-simplex-method" class="nav-link" data-scroll-target="#step-by-step-simplex-method"><span class="header-section-number">6.2</span> Step-by-Step Simplex Method</a></li>
+  <li><a href="#step-by-step-simplex-method" id="toc-step-by-step-simplex-method" class="nav-link" data-scroll-target="#step-by-step-simplex-method"><span class="header-section-number">6.2</span> Step-by-Step Simplex Method</a>
+  <ul class="collapse">
+  <li><a href="#summary-of-the-simplex-method" id="toc-summary-of-the-simplex-method" class="nav-link" data-scroll-target="#summary-of-the-simplex-method"><span class="header-section-number">6.2.1</span> Summary of the Simplex Method</a></li>
+  </ul></li>
+  <li><a href="#a-short-trip-back" id="toc-a-short-trip-back" class="nav-link" data-scroll-target="#a-short-trip-back"><span class="header-section-number">6.3</span> A Short Trip Back</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">6.4</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -249,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="introduction-to-simplex-method" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="introduction-to-simplex-method"><span class="header-section-number">6.1</span> Introduction to Simplex Method</h2>
 <p>As stated earlier, Linear Programming is one of the most commonly used methods for solving practical problems in business and even in government. However, the problems we have considered so far had a maximum of two products and relatively small feasible regions and few corner points. Many real life problems often involve much more products and result in very big feasible regions with hundreds or even thousands of corner points.</p>
-<p>As an example, consider the following LP problem:</p>
+<p>The simplex method provides a more general method of solving LP programs without relying on a <strong>physical</strong> feasible region. Consider the following LP problem through which we will discuss the details of the simplex method:</p>
 <p><strong>Example 1</strong></p>
 <p>A factory manufactures chairs, tables and bookcases each requiring the use of three operations: Cutting, Assembly, and Finishing. The first operation can be used at most 600 hours; the second at most 500 hours; and the third at most 300 hours. A chair requires 1 hour of cutting, 1 hour of assembly, and 1 hour of finishing; a table needs 1 hour of cutting, 2 hours of assembly, and 1 hour of finishing; and a bookcase requires 3 hours of cutting, 1 hour of assembly, and 1 hour of finishing. If the profit is $20 per unit for a chair, $30 for a table, and $25 for a bookcase, how many units of each should be manufactured to maximize profit?</p>
 <p>Let us start by creating a mixture chart for the problem:</p>
@@ -307,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
 <li>The simplex method provides an algorithmic method that solves this type of problems without needing to create a visual feasible region. The method can also be used to solve problems in the previous chapter.</li>
 <li>The technical details of the simplex method are beyond the scope of the course but the algorithm itself is relatively easy to execute once you learn it.</li>
 </ul>
-<p>We will return to this problem later.</p>
+<p>You should try this problem on your own (see exercises) once you have understood the simplex method. For now, the step-by-step procedure of the simplex algorithm is presented.</p>
 </section>
 <section id="step-by-step-simplex-method" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="step-by-step-simplex-method"><span class="header-section-number">6.2</span> Step-by-Step Simplex Method</h2>
@@ -391,8 +396,240 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Notice that</strong> the last row has no negative numbers. This means we are done and we can directly read our solution. If there were any negative numbers left on the last row, you would have to do the process one more time (i.e., find new pivot column and row then perform subsequent row operations). This process continues until there are no negative numbers on the last row.</p>
 <p><strong>Step 7:</strong> <br> Read the solution from the final tableau. Every column with a “1’s” and “0’s” would give us a value for a variable. In our case above,</p>
 <p><span class="math inline">\(y=3, s_1=90, s_3=75, P=12\)</span></p>
-<p>Al the others (i.e., <span class="math inline">\((x,z,s_2)\)</span>) will be zero.</p>
+<p>All the others (i.e., <span class="math inline">\((x,z,s_2)\)</span>) will be zero.</p>
 <p>This solution basically means, make 3 units of product <span class="math inline">\(y\)</span>, and zero product <span class="math inline">\(x\)</span> and <span class="math inline">\(z\)</span>.</p>
+<section id="summary-of-the-simplex-method" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="summary-of-the-simplex-method"><span class="header-section-number">6.2.1</span> Summary of the Simplex Method</h3>
+<p>Below is a summary of the simplex method for maximization problems in LP:</p>
+<ol type="a">
+<li>Set up the problem. That is, convert the problem into mathematical terms. This involves creating the constraint inequalities and the objective function.</li>
+<li>Convert the inequalities into equations. This is done by adding one slack variable for each inequality.</li>
+<li>Construct the initial simplex tableau with the objective function as the bottom row. d)Identify the pivot column. The most negative entry in the bottom row identifies the pivot column.</li>
+<li>Calculate the quotients. The smallest quotient identifies a row. The element in the intersection of the column identified in step 4 and the row identified in this step is identified as the pivot element. The quotients are computed by dividing the far right column by the identified column in step 4. A quotient that is a zero, or a negative number, or that has a zero in the denominator, is ignored.</li>
+<li>Perform pivoting to make all other entries in this column zero.</li>
+<li>When there are no more negative entries in the bottom row, we are finished; otherwise, we start again from step (d).</li>
+<li>Read off your answers. Get the variables using the columns with 1 and 0s. All other variables are zero. The maximum value you are looking for appears in the bottom right hand corner.</li>
+</ol>
+</section>
+</section>
+<section id="a-short-trip-back" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="a-short-trip-back"><span class="header-section-number">6.3</span> A Short Trip Back</h2>
+<p>Let us use the simplex method to solve <strong>example 2</strong> from the previous chapter. For your convenience the example is repeated below:</p>
+<p><strong>Example 3</strong></p>
+<p>A toy manufacturer can manufacture only skateboards and, only dolls, or some kind of skateboards and dolls. Skateboards require 5 units of plastic and can be sold for a profit of $1.00, while dolls require 2 units of plastic and can be sold for $0.55 profit. Only 60 units of plastic are available. Furthermore, making one skateboard requires 15 person-minutes while making one doll requires 18-person minutes. There are only 360person person-minutes available.</p>
+<p><strong><em>Solution</em></strong></p>
+<p>Recall that we had generated the following resource inequalities:</p>
+<p><span class="math inline">\(5x+2y\le 60\)</span><br></p>
+<p><span class="math inline">\(15x+18y\le360\)</span> (Simplifies to <span class="math inline">\(5x+6y\le120\)</span> by dividing through by 3)</p>
+<p>We also had the following profit function: <span class="math inline">\(P=1.00x+0.55y\)</span></p>
+<p>Our first step is to convert the inequalities to equations by adding slack variables and rewriting the profit function:</p>
+<p><span class="math inline">\(5x+2y+s_1= 60\)</span><br></p>
+<p><span class="math inline">\(5x+6y+s_2=120\)</span><br></p>
+<p><span class="math inline">\(-1x-0.55y+P=0\)</span></p>
+<p>Thus, our initial tableau on which we shall perform row operations is:</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+5 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; |&amp; 60 \\
+5 &amp; 6 &amp; 0 &amp; 1 &amp; 0 &amp; | &amp; 120\\
+\hline
+-1 &amp; -0.55 &amp; 0 &amp; 0 &amp; 1 &amp; |&amp; 0
+\end{bmatrix}\]</span>
+<p>Next, we find the pivot element by identifying the pivot column and row.</p>
+<p>The most negative entry in the last row is <span class="math inline">\(-1\)</span> and so the first column is our pivot column:</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+\color{red}5 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; |&amp; 60 \\
+\color{red}5 &amp; 6 &amp; 0 &amp; 1 &amp; 0 &amp; | &amp; 120\\
+\hline
+\color{red}-1 &amp; -0.55 &amp; 0 &amp; 0 &amp; 1 &amp; |&amp; 0
+\end{bmatrix}\]</span>
+<p>To find the pivot row, we compute following quotients : <span class="math inline">\(\frac{60}{5}=12\)</span>; <span class="math inline">\(\frac{360}{5}=72\)</span>. Thus, our pivot row is row 1.</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+\color{red}\textbf5 &amp; \color{red}2 &amp; \color{red}1 &amp; \color{red}0 &amp; \color{red}0 &amp; |&amp; \color{red}60 \\
+\color{red}{5} &amp; 6 &amp; 0 &amp; 1 &amp; 0 &amp; | &amp; 120\\
+\hline
+\color{red}-1 &amp; -0.55 &amp; 0 &amp; 0 &amp; 1 &amp; |&amp; 0
+\end{bmatrix}\]</span>
+<p>Our pivot element is, therefore, the <span class="math inline">\(5\)</span> in the first row. Next perform row operations to make the element a <span class="math inline">\(1\)</span>. The operation to achieve this goal is <span class="math inline">\(\frac{1}{5}R_2\)</span> (i.e., we multiply the entire row 2 by one fifth). The new tableau becomes,</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+\color{red}\textbf{1} &amp; 0.4 &amp; 0.2 &amp; 0 &amp; 0 &amp; |&amp; 12\\
+5 &amp; 6 &amp; 0 &amp; 1 &amp; 0 &amp; | &amp; 120\\
+\hline
+-1 &amp; -0.55 &amp; 0 &amp; 0 &amp; 1 &amp; |&amp; 0
+\end{bmatrix}\]</span>
+<p>Next, we perform row operations that will convert all entries of column 1 (except our pivot element) to 0. Let us start by targeting the 5. The operation <span class="math inline">\(R_2-5R_1 \mapsto R_2\)</span> (<strong>replace row 1 by row 2 minus five times row 1</strong>) will achieve our desired goals. See the new tableau below:</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+\color{red}\textbf{1} &amp; 0.4 &amp; 0.2 &amp; 0 &amp; 0 &amp; |&amp; 12\\
+\color{red}\textbf{0} &amp; 4 &amp; -5 &amp; 1 &amp; 0 &amp; | &amp; 60\\
+\hline
+-1 &amp; -0.55 &amp; 0 &amp; 0 &amp; 1 &amp; |&amp; 0
+\end{bmatrix}\]</span>
+<p>Next, we perform the operation <span class="math inline">\(R_3+R_1 \mapsto R_3\)</span>, which achieve the goal of converting the <span class="math inline">\(-1\)</span> on the last row into a zero. Here is the new tableau:</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+\color{red}\textbf{1} &amp; 0.4 &amp; 0.2 &amp; 0 &amp; 0 &amp; |&amp; 12\\
+\color{red}\textbf{0} &amp; 4 &amp; -5 &amp; 1 &amp; 0 &amp; | &amp; 60\\
+\hline
+\color{red}\textbf{0} &amp; -0.15 &amp; 0.2 &amp; 0 &amp; 1 &amp; |&amp; 12
+\end{bmatrix}\]</span>
+<p>Since the last row still have a negative entry (i.e., <span class="math inline">\(-1\)</span>), we repeat the process one more time:</p>
+<p>Our new pivot column is column 2 and the pivot row is row 2 (you should verify this). Thus, our pivot element is the 4 in row 2.</p>
+<p>To convert the 4 into a 1, we perform the operation <span class="math inline">\(\frac{1}{4}R_2\)</span> (i.e., multiply the entire row by one fourth). Here is the new tableau:</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+1 &amp; 0.4 &amp; 0.2 &amp; 0 &amp; 0 &amp; |&amp; 12\\
+0 &amp; \color{red}\textbf{1} &amp; -1.25 &amp; 0.25 &amp; 0 &amp; | &amp; 15\\
+\hline
+0 &amp; -0.15 &amp; 0.2 &amp; 0 &amp; 1 &amp; |&amp; 12
+\end{bmatrix}\]</span>
+<p>Next, we convert the - 0.15 into 0 by performing the operation <span class="math inline">\(R_3+0.15R_2\mapsto R_3\)</span>. The new tableau becomes,</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+1 &amp; 0.4 &amp; 0.2 &amp; 0 &amp; 0 &amp; |&amp; 12\\
+0 &amp; \color{red}\textbf{1} &amp; -1.25 &amp; 0.25 &amp; 0 &amp; | &amp; 15\\
+\hline
+0 &amp; \color{red}\textbf{0} &amp; 0.0125 &amp; 0.0375 &amp; 1 &amp; |&amp; 14.25
+\end{bmatrix}\]</span>
+<p>Finally, we convert the 0.4 into a 0 by performing the operation <span class="math inline">\(R_1-0.4R_2\mapsto R_1\)</span>. The new tableau becomes:</p>
+<span class="math display">\[\begin{bmatrix}
+x &amp; y &amp; s_1&amp;s_2&amp;P &amp; | \\
+\hline
+1 &amp; \color{red}\textbf{0} &amp; 0.7 &amp; 0.1 &amp; 0 &amp; |&amp; 6\\
+0 &amp; \color{red}\textbf{1} &amp; -1.25 &amp; 0.25 &amp; 0 &amp; | &amp; 15\\
+\hline
+0 &amp; \color{red}\textbf{0} &amp; 0.0125 &amp; 0.0375 &amp; 1 &amp; |&amp; 14.25
+\end{bmatrix}\]</span>
+<p>Notice now that there is no negative entry on the last row. You can now read off the solutions from the columns with 1’s and 0’s.</p>
+<span class="math display">\[\begin{align}
+x&amp;=6\\
+y&amp;=15
+\end{align}\]</span>
+<p>Which means that the <strong>optimal production policy</strong> will be manufacturing 6 skateboards and 15 dolls. The maximum profit will be: <span class="math inline">\(P=1.00(6)+0.55(15)=\$14.25\)</span>.</p>
+<p>The profit can also be read off directly from the tableau above since the P column has only 0’s and 1’s.</p>
+<p>The above solution is exactly the as the one obtained using the geometric method in the previous chapter.</p>
+</section>
+<section id="exercises" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.4</span> Exercises</h2>
+<ol type="1">
+<li>Consider the following tableau and answer the questions thereafter. Perform row operations to achieve the the results in (a) to (c):</li>
+</ol>
+<span class="math display">\[\begin{bmatrix}
+x_1 &amp; x_2 &amp; x_3 &amp; s_1 &amp; s_2 &amp; s_3 &amp;P &amp; |&amp;2\\
+\hline
+1 &amp; 0 &amp; 7 &amp; 1 &amp; 0 &amp; 0 &amp;0&amp; |&amp;5 \\
+0 &amp; 1 &amp; 5 &amp; 0 &amp; 1 &amp; 0&amp;0&amp; |&amp;8\\
+3 &amp; 1 &amp; 6 &amp; 0 &amp; 0 &amp; 1&amp;0&amp; |&amp;19\\
+\hline
+-2 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; 0&amp;1&amp; |&amp;0
+\end{bmatrix}\]</span>
+<ol type="a">
+<li>Convert the 3 in row 3 into a 1.<br><br></li>
+<li>Using the tableau in (a) convert the 1 in row 1 into a 0.<br><br></li>
+<li>Convert the -2 in row 4 of the tableau in (b) into a zero.<br><br></li>
+</ol>
+<ol start="2" type="1">
+<li><p>Find the pivot column, row, and element for the each of the following tableaux:</p>
+<ol type="a">
+<li></li>
+</ol>
+<span class="math display">\[\begin{bmatrix}
+x_1 &amp; x_2 &amp; x_3 &amp; s_1 &amp; s_2 &amp; s_3&amp; P&amp; |&amp;\\
+\hline
+7 &amp; 1 &amp; 4 &amp; 1 &amp; 0 &amp; 0&amp; 0 &amp; |&amp;9\\
+0 &amp; 1 &amp; 5 &amp; 0 &amp; 1 &amp; 0&amp; 0&amp; |&amp;3\\
+3 &amp; 1 &amp; 6 &amp; 0 &amp; 0 &amp; 1&amp; 0&amp; |&amp;2\\
+1 &amp; 0 &amp; 7 &amp; 0 &amp; 0 &amp; 0 &amp; 0&amp; |&amp;1\\
+\hline
+4 &amp; -3 &amp; -7 &amp; 0 &amp; 0 &amp; 0&amp; 1&amp; |&amp;0
+\end{bmatrix}\]</span>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<span class="math display">\[\begin{bmatrix}
+x_1 &amp; x_2 &amp; x_3 &amp; s_1 &amp; s_2 &amp; s_3&amp; P&amp; |&amp;\\
+\hline
+4 &amp; 1 &amp; 3 &amp; 1 &amp; 0 &amp; 0&amp; 0 &amp; |&amp;9\\
+0 &amp; 6 &amp; 17 &amp; 0 &amp; 1 &amp; 0&amp; 0&amp; |&amp;3\\
+1 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; 1&amp; 0&amp; |&amp;2\\
+7 &amp; 9 &amp; 3 &amp; 0 &amp; 0 &amp; 0 &amp; 1&amp; |&amp;1\\
+\hline
+1 &amp; -3 &amp; -2 &amp; 0 &amp; 0 &amp; 0&amp; 1&amp; |&amp;0
+\end{bmatrix}\]</span></li>
+<li><p>Create an initial tableau from each of the following set of constraint inequalities and the given profit function:<br></p>
+<ol type="a">
+<li><p><span class="math inline">\(P=x+y\)</span> <br> <span class="math inline">\(-x+y\le4\)</span> <br> <span class="math inline">\(2x+y\le20\)</span> <br> <span class="math inline">\(2x-y\le2\)</span> <br></p></li>
+<li><p><span class="math inline">\(P = 4x_1 + x_3 + x_3\)</span> <br> <span class="math inline">\(x_1 + 2x_2 + 3x_3 \le 6\)</span> <br> <span class="math inline">\(2x_1 + x_2 + x_3 \le3\)</span> <br> <span class="math inline">\(x_1 + x_2 + x_3 \le2\)</span> <br></p></li>
+<li><p><span class="math inline">\(P = 2x_1 + 2x_3 + 5x_3\)</span> <br> <span class="math inline">\(x_1 + x_3 \le 2\)</span> <br> <span class="math inline">\(x_2 + x_3 \le 4\)</span> <br> <span class="math inline">\(x_1 + 2x_3 \le 3\)</span> <br></p></li>
+</ol></li>
+</ol>
+<!-- -->
+<ol start="4" type="1">
+<li><p>For the following tableaus, write the constraint inequalities and the profit function.<br></p>
+<ol type="a">
+<li></li>
+</ol>
+<span class="math display">\[\begin{bmatrix}
+x_1 &amp; x_2 &amp; x_3 &amp; s_1 &amp; s_2 &amp; s_3 &amp;P &amp;|&amp; \\
+\hline
+3 &amp; 1 &amp; 5 &amp; 1 &amp; 0 &amp; 0&amp;0 &amp;|&amp; 12 \\
+4 &amp; 0 &amp; 2 &amp; 0 &amp; 1 &amp; 0&amp;0 &amp;|&amp; 7\\
+6 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1&amp;0 &amp;|&amp; 13\\
+\hline
+-9 &amp; -3 &amp; 1 &amp; 0 &amp; 0 &amp; 0&amp;1 &amp;|&amp; 0
+\end{bmatrix}\]</span>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<span class="math display">\[\begin{bmatrix}
+x_1 &amp; x_2 &amp; x_3 &amp; s_1 &amp; s_2 &amp; s_3 &amp;P &amp;|&amp; \\
+\hline
+2 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0&amp;0 &amp;|&amp; 12 \\
+5 &amp; 1 &amp; 5 &amp; 0 &amp; 1 &amp; 0&amp;0 &amp;|&amp; 7\\
+6 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; 1&amp;0 &amp;|&amp; 13\\
+\hline
+3 &amp; -2 &amp; 1 &amp; 0 &amp; 0 &amp; 0&amp;1 &amp;|&amp; 0
+\end{bmatrix}\]</span></li>
+</ol>
+<!-- -->
+<ol start="5" type="1">
+<li>Create the inequalities, profit function, and the initial tableau for the following scenario: <br><br> A farmer has 100 acres of land on which she plans to grow wheat and corn. Each acre of wheat requires 4 hours of labor and $20 of capital, and each acre of corn requires 16 hours of labor and $40 of capital. The farmer has at most 800 hours of labor and $2400 of capital available. The profit from an acre of wheat is $80 and from an acre of corn is $100. The farmer needs to maximize her profit.</li>
+</ol>
+<!-- -->
+<ol start="6" type="1">
+<li><p>Solve the following LP problems using the simplex method:<br></p>
+<ol type="a">
+<li>Maximize <span class="math inline">\(P=x+y\)</span> subject to:<br></li>
+</ol>
+<span class="math display">\[\begin{align}
+-x+y &amp;\le4 \\
+2x+y &amp;\le20\\
+2x-y &amp;\le2
+\end{align}\]</span>
+<ol start="2" type="a">
+<li>Maximize <span class="math inline">\(P = 4x_1 + x_3 + x_3\)</span> subject to:<br></li>
+</ol>
+<span class="math display">\[\begin{align}
+x_1 + 2x_2 + 3x_3 \le 6\\
+2x_1 + x_2 + x_3 \le3 \\
+x_1 + x_2 + x_3 \le2
+\end{align}\]</span></li>
+</ol>
+<!-- -->
+<ol start="7" type="1">
+<li><p>A factory manufactures chairs, tables and bookcases each requiring the use of three operations: Cutting, Assembly, and Finishing. The first operation can be used at most 600 hours; the second at most 500 hours; and the third at most 300 hours. A chair requires 1 hour of cutting, 1 hour of assembly, and 1 hour of finishing; a table needs 1 hour of cutting, 2 hours of assembly, and 1 hour of finishing; and a bookcase requires 3 hours of cutting, 1 hour of assembly, and 1 hour of finishing. If the profit is $20 per unit for a chair, $30 for a table, and $25 for a bookcase, how many units of each should be manufactured to maximize profit?</p></li>
+<li><p>How many acres of each crop should the farmer in problem 5 above plant to maximize her profit? Use the simplex method and show all the steps.</p></li>
+</ol>
 
 
 </section>

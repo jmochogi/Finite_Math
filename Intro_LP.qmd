@@ -1,3 +1,28 @@
 ---
 title: "Intro to Linear Programming"
 ---
+
+Here are the matrices styles for the Simplex Method section of the book. Shows how to color the elements in a matric to illustrate the pivot element (row and column).
+
+Here is the first one:
+
+```{=tex}
+\begin{bmatrix}
+1 & 2 & 3 \\
+\color{red}4 & \color{red}5 & \color{red}6 \\
+7 & 8 & 9
+\end{bmatrix}
+
+```
+
+And here is another one:
+
+```{=tex}
+\begin{bmatrix}
+1 & \color{red}2 & 3 \\
+4 & \color{red}5 & 6 \\
+7 & \color{red}8 & 9
+\end{bmatrix}
+
+```
+

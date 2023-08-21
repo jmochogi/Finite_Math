@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Intro_LP.html" rel="next">
+<link href="./Geometric_Method.html" rel="next">
 <link href="./ROC.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -61,6 +61,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -150,26 +152,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Intro_LP.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geometric Method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Transportation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
   </div>
 </li>
       </ul>
@@ -186,19 +182,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Simple_Interest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Compound_Interest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Annuities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
   </div>
 </li>
       </ul>
@@ -206,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -225,10 +221,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#equation-of-a-line" id="toc-equation-of-a-line" class="nav-link active" data-scroll-target="#equation-of-a-line"><span class="header-section-number">4.1</span> Equation of a Line</a></li>
-  <li><a href="#parallel-intersecting-lines" id="toc-parallel-intersecting-lines" class="nav-link" data-scroll-target="#parallel-intersecting-lines"><span class="header-section-number">4.2</span> Parallel Intersecting Lines</a></li>
-  <li><a href="#graphin-linear-functions" id="toc-graphin-linear-functions" class="nav-link" data-scroll-target="#graphin-linear-functions"><span class="header-section-number">4.3</span> Graphin Linear Functions</a></li>
-  <li><a href="#systems-of-equations" id="toc-systems-of-equations" class="nav-link" data-scroll-target="#systems-of-equations"><span class="header-section-number">4.4</span> Systems of Equations</a></li>
+  <li><a href="#intersecting-lines" id="toc-intersecting-lines" class="nav-link active" data-scroll-target="#intersecting-lines"><span class="header-section-number">4.1</span> Intersecting Lines</a></li>
+  <li><a href="#systems-of-equations" id="toc-systems-of-equations" class="nav-link" data-scroll-target="#systems-of-equations"><span class="header-section-number">4.2</span> Systems of Equations</a></li>
   </ul>
 </nav>
     </div>
@@ -252,17 +246,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="equation-of-a-line" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="equation-of-a-line"><span class="header-section-number">4.1</span> Equation of a Line</h2>
+<section id="intersecting-lines" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="intersecting-lines"><span class="header-section-number">4.1</span> Intersecting Lines</h2>
+<p>As you saw earlier, graphs are one of the ways commonly used to represent linear functions. By examining graphs of linear functions, we learn a lot about the function. For example, we can quickly tell whether a function is increasing (positive slope), decreasing (negative slope) or neither (zero slope). We can also get a sense of how fast the output values are changing with change in the input values. In order to leverage this benefit of graphs to compare multiple linear functions, it is often helpful to graph the functions on the same grid.</p>
+<p><strong>Consider the claim below:</strong></p>
+<p>If two linear functions with <strong>different</strong> rates of change are graphed on the same grid, then, the lines must intersect at some point. Do you think this claim is true? Why or why not?</p>
+<p>In the world of business and economics, <strong>supply</strong> and <strong>demand</strong> problems are sometimes modeled using linear functions. When the demand and supply meet (intersect) we have an equilibrium point. Consider the following example:</p>
+<p><strong>Example 1</strong></p>
+<p>The supply, in thousands of items, for custom phone cases can be modeled by the equation, <span class="math inline">\(s(p)=0.5+1.2p\)</span> while the demand can be modeled by <span class="math inline">\(d(p)=8.7−0.7p\)</span>, where p is in the price in dollars. Find the equilibrium price and quantity, the intersection of the supply and demand curves.</p>
+<p><strong><em>Solution</em></strong></p>
+<p>There are two ways to solve this problem. First, you can set up <span class="math inline">\(s(p)=d(p)\)</span> then solve algebraically for <span class="math inline">\(p\)</span> or simply graph the two functions then look at the point of intersection.</p>
+<p>Let us do both.</p>
+<p><em>Graphical solution</em> :</p>
+<p>For the graphical solution, you simply graph the two functions (you can use tools such as desmos or geogebra) and read out the coordinates of the intersection point.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="LF_Applications_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The approximate point of intersection for the graphs is <span class="math inline">\((4.3,5.6)\)</span>. You can get more accurate values using technology. This intersection is a pair <span class="math inline">\((x,y)\)</span> where the first number is the price (input) and the second if the quantity (output).</p>
+<p><em>Algebraic solution</em>:</p>
+<span class="math display">\[\begin{align}
+  0.5+1.2p&amp;=8.7−0.7p\\ \\
+  1.2p+0.7p&amp;=8.7-0.5\\ \\
+  1.9p&amp;=8.2\\ \\
+  p&amp;=\frac{8.2}{1.9}\\ \\
+  &amp;=4.32
+\end{align}\]</span>
+<p>Thus, the equilibrium price is approximately $4.32.</p>
+<p>To find the quantity associated with this price, use any of the two functions to evaluate the output at <span class="math inline">\(p=4.32\)</span>. It does not matter which function you use because both of them have the same output value at the point of intersection (a shared point).</p>
+<span class="math display">\[\begin{align}
+s(4.32)&amp;=0.5+(1.2\times 4.32)\\ \\
+&amp;= 5.68
+\end{align}\]</span>
+<p>Thus, the two approaches give us the same solution.</p>
 </section>
-<section id="parallel-intersecting-lines" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="parallel-intersecting-lines"><span class="header-section-number">4.2</span> Parallel Intersecting Lines</h2>
-</section>
-<section id="graphin-linear-functions" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="graphin-linear-functions"><span class="header-section-number">4.3</span> Graphin Linear Functions</h2>
-</section>
-<section id="systems-of-equations" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="systems-of-equations"><span class="header-section-number">4.4</span> Systems of Equations</h2>
+<section id="systems-of-equations" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="systems-of-equations"><span class="header-section-number">4.2</span> Systems of Equations</h2>
 
 
 </section>
@@ -508,8 +528,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Intro_LP.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Linear Programming</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Geometric_Method.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
