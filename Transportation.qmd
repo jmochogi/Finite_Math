@@ -2,7 +2,7 @@
 title: "The Transportation Problem"
 ---
 
-## Introduction
+## [Introduction]{style="color:#4166f5;"}
 
 Consider the following scenarios:
 
@@ -66,7 +66,7 @@ Shipment \hspace{.05in}Cost&= 2(8)+6(9)+1(15)+1(3)+1(5)\\
 
 In case you are wondering how we came up with the above shipment plan, it means you are paying close attention. That is a good thing. The next section presents a method know as **Northwest corner rule** that we can use to find a feasible solution. the method does not use the associated costs and so may not guarantee an optimal solution.
 
-## The Northwest Corner Rule
+## [The Northwest Corner Rule]{style="color:#4166f5;"}
 
 The northwest corner rule (NWCR) leverages the geometry of the table to identify a feasible shipment plan. It works by reducing the initial tableau step by step until one cell remains. Below are the steps of the rule:
 
@@ -98,20 +98,19 @@ Observe that there are exactly 5 cells through which we are shipping. This is on
 
 The cost of this new shipment plan is,
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Shipment \hspace{.05in}Cost&= 3(8)+5(9)+1(1)+1(3)+1(5)\\
 &=24+45+1+3+5\\
 &=78
-\end{align}
-```
-Notice that this cost is smaller than what we had earlier (93). The question that still remains is,
+\end{aligned}
+$$ Notice that this cost is smaller than what we had earlier (93). The question that still remains is,
 
 ***Is this the cheapest solution? How can we be absolutely sure about this?***
 
 It turns out that this is still ***not the cheapest***. There is an algorithm called the ***Stepping Stone Method*** that will guarantee an optimal solution (i.e., the cheapest shipment plan).
 
-## The Stepping Stone Method
+## [The Stepping Stone Method]{style="color:#4166f5;"}
 
 Before we look at the stepping stone method, we define the term ***indicator value***.
 
@@ -129,25 +128,23 @@ Notice that the circuit has alternating $+$ and $-$ signs. We can ship $1$ unit 
 
 By using this alternative tableau, we get a cost of $70$. See below:
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Shipment \hspace{.05in}Cost&= 3(8)+4(9)+1(1)+2(3)+1(3)\\
 &=24+36+1+6+3\\
 &=70
-\end{align}
-```
-The difference in cost between this new tableau and the original one is $-8$. Thus, the indicator value of this cell is $-8$.
+\end{aligned}
+$$ The difference in cost between this new tableau and the original one is $-8$. Thus, the indicator value of this cell is $-8$.
 
 Alternatively, we can compute the indicator values directly from the circuit as follows:
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Indicator \hspace{.05in}Value&= 1(3)-1(9)+1(3)-1(5)\\
 &=3-9+3-5\\
 &=-8
-\end{align}
-```
-We use 1 unit for each cell cost because that is the amount we are moving around thr circuit.
+\end{aligned}
+$$ We use 1 unit for each cell cost because that is the amount we are moving around thr circuit.
 
 Some things to Note;
 
@@ -161,14 +158,13 @@ Now, we need to compute the indicator values for the rest of the cells.
 
 Indicator value computation for cell $(II,3)$ is shown below: ![First tableau](images/n.jpeg)
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Indicator \hspace{.05in}Value&= 1(12)-1(1)+1(3)-1(5)\\
 &=12-1+3-5\\
 &=+9
-\end{align}
-```
-The positive indicator value means that shipping through that cell adds the cost. So, this does not help.
+\end{aligned}
+$$ The positive indicator value means that shipping through that cell adds the cost. So, this does not help.
 
 Notice that the indicator values for the other two cells based on our initial tableau are also positive. So, our best tableau at the moment is the second figure in example 3 above. We ask ourselves, can we improve this tableau any further? It turns out that the only cell with negative indicator value based this new tableau is $(III, 1)$. See figure below:
 
@@ -176,14 +172,13 @@ Notice that the indicator values for the other two cells based on our initial ta
 
 With this new tableau, all the empty cells have positive indicator values and so we cannot improve any further. We now have an ***optimal shipping plan***. The cost of the plan is
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Shipment \hspace{.05in}Cost&= 1(8)+6(9)+1(3)+1(1)+2(1)\\
 &=8+54+3+1+2\\
 &=68
-\end{align}
-```
-The above process is called the ***stepping stone method***. You check indicator values at every step until all cells have positive indicators values, which means the solution cannot be improved any further.
+\end{aligned}
+$$ The above process is called the ***stepping stone method***. You check indicator values at every step until all cells have positive indicators values, which means the solution cannot be improved any further.
 
 **Example 4** (Adopted from *For All Practical Purposes, 10th Edition*)
 
@@ -199,46 +194,45 @@ b\) If the feasible solution in part (a) is not optimal, find an optimal solutio
 
 Applying the northwest corner rule, we get the following tableau: ![First tableau](images/q.jpeg){width="70%"}
 
-a\) Note that the rim conditions are satisfied. The solution for this shipping plan would be \begin{align}
+a\) Note that the rim conditions are satisfied. The solution for this shipping plan would be $$
+\begin{aligned}
 Cost&=2(6)+3(9)+2(3)+4(5)\\
 &= 12+27+6+20\\
 &=65
-\end{align}
-
-b\) To determine whether the solution in (a) is optimal, we compute the indicator values for each of the empty cells:
+\end{aligned}
+$$ b) To determine whether the solution in (a) is optimal, we compute the indicator values for each of the empty cells:
 
 For cell $(II,1)$,
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Indicator \hspace{.05in}Value
 &=+1-6+3-5\\
 &=-7
-\end{align}
-```
+\end{aligned}
+$$
+
 For cell $(II,2)$,
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Indicator \hspace{.05in}Value
 &=+7-5+3-9\\
 &=-4
-\end{align}
-```
-The negative indicator values mean that the solution we have is not optimal. We can improve it.
+\end{aligned}
+$$ The negative indicator values mean that the solution we have is not optimal. We can improve it.
 
 Let us ship via $(II,1)$. The new tableau for this plan is, ![First tableau](images/s.jpeg){width="70%"}
 
 And the associated cost is,
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Shipment \hspace{.05in}Cost
 &=2(1)+2(5)+5(3)+3(9)\\
 &=51
-\end{align}
-```
-Although this is an improved solution, the indicator value for cell $(II,2)$ is negative $(7-5+3-9=-4)$, which means we can do better.
+\end{aligned}
+$$ Although this is an improved solution, the indicator value for cell $(II,2)$ is negative $(7-5+3-9=-4)$, which means we can do better.
 
 Let us improve this by shipping via cell $(II,2)$. The new tableau becomes, ![First tableau](images/r.jpeg){width="70%" fig-align="center"}
 
@@ -246,14 +240,15 @@ Notice that with this new tableau, all empty cells have positive indicator value
 
 The cost associated with this plan is,
 
-```{=tex}
-\begin{align}
+$$
+\begin{aligned}
 Shipment \hspace{.05in}Cost
 &=2(1)+2(7)+6(3)+1(9)\\
 &=43
-\end{align}
-```
-## Exercises
+\end{aligned}
+$$
+
+## [Exercises]{style="color:#4166f5;"}
 
 1.  For each of the following tableaux, create a possible real-world setting for the problem.
 

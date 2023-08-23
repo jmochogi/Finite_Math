@@ -2,27 +2,70 @@
 title: "Intro to Linear Programming"
 ---
 
-Here are the matrices styles for the Simplex Method section of the book. Shows how to color the elements in a matric to illustrate the pivot element (row and column).
+This is basically a file I am playing around with. Will eventually delete. 
+I wonder why everything seems to be rendering just fine in this document but not on others even after I take off the problematic dollar sign.
+Here are the matrices styles for the Simplex Method section of the book. Shows how to color the elements in a matrix to illustrate the pivot element (row and column).
 
 Here is the first one:
 
-```{=tex}
+$$
 \begin{bmatrix}
 1 & 2 & 3 \\
 \color{red}4 & \color{red}5 & \color{red}6 \\
 7 & 8 & 9
 \end{bmatrix}
-
-```
+$$
 
 And here is another one:
 
-```{=tex}
+$$
 \begin{bmatrix}
 1 & \color{red}2 & 3 \\
 4 & \color{red}5 & 6 \\
 7 & \color{red}8 & 9
 \end{bmatrix}
+$$
 
+Now I want to perform some operations and include aligned equations:
+
+```{=tex}
+\begin{align} 
+\ S &= \int_{3}^{9}{x^2 dx}\\ 
+&= \left[\frac{x^3}{3}\right]_3^9\\ 
+&= \frac{9^3}{3}-\frac{9^3}{3}\\ 
+&= 234 
+\end{align}
+```
+```{=tex}
+\begin{align}
+Indicator \hspace{.05in}Value
+&=+7-5+3-9\\
+&=-4
+\end{align}
+```
+```{=tex}
+\begin{align}
+Indicator \hspace{.05in}Value&= 1(12)-1(1)+1(3)-1(5)\\
+&=12-1+3-5\\
+&=+9
+\end{align}
 ```
 
+$$
+\begin{aligned}
+Indicator \hspace{.05in}Value
+&=+1-6+3-5\\
+&=-7
+\end{aligned}
+$$
+
+$$
+\begin{aligned} 
+Rate\hspace{.04in} of\hspace{.04in} change &=  \frac{pop. \hspace{.04in} in \hspace{.04in} 2006 \hspace{.04in}- pop. \hspace{.04in} in \hspace{.04in} 2002}{2006-2002}\\\\&= 1100\hspace{.04in} people\hspace{.04in} per \hspace{.04in} year
+\end{aligned}
+$$
+$$
+\begin{aligned}
+f(22) &= 1100\times22+23,400\\\\&=47,600
+\end{aligned}
+$$

@@ -118,13 +118,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
-</head><body class="nav-sidebar floating">\usepackage{amsmath} \usepackage{tcolorbox}
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+</head>
 
-
-
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -257,16 +256,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-to-linear-programming" id="toc-introduction-to-linear-programming" class="nav-link active" data-scroll-target="#introduction-to-linear-programming"> <span class="header-section-number">5.1</span> <span style="color:#4166f5;">Introduction to linear Programming</span></a></li>
-  <li><a href="#mixture-problems-charts" id="toc-mixture-problems-charts" class="nav-link" data-scroll-target="#mixture-problems-charts"> <span class="header-section-number">5.2</span> <span style="color:#4166f5;">Mixture Problems &amp; Charts</span></a></li>
-  <li><a href="#the-geometric-method" id="toc-the-geometric-method" class="nav-link" data-scroll-target="#the-geometric-method"> <span class="header-section-number">5.3</span> <span style="color:#4166f5;">The Geometric Method</span></a>
+  <li><a href="#introduction-to-linear-programming" id="toc-introduction-to-linear-programming" class="nav-link active" data-scroll-target="#introduction-to-linear-programming"> <span class="header-section-number">5.1</span> Introduction to linear Programming</a></li>
+  <li><a href="#mixture-problems-charts" id="toc-mixture-problems-charts" class="nav-link" data-scroll-target="#mixture-problems-charts"> <span class="header-section-number">5.2</span> Mixture Problems &amp; Charts</a></li>
+  <li><a href="#the-geometric-method" id="toc-the-geometric-method" class="nav-link" data-scroll-target="#the-geometric-method"> <span class="header-section-number">5.3</span> The Geometric Method</a>
   <ul class="collapse">
-  <li><a href="#converting-mixture-chart-into-mathematical-form" id="toc-converting-mixture-chart-into-mathematical-form" class="nav-link" data-scroll-target="#converting-mixture-chart-into-mathematical-form"> <span class="header-section-number">5.3.1</span> <span style="color:#4166f5;">Converting Mixture Chart into Mathematical Form</span></a></li>
-  <li><a href="#representing-the-feasible-region" id="toc-representing-the-feasible-region" class="nav-link" data-scroll-target="#representing-the-feasible-region"> <span class="header-section-number">5.3.2</span> <span style="color:#4166f5;">Representing the Feasible Region</span></a></li>
-  <li><a href="#the-corner-point-principle" id="toc-the-corner-point-principle" class="nav-link" data-scroll-target="#the-corner-point-principle"> <span class="header-section-number">5.3.3</span> <span style="color:#4166f5;">The Corner Point Principle</span></a></li>
-  <li><a href="#summary-of-the-geometric-method" id="toc-summary-of-the-geometric-method" class="nav-link" data-scroll-target="#summary-of-the-geometric-method"> <span class="header-section-number">5.3.4</span> <span style="color:#4166f5;">Summary of the Geometric Method</span></a></li>
+  <li><a href="#convering-mixture-chart-into-mathematical-form" id="toc-convering-mixture-chart-into-mathematical-form" class="nav-link" data-scroll-target="#convering-mixture-chart-into-mathematical-form"> <span class="header-section-number">5.3.1</span> Convering Mixture Chart into Mathematical Form</a></li>
+  <li><a href="#representing-the-feasible-region" id="toc-representing-the-feasible-region" class="nav-link" data-scroll-target="#representing-the-feasible-region"> <span class="header-section-number">5.3.2</span> Representing the Feasible Region</a></li>
+  <li><a href="#the-corner-point-principle" id="toc-the-corner-point-principle" class="nav-link" data-scroll-target="#the-corner-point-principle"> <span class="header-section-number">5.3.3</span> The Corner Point Principle</a></li>
+  <li><a href="#summary-of-the-geometric-method" id="toc-summary-of-the-geometric-method" class="nav-link" data-scroll-target="#summary-of-the-geometric-method"> <span class="header-section-number">5.3.4</span> Summary of the Geometric Method</a></li>
   </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"> <span class="header-section-number">5.4</span> <span style="color:#4166f5;">Exercises</span></a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"> <span class="header-section-number">5.4</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -290,12 +289,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <section id="introduction-to-linear-programming" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="introduction-to-linear-programming"><span class="header-section-number">5.1</span> <span style="color:#4166f5;">Introduction to linear Programming</span></h2>
+<h2 data-number="5.1" class="anchored" data-anchor-id="introduction-to-linear-programming"><span class="header-section-number">5.1</span> Introduction to linear Programming</h2>
 <p>Managers are often called upon to make complicated decisions. For example, production managers often make decisions on what products to manufacture and in what quantities. In making such decisions, the manager must consider the available resources and how to utilize them for maximum profit. Note that resources are not limited to raw materials. They can include labor (human hours), farmland, machinery, etc. Resources, in general, are always limited and management must decide how to allocate them in order to get the maximum possible profit.</p>
 <p>Linear programming (LP) is one of the most important methods used in management science to solve problems of the kind describe above. LP involves maximizing or minimizing a quantity, usually profit or cost, under some given constraints.</p>
 </section>
 <section id="mixture-problems-charts" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="mixture-problems-charts"><span class="header-section-number">5.2</span> <span style="color:#4166f5;">Mixture Problems &amp; Charts</span></h2>
+<h2 data-number="5.2" class="anchored" data-anchor-id="mixture-problems-charts"><span class="header-section-number">5.2</span> Mixture Problems &amp; Charts</h2>
 <p>A mixture problem is a problem which includes combining limited resources to manufacture products that will generate maximum profit for the company.</p>
 <p>These problems are common because most products that we use involve combining multiple resources in their production. Although there are other considerations in making production decisions, availability of resources is one of the most important constraints.</p>
 <p>An <strong><em>optimal production policy (OPP)</em></strong> is a policy that,</p>
@@ -319,9 +318,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <table class="table">
 <caption><strong>Mixture Chart for dolls and skateboards problem</strong></caption>
 <colgroup>
-<col style="width: 27%">
-<col style="width: 45%">
 <col style="width: 26%">
+<col style="width: 48%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -354,13 +353,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 </section>
 <section id="the-geometric-method" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="the-geometric-method"><span class="header-section-number">5.3</span> <span style="color:#4166f5;">The Geometric Method</span></h2>
+<h2 data-number="5.3" class="anchored" data-anchor-id="the-geometric-method"><span class="header-section-number">5.3</span> The Geometric Method</h2>
 <p>The geometric method of solving linear programming problems involves creating a graph to visualize the <strong>feasible region</strong> (the set of likely solutions) and then identifying the correct solution from the feasible region. Since the inequalities involve linear functions, the feasible region is polygonal in shape. The type of polygon formed (triangle, quadrilateral, pentagon, etc) depends on the number of constraints you have.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">A</span> <span class="er">feasible</span> <span class="er">set</span> <span class="er">(region)</span> <span class="er">for</span> <span class="er">an</span> <span class="er">LP</span> <span class="er">problem</span> <span class="er">is</span> <span class="er">the</span> <span class="er">collection</span> <span class="er">of</span> <span class="er">all</span> <span class="er">physical</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">possible</span> <span class="er">solution</span> <span class="er">choices</span> <span class="er">that</span> <span class="er">can</span> <span class="er">be</span> <span class="er">made.</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Let us proceed with the solution to Example 1. We will start by converting the problem into mathematical terms (inequalities and equations), creating a feasible region, and then use a technique called the <strong>corner point principle</strong> to choose the best solution from the feasible region.</p>
-<section id="converting-mixture-chart-into-mathematical-form" class="level3" data-number="5.3.1">
-<h3 data-number="5.3.1" class="anchored" data-anchor-id="converting-mixture-chart-into-mathematical-form"><span class="header-section-number">5.3.1</span> <span style="color:#4166f5;">Converting Mixture Chart into Mathematical Form</span></h3>
+<section id="convering-mixture-chart-into-mathematical-form" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="convering-mixture-chart-into-mathematical-form"><span class="header-section-number">5.3.1</span> Convering Mixture Chart into Mathematical Form</h3>
 <p>First, we know that we cannot manufacture negative number of objects (skateboards of dolls). So, negative numbers are not permitted in this context. Note however, that 0 is a possible number. Thus, we have two inequalities;</p>
 <p><span class="math display">\[x \ge 0 \hspace{.04in} \text{and} \hspace{.04in} y \ge 0\]</span></p>
 <p>The symbol <span class="math inline">\(&gt;\)</span> means grater than while <span class="math inline">\(\ge\)</span> means greater than or equal to.</p>
@@ -373,7 +372,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[P=1x+0.55y\]</span> Notice that the objective function is an <strong>equation</strong> (not inequality) that gives a <strong>specific</strong> amount of profit as we vary the number of skateboards and dolls. In other words, <span class="math inline">\(P\)</span> changes as we change <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So we can determine the value of <span class="math inline">\(x\)</span> and<span class="math inline">\(y\)</span> that would produce maximum <span class="math inline">\(P\)</span>.</p>
 </section>
 <section id="representing-the-feasible-region" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="representing-the-feasible-region"><span class="header-section-number">5.3.2</span> <span style="color:#4166f5;">Representing the Feasible Region</span></h3>
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="representing-the-feasible-region"><span class="header-section-number">5.3.2</span> Representing the Feasible Region</h3>
 <p>After creating the inequalities from the mixture chart, we can draw a picture to help us visualize the feasible region geometrically. Graphs are the most commonly used tools for visualizing the feasible region.</p>
 <p>Notice that all the three inequalities (i.e., the minimum and resource constraints) are linear in the sense that when you graph them (assuming an equal sign) you will get a straight line. To take care of the fact that the inequalities admit a broad range of values, we,</p>
 <ol type="a">
@@ -392,25 +391,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>All points within the region labelled “feasible region” are possible solutions to our problem in the sense that they do not violate the constraints. For example, the feasible point <span class="math inline">\((8,4)\)</span> requires the company to manufacture 8 skateboards and 4 dolls. This “solution” does not violate any of the constraints given in the problem. To find the profit associated with this point, we use the objective (profit) function to compute the profit as follows:</p>
-<p>$$</p>
-<p><span class="math display">\[\begin{align}
+<span class="math display">\[\begin{align}
 P&amp;=x+0.55y\\
 &amp;=8+(0.55\times 4)\\
 &amp;=\$10.20
-\end{align}\]</span></p>
-<p>$$</p>
+\end{align}\]</span>
 <p>Now, it is easy to show that there is a different point within the feasible region that would yield a higher profit while still obeying the constraints. Take, for example, the point <span class="math inline">\((2,20)\)</span> which means 2 skateboards and 20 dolls. The profit for this choice would be higher. See below:</p>
-<p>$$</p>
-<p><span class="math display">\[\begin{align}
+<span class="math display">\[\begin{align}
 P&amp;=1.00 x+0.55y\\
 &amp;=2+(0.55\times 20)\\
 &amp;=\$13.0
-\end{align}\]</span></p>
-<p>$$</p>
+\end{align}\]</span>
 <p>Choosing a point in the feasible region that would result in maximum profit (optimal production policy) is not a trivial task. However, there is an genius technique known as <strong><em>The Corner Point Principle</em></strong> which we discuss next.</p>
 </section>
 <section id="the-corner-point-principle" class="level3" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="the-corner-point-principle"><span class="header-section-number">5.3.3</span> <span style="color:#4166f5;">The Corner Point Principle</span></h3>
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="the-corner-point-principle"><span class="header-section-number">5.3.3</span> The Corner Point Principle</h3>
 <p>The corner point principle has been touted as one of the most important insights into the theory of linear programming. The principle states that,</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">In</span> <span class="er">a</span> <span class="er">linear</span> <span class="er">programming</span> <span class="er">problem,</span> <span class="er">the</span> <span class="er">maximum</span> <span class="er">value</span> <span class="er">for</span> <span class="er">the</span> <span class="er">profit</span> <span class="er">formula</span> <span class="er">always</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">corresponds</span> <span class="er">to</span> <span class="er">a</span> <span class="er">corner</span> <span class="er">point</span> <span class="er">of</span> <span class="er">the</span> <span class="er">feasible</span> <span class="er">region.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -422,7 +417,7 @@ P&amp;=1.00 x+0.55y\\
 <p><strong>NOTE</strong>: In the real world, there would be a lot more corners which would make this process cumbersome. However, as mentioned earlier, there are computer programs that can do the job faster and more efficiently than humans.</p>
 </section>
 <section id="summary-of-the-geometric-method" class="level3" data-number="5.3.4">
-<h3 data-number="5.3.4" class="anchored" data-anchor-id="summary-of-the-geometric-method"><span class="header-section-number">5.3.4</span> <span style="color:#4166f5;">Summary of the Geometric Method</span></h3>
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="summary-of-the-geometric-method"><span class="header-section-number">5.3.4</span> Summary of the Geometric Method</h3>
 <ol type="1">
 <li>Read the problem carefully to identify resources and products.</li>
 <li>Make a mixture chart for the problem.</li>
@@ -433,7 +428,7 @@ P&amp;=1.00 x+0.55y\\
 </ol>
 <p>In the next example, we extend the toy problem above to include one more resource (person minutes). Read below:</p>
 <p><strong>Example 2</strong></p>
-<p>A toy manufacturer can manufacture only skateboards and, only dolls, or some kind of skateboards and dolls. Skateboards require 5 units of plastic and can be sold for a profit of $ 1, while dolls require 2 units of plastic and can be sold for $0.55 profit. Only 60 units of plastic are available. Furthermore, making one skateboard requires 15 person-minutes while making one doll requires 18-person minutes. There are only 360 person-minutes available.</p>
+<p>A toy manufacturer can manufacture only skateboards and, only dolls, or some kind of skateboards and dolls. Skateboards require 5 units of plastic and can be sold for a profit of $ 1, while dolls require 2 units of plastic and can be sold for $0.55 profit. Only 60 units of plastic are available. Furthermore, making one skateboard requires 15 person-minutes while making one doll requires 18-person minutes. There are only 360person person-minutes available.</p>
 <ol type="a">
 <li>Make a mixture chart to model this situation.</li>
 <li>What numbers of skateboards and/or dolls should the company make to maximize profit?</li>
@@ -444,7 +439,7 @@ P&amp;=1.00 x+0.55y\\
 </ol>
 <table class="table">
 <colgroup>
-<col style="width: 26%">
+<col style="width: 27%">
 <col style="width: 24%">
 <col style="width: 24%">
 <col style="width: 24%">
@@ -490,7 +485,7 @@ P&amp;=1.00 x+0.55y\\
 </section>
 </section>
 <section id="exercises" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.4</span> <span style="color:#4166f5;">Exercises</span></h2>
+<h2 data-number="5.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.4</span> Exercises</h2>
 <p>For each description in exercises 1-4, create a mixture table and write one or more resource constraint inequalities. The unknown to use for each product is given in parenthesis:</p>
 <ol type="1">
 <li>Manufacturing one package of hot dogs(x) requires 6 oz of beef, and manufacturing one package of bologna (y) requires 4 oz of beef. There are 300 oz of beef available. <br> <br></li>

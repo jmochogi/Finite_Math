@@ -1,5 +1,9 @@
 # Preface {.unnumbered}
 
-This was made using Quarto.
+Welcome to the world of finite mathematics! This course pack has been crafted to serve as your compass through the intriguing landscape of finite mathematical concepts with an emphasis on applications. Whether you're a student seeking a solid foundation for various disciplines or an enthusiast of logical reasoning, this book will provide you with the tools and knowledge to navigate the realm of finite mathematics with confidence.
+
+Finite mathematics is a branch of mathematics that focuses on discrete, quantifiable structures and concepts. Unlike the infinite expanses of calculus or the theoretical abstractions of abstract algebra, finite mathematics deals with concrete, countable elements. It finds its applications in various fields, from computer science and engineering to business and social sciences. This diversity is a testament to the fundamental role finite mathematics plays in modern problem-solving.
+
+As you may have guessed, finite mathematics is a very broad area and it would be very hard to cover all concepts in a single book. This text covers three broad areas namely, functions, linear programming, and Mathematics of finance. The first two parts are helpful in creating mathematical models to solve real-life problems while the last part teaches you the nuances of personal finance with a heavy focus on understanding interest rates and how financial institutions leverage them stay profitable. I believe that you will learn a lot of new material that you will find helpful in your life both as a student and as a responsible citizen. 
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.

@@ -2,7 +2,7 @@
 title: "The Simplex Method"
 ---
 
-## Introduction to Simplex Method
+## [Introduction to Simplex Method]{style="color:#4166f5;"}
 
 As stated earlier, Linear Programming is one of the most commonly used methods for solving practical problems in business and even in government. However, the problems we have considered so far had a maximum of two products and relatively small feasible regions and few corner points. Many real life problems often involve much more products and result in very big feasible regions with hundreds or even thousands of corner points.
 
@@ -41,7 +41,7 @@ Next, we make the constraint inequalities assuming that the company makes $x$ ch
 
 You should try this problem on your own (see exercises) once you have understood the simplex method. For now, the step-by-step procedure of the simplex algorithm is presented.
 
-## Step-by-Step Simplex Method
+## [Step-by-Step Simplex Method]{style="color:#4166f5;"}
 
 We want to walk through the simplex method step-by-step until we find an optimal production policy and the maximum profit.
 
@@ -121,7 +121,7 @@ All the others (i.e., $(x,z,s_2)$) will be zero.
 
 This solution basically means, make 3 units of product $y$, and zero product $x$ and $z$.
 
-### Summary of the Simplex Method
+### [Summary of the Simplex Method]{style="color:#4166f5;"}
 
 Below is a summary of the simplex method for maximization problems in LP:
 
@@ -133,7 +133,7 @@ e)  Perform pivoting to make all other entries in this column zero.
 f)  When there are no more negative entries in the bottom row, we are finished; otherwise, we start again from step (d).
 g)  Read off your answers. Get the variables using the columns with 1 and 0s. All other variables are zero. The maximum value you are looking for appears in the bottom right hand corner.
 
-## A Short Trip Back
+## [A Short Trip Back]{style="color:#4166f5;"}
 
 Let us use the simplex method to solve **example 2** from the previous chapter. For your convenience the example is repeated below:
 
@@ -287,9 +287,10 @@ The profit can also be read off directly from the tableau above since the P colu
 
 The above solution is exactly the as the one obtained using the geometric method in the previous chapter.
 
-## Exercises
+## [Exercises]{style="color:#4166f5;"}
 
 1)  Consider the following tableau and answer the questions thereafter. Perform row operations to achieve the the results in (a) to (c):
+
 ```{=tex}
 \begin{bmatrix}
 x_1 & x_2 & x_3 & s_1 & s_2 & s_3 &P & |&2\\
@@ -301,9 +302,13 @@ x_1 & x_2 & x_3 & s_1 & s_2 & s_3 &P & |&2\\
 -2 & 1 & -1 & 0 & 0 & 0&1& |&0
 \end{bmatrix}
 ```
-  a) Convert the 3 in row 3 into a 1.<br><br>
-  b) Using the tableau in (a) convert the 1 in row 1 into a 0.<br><br>
-  c) Convert the -2 in row 4 of the tableau in (b) into a zero.<br><br>
+a)  Convert the 3 in row 3 into a 1.<br><br>
+b)  Using the tableau in (a) convert the 1 in row 1 into a 0.<br><br>
+c)  Convert the -2 in row 4 of the tableau in (b) into a zero.<br><br>
+
+```{=html}
+<!-- -->
+```
 2)  Find the pivot column, row, and element for the each of the following tableaux:
 
     a)  

@@ -324,8 +324,7 @@ The approximate point of intersection for the graphs is $(4.3,5.6)$. You can get
 
 7.  Find a formula for the linear equation graphed below. You can enlarge the graph by clicking on it. <br> <br>
 
-8.  An apartment manager keeps careful record of how the rent charged per unit corresponds to the number of occupied units in a large complex. The collected data is shown in the table below: <br> <br> ***Table Here***
-![Elephant](images/h.jpeg)
+8.  An apartment manager keeps careful record of how the rent charged per unit corresponds to the number of occupied units in a large complex. The collected data is shown in the table below: <br> <br> ***Table Here*** ![Elephant](images/h.jpeg)
 
     a.  Why is it reasonable to say that the number of occupied apartments is a linear function of rent? <br> <br>
     b.  Let $A$ be the number of occupied apartments and $R$ the monthly rent charged (in dollars). If we let $A=f(R)$ ,what is the slope of the linear function $f(R)$? What is the meaning of the slope in the context of this question? <br> <br>
