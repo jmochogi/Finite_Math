@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.28">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
 </style>
 
 
@@ -32,10 +37,12 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -56,6 +63,8 @@ ul.task-list{list-style: none;}
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -63,11 +72,16 @@ ul.task-list{list-style: none;}
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Simple_Interest.html">Mathematics of Finance</a></li><li class="breadcrumb-item"><a href="./Compound_Interest.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -75,127 +89,159 @@ ul.task-list{list-style: none;}
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Linear Functions</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Linear Functions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Intro_LF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intro to Linear Functions</span></a>
+  <a href="./Intro_LF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intro to Linear Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ROC.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></a>
+  <a href="./ROC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LF_Applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications</span></a>
+  <a href="./LF_Applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Linear Programming</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Linear Programming</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></a>
+  <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></a>
+  <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Transportation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></a>
+  <a href="./Transportation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Mathematics of Finance</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Mathematics of Finance</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Simple_Interest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></a>
+  <a href="./Simple_Interest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Compound_Interest.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></a>
+  <a href="./Compound_Interest.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annuities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></a>
+  <a href="./Annuities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-compound-interest" id="toc-introduction-to-compound-interest" class="nav-link active" data-scroll-target="#introduction-to-compound-interest"><span class="header-section-number">9.1</span> Introduction to Compound Interest</a></li>
+  <li><a href="#future-value-for-compound-interest" id="toc-future-value-for-compound-interest" class="nav-link" data-scroll-target="#future-value-for-compound-interest"><span class="header-section-number">9.2</span> Future value for Compound Interest</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">9.3</span> Exercises</a></li>
+  <li><a href="#growth-time-for-compound-interest" id="toc-growth-time-for-compound-interest" class="nav-link" data-scroll-target="#growth-time-for-compound-interest"><span class="header-section-number">9.4</span> Growth Time for Compound Interest</a></li>
+  <li><a href="#calculating-the-interest-rate" id="toc-calculating-the-interest-rate" class="nav-link" data-scroll-target="#calculating-the-interest-rate"><span class="header-section-number">9.5</span> Calculating the Interest Rate</a></li>
+  <li><a href="#apr-vs-apy" id="toc-apr-vs-apy" class="nav-link" data-scroll-target="#apr-vs-apy"><span class="header-section-number">9.6</span> APR vs APY</a></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"><span class="header-section-number">9.7</span> Exercises</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></h1>
 </div>
 
 
@@ -203,14 +249,264 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
+<section id="introduction-to-compound-interest" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="introduction-to-compound-interest"><span class="header-section-number">9.1</span> Introduction to Compound Interest</h2>
+<p>With simple interest, we assumed that we the interest, together with the principal amount lent out or borrowed were paid at maturity (i.e., at the end of the investment/loan period). In a standard bank account, any interest we earn is automatically added to our principal, and we earn interest on that interest in future.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Compounding">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Compounding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The idea of reinvesting earned interest is to earn further interest is referred to as compounding.</p>
+</div>
+</div>
+<p>An interesting questioning we may want to explore is, “how often does compounding happen within the life cycle of a loan or investment?”</p>
+<p>Consider the example in the previous chapter where you were lending a friend $5,000 to be paid back after one year. We found that, if you charge your friend an interest rate of 10%, they will have to pay $500 worth of interest by the end of the year. Now, if your friend keeps the money for one more year, under the compound interest arrangement, they will pay the new interest based on $ 5,500 (i.e., the original $ 5000 plus $ 500 interest from the first year). See calculation below:</p>
+<p><span class="math display">\[\begin{align}
+Interest \hspace{.05in} (Year\hspace{.05in}1)&amp;=Prt\\
+&amp;=5000 \times 0.1\times 1\\
+&amp;=\$500\\
+Total\hspace{.05in} Year\hspace{.05in}1 &amp;= 5000+500\\
+&amp;=5,500\\
+
+Interest \hspace{.05in} (Year\hspace{.05in}2)&amp;=Prt\\
+&amp;=5500 \times 0.1\times 1\\
+&amp;=\$550\\
+Total(\hspace{.05in} Year\hspace{.05in}2) &amp;= 5500+550\\
+&amp;=\$6050\\
+\end{align}\]</span></p>
+<p>You can continue with this trend for as long as your friend keeps the money. Of course, the longer they keep the money, the higher the interest hay pay. In the case where they keep the money for only two years, the end up paying an interest of <span class="math inline">\(6050-6000=\$1050\)</span>. If you had charged your friend simple interest instead of compound interest, they would have to pay an interest of $1,000 only (see computation below for simple interest).</p>
+<p><span class="math display">\[\begin{align}
+I&amp;=Prt\\
+&amp;=5000\times 0.1\times2\\
+&amp;=\$1000
+\end{align}\]</span></p>
+<p>In the above example, compounding happens once every year and so we have two compounding periods (Year 1 and Year 2) in total. If compounding were to happen every six months instead (twice a year), we would have a total of four compounding periods.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Definition: Compounding Period">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: Compounding Period
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A compounding period refers to the how often compounding happens within a year. Compounding period is also known as <strong><em>interest period</em></strong>.</p>
+</div>
+</div>
+<p>In the above example, how many compounding periods would you have in total if the compounding period were one month?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Definition: Total compounding period">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: Total compounding period
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If we let <span class="math inline">\(n\)</span> be the total number of compounding periods and <span class="math inline">\(m\)</span> be the number of periods per year, then, a loan or investment of duration <span class="math inline">\(t\)</span> years, would have <span class="math inline">\(mt\)</span> total compounding periods. <span class="math display">\[n=mt
+\]</span></p>
+</div>
+</div>
+<p>In calculating compound interest, it is important to know the interest rate per compounding period. In the above example where the interest rate is 10% with two compounding, the interest rate per period is <span class="math inline">\(i=\frac{r}{2}\)</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Interest rate per compounding period">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Interest rate per compounding period
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If we let <span class="math inline">\(r\)</span> be the annual interest rate, and <span class="math inline">\(i\)</span> be the rate per period, then, <span class="math display">\[
+i=\frac{r}{m}
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="future-value-for-compound-interest" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="future-value-for-compound-interest"><span class="header-section-number">9.2</span> Future value for Compound Interest</h2>
+<p>In the previous example, we saw that your friend would pay you a total of $ 6050 under the compound interest arrangement but only $ 6,000 under the simple interest arrangement. For the simple interest, you can get the future value directly by using teh formula <span class="math inline">\(F=P(1+rt)\)</span> from the previous chapter. For compound interest, the formula is</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Interest rate per compounding period">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Interest rate per compounding period
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+F=P(1+i)^n
+\]</span></p>
+<p>Where,</p>
+<p><span class="math inline">\(F=\)</span> Future Value</p>
+<p><span class="math inline">\(i=\)</span> interest rate per compounding period</p>
+<p><span class="math inline">\(n=\)</span> total number of compounding periods.</p>
+</div>
+</div>
+<p>Let us use the above formula to check whether we get the $6050 that we found earlier in the example where your friend borrows $5000 for two years at an interest rate of 10% compounded every year (once a year).</p>
+<p>First, we calculate the interest rate per compounding period. Since there is only one compounding period per year, <span class="math inline">\(m=1\)</span>. Thus, <span class="math inline">\(i=\frac{0.1}{1}=0.1\)</span>.</p>
+<p>Next, we compute the total number of compounding periods. Since the loan is for 2 years and there is only one compounding per year, we have <span class="math inline">\(n=mt=1\times 2=2\)</span> periods. Therefore,</p>
+<p><span class="math display">\[\begin{align}
+F&amp;=5000(1+0.1)^2\\
+&amp;=6050
+\end{align}\]</span></p>
+<p>In the above example, if we assume that the compounding happens every six months, we would have to change both <span class="math inline">\(i\)</span> and <span class="math inline">\(n\)</span> accordingly. In writing interest rates under compound interest, we often write the compounding period in parenthesis. For example, if compounsing happens every six months (twice a year), we would the rate as <span class="math inline">\(10\%(2)\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Representing Compound Interest">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Representing Compound Interest
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We write interest rate as <span class="math inline">\(r\%(m)\)</span></p>
+<p>Where,</p>
+<p><span class="math inline">\(r\%=\)</span> the raw interest rate (not divided by 100)</p>
+<p><span class="math inline">\(m=\)</span> compounding period.</p>
+</div>
+</div>
+<p><strong>Example 1</strong></p>
+<p>Suppose you open up a savings account that pays <span class="math inline">\(6\%(12)\)</span> with $1,000. How much will you have in this account after 10 years?</p>
+<p><strong><em>Solution</em></strong></p>
+<p>First, note the interest rate, <span class="math inline">\(6\%(12)\)</span>, means that compounding happens every month (12 times a year).</p>
+<p>We can calculate the interest earned in the first year first month, add it to 1000, and then calculate the interest earned in the second month, add it back ,etc but this would be a cumbersome and long process. We can use the formula given earlier:</p>
+<p>The formula is <span class="math inline">\(F=P(1-i)^n\)</span>. We know that <span class="math inline">\(P=1,000\)</span>.</p>
+<p>We find <span class="math inline">\(i=\frac{0.06}{12}=0.005\)</span> and <span class="math inline">\(n=12\times10=120\)</span></p>
+<p>We now plug in these numbers into the future value formula under compound interest as follows</p>
+<p><span class="math display">\[\begin{align}
+F&amp;=P(1+i)^n\\
+&amp;=1,000(1+0.005)^{120}\\
+&amp;=1,819.40
+\end{align}\]</span></p>
+</section>
+<section id="exercises" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.3</span> Exercises</h2>
+<ol type="1">
+<li><p>Compute the future value of $750 for 3 years at 8%(1). How much of this amount is interest?</p></li>
+<li><p>When Will was born, his grandfather bought him a $250 savings bond that paid 5%(6). When Will started college at age 18, he cashed in the savings bond. How much did Will get out of the savings bond? How much is earned as interest?</p></li>
+<li><p>Henry owes $60,000 in Direct Unsubsidized student loans to the federal government. Since he is in graduate school, his loans are in deferment. This means he does not need to pay anything while still in school, but the interest still accrues (note that this is not true for all types of loans, but it is for the type Bob has). His loans charge 6.5% and the interest is compounded monthly. Find the amount Henry owes after being in graduate school for 2 years. How much of this is the compound interest?</p></li>
+</ol>
+</section>
+<section id="growth-time-for-compound-interest" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="growth-time-for-compound-interest"><span class="header-section-number">9.4</span> Growth Time for Compound Interest</h2>
+<p>You may be interested in knowing how long your investment would take to grow to a specified target amount or how long you may take to pay off a loan. To answer such questions, we can solve for <span class="math inline">\(n\)</span> in the formula for compound interest. The formula is, <span class="math display">\[
+F=P(1+i)^n
+\]</span> Note that <span class="math inline">\(n=\)</span> total number of compounding periods. To find time in years, you will have to divide n by the number of compoundings per year (i.e., <span class="math inline">\(m\)</span>). Check out the next example,</p>
+<p><strong>Example 2</strong></p>
+<p>Suppose you open up a savings account with $1,000 that pays <span class="math inline">\(6\%(12)\)</span> interest rate. After how long will you have $1,500 in the account?</p>
+<p><strong><em>Solution</em></strong></p>
+<p>We know that <span class="math inline">\(F=1,500\)</span>, <span class="math inline">\(i=\frac{0.06}{12}=0.005\)</span>, and <span class="math inline">\(P=1,000\)</span>. We do not know <span class="math inline">\(n\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+1500&amp;=1000(1+0.005)^n\\
+\frac{1500}{1000}&amp;=(1.005)^n\\
+\text{log} (1.5)&amp;=\text{log}(1.005)^n\\
+\text{log} (1.5)&amp;=n\times \text{log}(1.005)^n\\
+\text{log} (1.5)&amp;=n\times \text{log}(1.005)\\
+n&amp;=\frac {\text{log} (1.5)}{\text{log}(1.005)}\\
+&amp;= 81.295586
+\end{align}\]</span></p>
+<p>Finally, we divide <span class="math inline">\(n\)</span> by 6 (the number of compoundings per year) to get the number of years; <span class="math display">\[\frac{81.295586}{6}=13.55 \hspace{0.05in}\text{years}.\]</span></p>
+</section>
+<section id="calculating-the-interest-rate" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="calculating-the-interest-rate"><span class="header-section-number">9.5</span> Calculating the Interest Rate</h2>
+<p>In some cases, you may want to know what interest rate will achieve your goal in a given amount of time. To compute the interest rate, you will need to know the idea of indices and roots. For example; <span class="math inline">\(2\times 2 \times 2\times 2 = 16\)</span>. Here, we say that 2 is the fourth root of 16 and can write it as <span class="math inline">\(\sqrt[4]{64}=2\)</span>. Another way to write the fourth root of 16 is <span class="math inline">\(16^{\frac{1}{4}}=2.\)</span></p>
+<p>You can use your calculator to find the <span class="math inline">\(n^{th}\)</span> root of certain numbers. Try the following:</p>
+<ul>
+<li><p>The <span class="math inline">\(4^{th}\)</span> root of <span class="math inline">\(81\)</span> can be written as _______ and equals _______.</p></li>
+<li><p>The <span class="math inline">\(7^{th}\)</span> root of <span class="math inline">\(123\)</span> can be written as _______ and equals _______.</p></li>
+<li><p>The square of 3 is 9 (i.e., <span class="math inline">\(3\times 3\)</span>). What is the square root (second root) of 9?</p></li>
+<li><p>The cube of 5 is 125. What is the cube root(third root) of 125?</p></li>
+</ul>
+<p><strong>Example 3</strong></p>
+<p>Suppose you have $1,000 to invest for 4 years. What interest rate (compounded annually) would you need in order to have $2,000 at the end of the 4 years?</p>
+<p><strong><em>Solution</em></strong></p>
+<p>Here, we know that <span class="math inline">\(p=1,000\)</span>, <span class="math inline">\(F=\$2,000\)</span>. We do not know the interest rate, <span class="math inline">\(i\)</span>, but we know it is compounded annually (once a year). Furthermore, we know that there will be 4 compounding periods in total (<span class="math inline">\(n=4\)</span>).</p>
+<p><span class="math display">\[\begin{align}
+F&amp;=P(1+i)^n\\
+2000&amp;=1000(1+i)^4\\
+\frac{2000}{1000}&amp;=(1+i)^4\\
+2&amp;=(1+i)^4\\
+{2}^{\frac{1}{4}}&amp;= (1+i)\\
+1.189&amp;=(1+i)\\
+i&amp;=0.189\\
+\end{align}\]</span></p>
+<p>Recall that we present rate as a percentage: <span class="math inline">\(0.189\times 100=18.9\%\)</span></p>
+</section>
+<section id="apr-vs-apy" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="apr-vs-apy"><span class="header-section-number">9.6</span> APR vs APY</h2>
+<p><strong>Definition:</strong> The annual percentage rate (APR) is the annual interest rate that gets compounded over a number of interest periods.</p>
+<ul>
+<li>Note that in order to compute compound interest, we need to know both the APR and how many times per year interest is compounded (e.g., in 4%(12), the 4% is the APR and the 12 is the number of times per year the interest is compounded).</li>
+</ul>
+<p><strong>Definition:</strong> The annual percentage yield (APY) is the simple interest rate that would yield the same amount of interest over one year as the compound interest rate actually gives.</p>
+<p>Since the amount of interest earned from compound interest depends on how many times it is compounded per year, it can be difficult to compare different rates with different compounding times (e.g., try to compare 7.1%(4) to 6.9%(12)). In order to make a direct comparison, we can determine the equivalent rate when compounded once per year (e.g., 7.1%(4) is equivalent yearly to 7.29%(1), while 6.9%(12) is equivalent yearly to 7.12%(1)). You can now see that 7.1%(4) is higher because it will yield more in one year than 6.9%(12). These new rates are essentially simple interest rates restricted to one year. These rates are known as APYs (Annual Percentage Yields). We use <span class="math inline">\(r\)</span> to represent APR and <span class="math inline">\(R\)</span> to represent APY.</p>
+<p>We use the following fo0rmula to convert APR’s into APY’s:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="APR to APY conversion Formula">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+APR to APY conversion Formula
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+R = \left(1+\frac{r}{m}\right)^m -1
+\]</span></p>
+<p>Where, <span class="math inline">\(R=\)</span> Annual Percentage Yield (APY). <span class="math inline">\(r=\)</span> the Annual Percentage Rate (APR). <span class="math inline">\(m=\)</span> number of compounding periods per year.</p>
+</div>
+</div>
+<p><strong>Example 4</strong></p>
+<p>Convert <span class="math inline">\(24.44\% (12)\)</span> to an APR.</p>
+<p><strong><em>Solution</em></strong></p>
+<p>Here, we shall use the APR-APY conversion formula directly. We know that <span class="math inline">\(r=0.2444\)</span>, and <span class="math inline">\(m=12\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+R&amp;=\left(1+\frac{r}{m}\right)^m -1\\
+&amp;=\left(1+\frac{0.2444}{12}\right)^{12} -1\\
+&amp;=0.2737\\ \\
+&amp;=27.37\%
+\end{align}\]</span></p>
+<p><strong>Example 4</strong></p>
+<p>Jamie is trying to get a loan from one of two banks. Bank A charges an APR of 11.99% compounded weekly while bank B charges 11.7% compounded monthly. If Jamie thinks he can pay off the loan in 3 years, which bank should Jamie choose?</p>
+<p><strong><em>Solution</em></strong></p>
+<p>Note that Jamie is the one paying interest to the bank. So, Jamie needs to choose the bank that offers a cheaper loan. To do this, we can convert the two APR’s into APY’s for easy comparison.</p>
+<p>Please complete the solution.</p>
+</section>
+<section id="exercises-1" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">9.7</span> Exercises</h2>
+<ol type="1">
+<li><p>Find the annual percentage yield to two decimal places of 12% if money is compounded: (a) semiannually (b) quarterly (c) monthly (d) daily</p></li>
+<li><p>Which has a higher annual percentage yield: 12%(12) or 12.3%(2)?</p></li>
+<li><p>Which has a higher annual percentage yield: 8%(4) or 8.1%(2)?</p></li>
+<li><p>How much additional interest is earned on $125,000 for 3 years if money is worth 6%(12) compared to 6%(1)?</p></li>
+<li><p>Kim can get a $50,000 loan from one of two banks. The first charges 7%(12) and the second charges 7.05%(2). If he thinks he will pay off the loan in 5 years, which is better?</p></li>
+<li><p>Joanna can get a $50,000 loan from one of two banks. The first charges 7%(12) and the second charges 7.5% simple interest. If he pays of the loan in 1 year, which is better? If he pays off the loan in 10 years, which is better? Is there a length of the loan for which both banks will charge the same amount in interest?</p></li>
+<li><p>Eduardo can get a $4000 loan from two banks: Springfield Savings and Loan charges 9%(4) and the Shelbyville Savings and Loan charges 9.1%(2). If he wants to pay off his loan in 3 years, which bank is better and by how much?</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -233,6 +529,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -240,9 +651,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -254,7 +679,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -282,31 +724,136 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

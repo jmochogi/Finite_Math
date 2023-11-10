@@ -95,10 +95,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -144,6 +146,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -262,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#the-geometric-method" id="toc-the-geometric-method" class="nav-link" data-scroll-target="#the-geometric-method"> <span class="header-section-number">5.3</span> <span style="color:#4166f5;">The Geometric Method</span></a>
   <ul class="collapse">
   <li><a href="#converting-mixture-chart-into-mathematical-form" id="toc-converting-mixture-chart-into-mathematical-form" class="nav-link" data-scroll-target="#converting-mixture-chart-into-mathematical-form"> <span class="header-section-number">5.3.1</span> <span style="color:#4166f5;">Converting Mixture Chart into Mathematical Form</span></a></li>
-  <li><a href="#representing-the-feasible-region" id="toc-representing-the-feasible-region" class="nav-link" data-scroll-target="#representing-the-feasible-region"> <span class="header-section-number">5.3.2</span> <span style="color:#4166f5;">Representing the Feasible Region</span></a></li>
+  <li><a href="#visualizing-the-feasible-region" id="toc-visualizing-the-feasible-region" class="nav-link" data-scroll-target="#visualizing-the-feasible-region"> <span class="header-section-number">5.3.2</span> <span style="color:#4166f5;">Visualizing the Feasible Region</span></a></li>
   <li><a href="#the-corner-point-principle" id="toc-the-corner-point-principle" class="nav-link" data-scroll-target="#the-corner-point-principle"> <span class="header-section-number">5.3.3</span> <span style="color:#4166f5;">The Corner Point Principle</span></a></li>
   <li><a href="#summary-of-the-geometric-method" id="toc-summary-of-the-geometric-method" class="nav-link" data-scroll-target="#summary-of-the-geometric-method"> <span class="header-section-number">5.3.4</span> <span style="color:#4166f5;">Summary of the Geometric Method</span></a></li>
   </ul></li>
@@ -372,8 +377,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The last step in formulating the mathematical model is to make the <strong>objective function</strong>. This is the function that connects the profit to the resources. Since we know that each skateboard results in $1.00 profit, we know that x dolls will result in a profit of <span class="math inline">\(\$1x\)</span> and y dolls will result in a profit of <span class="math inline">\(\$0.55x\)</span>. We do not know what the profit is but we know it is a function of both dolls and skateboards. We can denote the profit as <span class="math inline">\(P\)</span>. So, we have the equation,</p>
 <p><span class="math display">\[P=1x+0.55y\]</span> Notice that the objective function is an <strong>equation</strong> (not inequality) that gives a <strong>specific</strong> amount of profit as we vary the number of skateboards and dolls. In other words, <span class="math inline">\(P\)</span> changes as we change <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So we can determine the value of <span class="math inline">\(x\)</span> and<span class="math inline">\(y\)</span> that would produce maximum <span class="math inline">\(P\)</span>.</p>
 </section>
-<section id="representing-the-feasible-region" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="representing-the-feasible-region"><span class="header-section-number">5.3.2</span> <span style="color:#4166f5;">Representing the Feasible Region</span></h3>
+<section id="visualizing-the-feasible-region" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="visualizing-the-feasible-region"><span class="header-section-number">5.3.2</span> <span style="color:#4166f5;">Visualizing the Feasible Region</span></h3>
 <p>After creating the inequalities from the mixture chart, we can draw a picture to help us visualize the feasible region geometrically. Graphs are the most commonly used tools for visualizing the feasible region.</p>
 <p>Notice that all the three inequalities (i.e., the minimum and resource constraints) are linear in the sense that when you graph them (assuming an equal sign) you will get a straight line. To take care of the fact that the inequalities admit a broad range of values, we,</p>
 <ol type="a">
@@ -541,6 +546,109 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

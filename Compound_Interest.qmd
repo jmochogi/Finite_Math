@@ -1,3 +1,283 @@
 ---
 title: "Compound Interest"
 ---
+
+## Introduction to Compound Interest
+
+With simple interest, we assumed that we the interest, together with the principal amount lent out or borrowed were paid at maturity (i.e., at the end of the investment/loan period). In a standard bank account, any interest we earn is automatically added to our principal, and we earn interest on that interest in future. 
+
+::: {.callout-tip title="Compounding"}
+The idea of reinvesting earned interest is to earn further interest is referred to as compounding.
+:::
+
+An interesting questioning we may want to explore is, "how often does compounding happen within the life cycle of a loan or investment?"
+
+Consider the example in the previous chapter where you were lending a friend \$5,000 to be paid back after one year. We found that, if you charge your friend an interest rate of 10%, they will have to pay \$500 worth of interest by the end of the year. 
+Now, if your friend keeps the money for one more year, under the compound interest arrangement, they will pay the new interest based on \$ 5,500 (i.e., the original \$ 5000 plus \$ 500 interest from the first year).
+See calculation below:
+
+\begin{align}
+Interest \hspace{.05in} (Year\hspace{.05in}1)&=Prt\\
+&=5000 \times 0.1\times 1\\
+&=\$500\\
+Total\hspace{.05in} Year\hspace{.05in}1 &= 5000+500\\
+&=5,500\\
+
+Interest \hspace{.05in} (Year\hspace{.05in}2)&=Prt\\
+&=5500 \times 0.1\times 1\\
+&=\$550\\
+Total(\hspace{.05in} Year\hspace{.05in}2) &= 5500+550\\
+&=\$6050\\
+\end{align}
+
+
+You can continue with this trend for as long as your friend keeps the money. Of course, the longer they keep the money, the higher the interest hay pay. In the case where they keep the money for only two years, the end up paying an interest of $6050-6000=\$1050$.
+If you had charged your friend simple interest instead of compound interest, they would have to pay an interest of \$1,000 only (see computation below for simple interest).
+
+\begin{align}
+I&=Prt\\
+&=5000\times 0.1\times2\\
+&=\$1000
+\end{align}
+
+In the above example, compounding happens once every year and so we have two compounding periods (Year 1 and Year 2) in total. If compounding were to happen every six months instead (twice a year), we would have a total of four compounding periods. 
+
+::: {.callout-tip title="Definition: Compounding Period"}
+A compounding period refers to the how often compounding happens within a year. Compounding period is also known as ***interest period***.
+:::
+
+In the above example, how many compounding periods would you have in total if the compounding period were one month? 
+
+::: {.callout-tip title="Definition: Total compounding period"}
+If we let $n$ be the total number of compounding periods and $m$ be the number of periods per year, then, a loan or investment of duration $t$ years, would have $mt$ total compounding periods.
+$$n=mt
+$$
+:::
+In calculating compound interest, it is important to know the interest rate per compounding period. In the above example where the interest rate is 10% with two compounding, the interest rate per period is $i=\frac{r}{2}$
+
+::: {.callout-tip title="Interest rate per compounding period"}
+If we let $r$ be the annual interest rate, and $i$ be the rate per period, then,
+$$
+i=\frac{r}{m}
+$$
+:::
+
+## Future value for Compound Interest
+
+In the previous example, we saw that your friend would pay you a total of \$ 6050 under the compound interest arrangement but only \$ 6,000 under the simple interest arrangement. For the simple interest, you can get the future value directly by using teh formula $F=P(1+rt)$ from the previous chapter. For compound interest, the formula is
+
+::: {.callout-tip title="Interest rate per compounding period"}
+$$
+F=P(1+i)^n
+$$
+
+Where,
+
+$F=$ Future Value
+
+$i=$ interest rate per compounding period
+
+$n=$ total number of compounding periods.
+:::
+
+Let us use the above formula to check whether we get the \$6050 that we found earlier in the example where your friend borrows \$5000 for two years at an interest rate of 10% compounded every year (once a year). 
+
+First, we calculate the interest rate per compounding period. Since there is only one compounding period per year, $m=1$. Thus, $i=\frac{0.1}{1}=0.1$.
+
+Next, we compute the total number of compounding periods. Since the loan is for 2 years and there is only one compounding per year, we have $n=mt=1\times 2=2$ periods. 
+Therefore,
+
+\begin{align}
+F&=5000(1+0.1)^2\\
+&=6050
+\end{align}
+
+In the above example, if we assume that the compounding happens every six months, we would have to change both $i$ and $n$ accordingly. In writing interest rates under compound interest, we often write the compounding period in parenthesis. For example, if compounsing happens every six months (twice a year), we would the rate as $10\%(2)$.
+
+::: {.callout-tip title="Representing Compound Interest"}
+We write interest rate as $r\%(m)$
+
+Where,
+
+$r\%=$ the raw interest rate (not divided by 100)
+
+$m=$ compounding period. 
+:::
+
+
+**Example 1**
+
+Suppose you open up a savings account that pays $6\%(12)$ with \$1,000. How much will you have in this account after 10 years?
+
+***Solution***
+
+First, note the interest rate, $6\%(12)$, means that compounding happens every month (12 times a year).
+
+We can calculate the interest earned in the first year first month, add it to 1000, and then calculate the interest earned in the second month, add it back ,etc but this would be a cumbersome and long process. We can use the formula given earlier:
+
+The formula is $F=P(1-i)^n$. We know that $P=1,000$.
+
+We find $i=\frac{0.06}{12}=0.005$ and $n=12\times10=120$
+
+We now plug in these numbers into the future value formula under compound interest as follows
+
+\begin{align}
+F&=P(1+i)^n\\
+&=1,000(1+0.005)^{120}\\
+&=1,819.40
+\end{align}
+
+
+
+
+
+
+
+## Exercises 
+
+1. Compute the future value of \$750 for 3 years at 8%(1). How much of this amount is interest?
+
+2. When Will was born, his grandfather bought him a \$250 savings bond that paid 5%(6). When Will started college at age 18, he cashed in the savings bond. How much did Will get out of the savings bond? How much is earned as interest?
+
+3. Henry owes \$60,000 in Direct Unsubsidized student loans to the federal government. Since he is in graduate school, his loans are in deferment. This means he does not need to pay anything while still in school, but the interest still accrues (note that this is not true for all types of loans, but it is for the type Bob has). His loans charge 6.5% and the interest is compounded monthly. Find the amount Henry owes after being in graduate school for 2 years. How much of this is the compound interest?
+
+## Growth Time for Compound Interest
+
+You may be interested in knowing how long your investment would take to grow to a specified target amount or how long you may take to pay off a loan. To answer such questions, we can solve for $n$ in the formula for compound interest. The formula is,
+$$
+F=P(1+i)^n
+$$
+Note that $n=$ total number of compounding periods. To find time in years, you will have to divide n by the number of compoundings per year (i.e., $m$). Check out the next example,
+
+
+**Example 2**
+
+Suppose you open up a savings account with \$1,000 that pays $6\%(12)$ interest rate. After how long will you have \$1,500 in the account?
+
+
+***Solution***
+
+We know that $F=1,500$, $i=\frac{0.06}{12}=0.005$, and $P=1,000$. We do not know $n$.
+
+\begin{align}
+1500&=1000(1+0.005)^n\\
+\frac{1500}{1000}&=(1.005)^n\\
+\text{log} (1.5)&=\text{log}(1.005)^n\\
+\text{log} (1.5)&=n\times \text{log}(1.005)^n\\
+\text{log} (1.5)&=n\times \text{log}(1.005)\\
+n&=\frac {\text{log} (1.5)}{\text{log}(1.005)}\\
+&= 81.295586
+\end{align}
+
+Finally, we divide $n$ by 6 (the number of compoundings per year) to get the number of years; $$\frac{81.295586}{6}=13.55 \hspace{0.05in}\text{years}.$$
+
+## Calculating the Interest Rate
+
+In some cases, you may want to know what interest rate will achieve your goal in a given amount of time. To compute the interest rate, you will need to know the idea of indices and roots. For example; $2\times 2 \times 2\times 2 = 16$. Here, we say that 2 is the fourth root of 16 and can write it as $\sqrt[4]{64}=2$. Another way to write the fourth root of 16 is $16^{\frac{1}{4}}=2.$ 
+
+You can use your calculator to find the $n^{th}$ root of certain numbers. Try the following:
+
+- The $4^{th}$ root of $81$ can be written as _______ and equals _______.
+
+- The $7^{th}$ root of $123$ can be written as _______ and equals _______.
+
+- The square of 3 is 9 (i.e., $3\times 3$). What is the square root (second root) of 9? 
+
+- The cube of 5 is 125. What is the cube root(third root) of 125? 
+
+
+**Example 3**
+
+Suppose you have \$1,000 to invest for 4 years. What interest rate (compounded annually) would you need in order to have \$2,000 at the end of the 4 years?
+
+***Solution***
+
+Here, we know that $p=1,000$, $F=\$2,000$. We do not know the interest rate, $i$, but we know it is compounded annually (once a year). Furthermore, we know that there will be 4 compounding periods in total ($n=4$).
+
+\begin{align}
+F&=P(1+i)^n\\
+2000&=1000(1+i)^4\\
+\frac{2000}{1000}&=(1+i)^4\\
+2&=(1+i)^4\\ 
+{2}^{\frac{1}{4}}&= (1+i)\\
+1.189&=(1+i)\\
+i&=0.189\\
+\end{align}
+
+Recall that we present rate as a percentage: $0.189\times 100=18.9\%$
+
+
+
+## APR vs APY
+
+**Definition:** The annual percentage rate (APR) is the annual interest rate that gets compounded over a number of interest periods.
+
+- Note that in order to compute compound interest, we need to know both the APR and how many times per year interest is compounded (e.g., in 4%(12), the 4% is the APR and the 12 is the number of times per year the interest is compounded).
+
+**Definition:** The annual percentage yield (APY) is the simple interest rate that would yield the same amount of interest over one year as the compound interest rate actually gives. 
+
+Since the amount of interest earned from compound interest depends on how many times it is compounded per year, it can be difficult to compare different rates with different compounding times (e.g., try to compare 7.1%(4) to 6.9%(12)). In order to make a direct comparison, we can determine the equivalent rate when compounded once per year (e.g., 7.1%(4) is equivalent yearly to 7.29%(1), while 6.9%(12) is equivalent yearly to 7.12%(1)). You can now see that 7.1%(4) is higher because it will yield more in one year than 6.9%(12). These new rates are essentially simple interest rates restricted to one year. These rates are known as APYs (Annual Percentage Yields). We use $r$ to represent APR and $R$ to represent APY.
+
+
+We use the following fo0rmula to convert APR's into APY's:
+
+
+::: {.callout-tip title="APR to APY conversion Formula"}
+
+$$
+R = \left(1+\frac{r}{m}\right)^m -1
+$$
+
+Where,
+$R=$ Annual Percentage Yield (APY). 
+$r=$ the Annual Percentage Rate (APR).
+$m=$ number of compounding periods per year. 
+:::
+
+
+**Example 4**
+
+Convert $24.44\% (12)$ to an APR.
+
+***Solution***
+
+Here, we shall use the APR-APY conversion formula directly. We know that $r=0.2444$, and $m=12$.
+
+\begin{align}
+R&=\left(1+\frac{r}{m}\right)^m -1\\
+&=\left(1+\frac{0.2444}{12}\right)^{12} -1\\
+&=0.2737\\ \\
+&=27.37\%
+\end{align}
+
+**Example 4**
+
+Jamie is trying to get a loan from one of two banks. Bank A charges an APR of 11.99% compounded weekly while bank B charges 11.7% compounded monthly. If Jamie thinks he can pay off the loan in 3 years, which bank should Jamie choose?
+
+
+***Solution***
+
+Note that Jamie is the one paying interest to the bank. So, Jamie needs to choose the bank that offers a cheaper loan. To do this, we can convert the two APR's into APY's for easy comparison.
+
+Please complete the solution.
+
+## Exercises
+
+1. Find the annual percentage yield to two decimal places of 12% if money is compounded: (a) semiannually (b) quarterly (c) monthly (d) daily
+
+
+2. Which has a higher annual percentage yield: 12%(12) or 12.3%(2)?
+
+3. Which has a higher annual percentage yield: 8%(4) or 8.1%(2)?
+
+4. How much additional interest is earned on $125,000 for 3 years if money is worth 6%(12) compared to 6%(1)?
+
+5. Kim can get a $50,000 loan from one of two banks. The first charges 7%(12) and the second charges 7.05%(2). If he thinks he will pay off the loan in 5 years, which is better?
+
+6. Joanna can get a $50,000 loan from one of two banks. The first charges 7%(12) and the second charges 7.5% simple interest. If he pays of the loan in 1 year, which is better? If he pays off the loan in 10 years, which is better? Is there a length of the loan for which both banks will charge the same amount in interest?
+
+7. Eduardo can get a $4000 loan from two banks: Springfield Savings and Loan charges 9%(4) and the Shelbyville Savings and Loan charges 9.1%(2). If he wants to pay off his loan in 3 years, which bank is better and by how much?
+
+
+
+

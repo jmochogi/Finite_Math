@@ -30,7 +30,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: cosmo
+      dark: superhero
   #pdf:
    # documentclass: scrreprt
-editor: visual
+editor: source

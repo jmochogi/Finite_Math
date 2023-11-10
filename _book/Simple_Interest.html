@@ -32,10 +32,12 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -56,6 +58,7 @@ ul.task-list{list-style: none;}
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -79,6 +82,9 @@ ul.task-list{list-style: none;}
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -188,7 +194,24 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#intro-to-simple-interest" id="toc-intro-to-simple-interest" class="nav-link active" data-scroll-target="#intro-to-simple-interest"> <span class="header-section-number">8.1</span> Intro to Simple Interest</a></li>
+  <li><a href="#future-value" id="toc-future-value" class="nav-link" data-scroll-target="#future-value"> <span class="header-section-number">8.2</span> Future Value</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"> <span class="header-section-number">8.3</span> Exercises</a></li>
+  <li><a href="#exact-and-approximate-time" id="toc-exact-and-approximate-time" class="nav-link" data-scroll-target="#exact-and-approximate-time"> <span class="header-section-number">8.4</span> Exact and Approximate Time</a>
+  <ul class="collapse">
+  <li><a href="#exact-time-table" id="toc-exact-time-table" class="nav-link" data-scroll-target="#exact-time-table"> <span class="header-section-number">8.4.1</span> Exact Time Table</a></li>
+  </ul></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"> <span class="header-section-number">8.5</span> Exercises</a></li>
+  <li><a href="#consumer-price-index-and-inflation" id="toc-consumer-price-index-and-inflation" class="nav-link" data-scroll-target="#consumer-price-index-and-inflation"> <span class="header-section-number">8.6</span> Consumer Price Index and Inflation</a></li>
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2"> <span class="header-section-number">8.7</span> Exercises</a></li>
+  <li><a href="#equations-of-value" id="toc-equations-of-value" class="nav-link" data-scroll-target="#equations-of-value"> <span class="header-section-number">8.8</span> Equations Of Value</a></li>
+  <li><a href="#exercises-3" id="toc-exercises-3" class="nav-link" data-scroll-target="#exercises-3"> <span class="header-section-number">8.9</span> Exercises</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -209,8 +232,384 @@ ul.task-list{list-style: none;}
 
 </header>
 
+<section id="intro-to-simple-interest" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="intro-to-simple-interest"><span class="header-section-number">8.1</span> Intro to Simple Interest</h2>
+<p>If you lend someone $5000 today and that person pays you back in 1 year, you probably want them to pay you more than $ 5000 (say, $ 5,500). Borrowing money is not free. We use the term <strong>Present value</strong> (abbreviated as <span class="math inline">\(P\)</span>) to refer to the value of money at the moment and <strong>Future Value</strong> (abbreviated as <span class="math inline">\(F\)</span>) to refer to the value of the money at a future date.</p>
+<p>We use the term <strong>Interest</strong> (abbreviated as <span class="math inline">\(I\)</span>) to refer to the difference between the <strong>future value</strong> and the <strong>present value</strong>. You can think of interest as the <strong><em>value gained</em></strong> by the present value over a time period, <span class="math inline">\(t\)</span>. In other words, interest is the difference between the future value and the present value of the money.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Interest">
+<p><span class="math display">\[I=F-P\]</span></p>
+</div>
+</div>
+<p>If the person to whom you lend the money keeps it for two years instead of one, what would be the interest? What if they keep it for 10 years? Well, this will depend on the terms of payment that the two of you agree on. assuming you agree on a flat rate or $500 <strong>every</strong> year, they would pay a total interest of <span class="math inline">\((10\times500=\$5000)\)</span> if they keep the money for ten years and $1000 for two years.</p>
+<p>The term <strong>interest rate</strong> refers to the proportion (percentage) of a loan that is charged as interest to the borrower. Interest rates are typically expressed as an annual percentage of the amount borrowed. For example, in the above scenario, the interest rate would be <span class="math display">\[\frac{500}{5000} \times 100=10\%\]</span> This means that <span class="math inline">\(10\%\)</span> of the present value <span class="math inline">\((0.1\times5000=500)\)</span> is paid as interest every year. We usually use the letter <span class="math inline">\(r\)</span> to denote interest rate. Thus, for an interest rate of <span class="math inline">\(r\)</span>, a present value <span class="math inline">\(P\)</span> and time <span class="math inline">\(t\)</span> years, one should expect to pay an interest of <span class="math inline">\(P\times r \times t=Prt\)</span>.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Total Interest over time, t (years)">
+<p><span class="math display">\[I=Prt\]</span> where,</p>
+<ul>
+<li><p><span class="math inline">\(r=\)</span> annual interest rate</p></li>
+<li><p><span class="math inline">\(P=\)</span> Present value or principal</p></li>
+<li><p><span class="math inline">\(t=\)</span> time in years</p></li>
+</ul>
+</div>
+</div>
+<p><strong><em>Note:</em></strong></p>
+<ul>
+<li>In the above scenario, we use the original fixed amount($,5000) to compute interest for each subsequent year. This type of interest is known as <strong>Simple Interest</strong>. In some cases, interest is computed by updating the present value on, say a yearly basis, effectively assuming that you are “re-borrowing” every time the principal is updated. For example, you may decide to update the principal to $5,500 in the second year and then charge your friend 10% of $5,500. We will explore this kind of interest in the next chapter.</li>
+</ul>
+</section>
+<section id="future-value" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="future-value"><span class="header-section-number">8.2</span> Future Value</h2>
+<p>The future value is the sum of the amount originally borrowed (present value) and the interest that is accrued over time.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Total Future Value over time, t (years)">
+<p><span class="math display">\[\begin{align}
+F&amp;=P+Prt\\
+&amp;=P(1+rt)
+\end{align}\]</span></p>
+<p>where,</p>
+<ul>
+<li><p><span class="math inline">\(r=\)</span> annual interest rate</p></li>
+<li><p><span class="math inline">\(P=\)</span> Present value or principle</p></li>
+<li><p><span class="math inline">\(t=\)</span> time in years</p></li>
+<li><p><span class="math inline">\(F=\)</span> Future value after <span class="math inline">\(t\)</span> years</p></li>
+</ul>
+</div>
+</div>
+<p><strong>Example 1</strong></p>
+<p>Ethan borrows $2000 at 5% simple interest rate from his bank. How much interest does he pay after 5 years? How much (total amount) does he pay back after five years?</p>
+<p><strong><em>Solution</em></strong></p>
+<p>This is a two part question. First, we need to find the total interest accrued and then the future value.</p>
+<p>To compute the total interest, we can use the interest formula given above.</p>
+<p><span class="math display">\[\begin{align}
+Interest&amp;=Prt\\
+&amp;=2000 \times 0.05\times 5\\
+&amp;=\$1250
+\end{align}\]</span></p>
+<p>Note that the rate 5% means <span class="math inline">\(5\)</span> dollars for every <span class="math inline">\(100\)</span> or <span class="math inline">\(0.05\)</span> for every dollar. So, we use <span class="math inline">\(0.05\)</span> or <span class="math inline">\(\frac{5}{100}\)</span> in the formula.</p>
+<p>For the second part, we can simply add the accrued interest, <span class="math inline">\(I\)</span>, to the amount originally borrowed <span class="math inline">\((P)\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+F&amp;=2000+1250\\
+&amp;=2150\\
+\end{align}\]</span></p>
+<p>An alternative way to solve the second part is to use the future value formula <span class="math inline">\(F=P(1+rt)\)</span> where <span class="math inline">\(P=2000\)</span>, <span class="math inline">\(r=0.05\)</span>, and <span class="math inline">\(t=5\)</span>.</p>
+<p><strong>Example 2</strong></p>
+<p>Megan borrows $7000 at a simple interest rate of 6% from her bank for 8 months. How much interest will Megan pay when the loan matures?</p>
+<p><strong><em>Solution</em></strong></p>
+<p>First, remember that interest rates are given as annual rates. Since Meagan is keeping the money for only 8 months, time, <span class="math inline">\(t\)</span>, will be <span class="math inline">\(\frac{8}{12}\)</span> years. Thus,</p>
+<p><span class="math display">\[\begin{align}
+Interest&amp;=Prt\\
+&amp;=7000 \times 0.06 \times \frac{8}{12}\\
+&amp;=\$280
+\end{align}\]</span></p>
+</section>
+<section id="exercises" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.3</span> Exercises</h2>
+<ol type="1">
+<li><p>Find the interest paid when $150,000 is borrowed at 4.3% (annual interest rate) for 14 weeks. (Note that there are 52 weeks in a year.)</p></li>
+<li><p>At the beginning of September 2019, Morgan invests $5000 at 4.5%. Find the interest and the future value of the investment 9 months later.</p></li>
+<li><p>A quick check-cashing agent is willing to pay you $500 now but wait to deposit your $500 check for 2 weeks. For this service, she charges you $30. Find the annual interest rate of this loan.</p></li>
+<li><p>If you hope to double your money and you have $1000 to invest at 6% interest, how long will it take you? What if you have $7000 and you wish to double you money with this 6% interest investment?</p></li>
+<li><p>Moa wants to buy a used car. He has $3000 but wants $3500 to spend. He invests his $3000 into an account earning 6% annual simple interest. How long will he need to leave his money in the account to accumulate the $3500 he wants?</p></li>
+<li><p>You have a $3,345.59 balance on your credit card. The interest rate is 21.95%. If you pay $300 this month, how much of your payment will go toward interest? What will your balance be after your payment (assuming you make no additional charges)?</p></li>
+<li><p>William requires a loan of $125,000 to start an internet business. He found a loan agent that charges 14% interest. He is not willing to pay more than $1000 per month. Why is this an impossible situation?</p></li>
+<li><p>At the beginning of 2019, Marci lends her sister, Selma, $1000. Selma pays off the loan five months later with $1050. Find the annual interest rate.</p></li>
+<li><p>To the nearest month, how long does it take to increase your investment by 50% if you can get 4% on your investment?</p></li>
+<li><p>If you want to triple your money at 10% simple interest, how long will it take you?</p></li>
+<li><p>You want to buy a $1100 iPhone in 6 weeks. How much should you invest at 12% simple interest rate to have the money in 6 weeks?</p></li>
+<li><p>A small auto repair store owner would like to borrow $25,000 from a bank to buy some equipment. The bank will give the owner a discount loan for 3 months at an interest rate of 12%. What maturity value should be used so that the owner could receive $25,000?</p></li>
+<li><p>A credit card company charges 24.99% interest rate on overdue accounts. How much interest will be owed on $2600 account that is overdue for 41 days?</p></li>
+</ol>
+<!--14. You are treasurer for a local non-profit organization that is in the process of making improvements on its building. The contractor gives you two payment options: either pay \$27,500 on 9/6/18, or else \$28,500 on 4/3/19. If you calculate that you can get 8% annual interest on your money, which is the better deal? Take this problem after exact/approximate time section -->
+</section>
+<section id="exact-and-approximate-time" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="exact-and-approximate-time"><span class="header-section-number">8.4</span> Exact and Approximate Time</h2>
+<p>Consider the following scenario:</p>
+<p><em>While paying off student loans, you notice that the amount of interest you have to pay off each month changes by month. You expect this to go down, since the amount you owe goes down (so there is less money to charge interest on). But some months the amount of interest actually goes up. How is that possible?</em></p>
+<p>It turns out that the above scenario is caused by the fact that some months are longer (have more days) than others. Financial institutions take into consideration the <strong>number of days</strong> while computing the interest they charge their clients. The number of days can be either <strong>approximate</strong> or <strong>exact</strong>.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Defitnition (Approximate Time)">
+<p><strong><em>Approximate time:</em></strong> assumes that every month has 30 days. In order to compute the approximate time that has passed between two calendar dates, count the number of full months in the loan period, and multiply them by 30. Then add in the extra days included in the loan (less than a month) period using exact time.</p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Defitnition (Exact Time">
+<p><strong><em>Exact time:</em></strong> refers to the exact count of number of days that have passed.</p>
+</div>
+</div>
+<p>Now, how about the number of days in a year? In the world of banking, sometimes they use 360 as the number of days in a year and sometimes they use 365 (you may see this in <strong><em>terms and conditions</em></strong> section for various products such as credit cards). Remember that in the formula for interest <span class="math inline">\((I=Prt)\)</span>, time, <span class="math inline">\(t\)</span>, is expressed in years. When banks convert days to years they will either divide by 360 or by 365. Note that using 360 days in a year benefits the bank because the quantity <span class="math inline">\(t\)</span> will be higher and thus the interest paid increases.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Defitnition (Oedinary Interest">
+<p>*<strong>Ordinary interest:</strong> calculates interest by assuming a total of 360 days in a year. (i.e., this is the denominator of your fraction of a year when calculating time.)</p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Defintion (Banker's Rule)">
+<p>Banker’s Rule says that, when you are calculating the length of a loan on the order of days, you use exact time but with ordinary interest. In other words, you calculate t (the length of the loan) using exact time, but use 360 as the number of days in a year.</p>
+</div>
+</div>
+<p><strong>Example 3</strong></p>
+<p>Find the approximate time (days) between August 29 and December 14</p>
+<p><strong><em>Solution</em></strong></p>
+<p>We have the whole of Sep, Oct, and Nov.&nbsp;Each of those will be assumed to have 30 days (see definition of approximate time above).</p>
+<p>Next, we have the 14 days into Dec and the 1 day before the start of Sep for a total of 15. Therefore, the approximate time is <span class="math display">\[(3\times 30)+15=105 \text{days}\]</span></p>
+<p><strong>Example 4</strong></p>
+<p>Find the exact time (days) between August 29 and December 14</p>
+<p><strong><em>Solution</em></strong></p>
+<p>Left as an exercise.</p>
+<section id="exact-time-table" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="exact-time-table"><span class="header-section-number">8.4.1</span> Exact Time Table</h3>
+<p>The table below gives the serial numbers for each day of the year. For example, Jan 1 has serial number 1 while Feb 1 has serial number 32. What this means is that you can easily find the exact number of days between two dates by subtracting their serial numbers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tt.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Serial Numbers for Dates</figcaption><p></p>
+</figure>
+</div>
+<p>From the table above, Dec 14 is day number 348 of the year. Similarly, Aug 28 is day number 241. So, the exact number of days between these two dates is <span class="math display">\[348-241=107.\]</span></p>
+<p><strong>Example 5</strong> Henry borrows $1500 on Aug 3, 2023. If interest is 8.5%, determine the amount that he must repay on Dec 23, 2023. Use the Banker’s Rule.</p>
+<p><strong><em>Solution</em></strong></p>
+<p>First, the question is asking us to find the future value <span class="math inline">\((F)\)</span>. The formula for future value was given as <span class="math inline">\(F=P(1+rt).\)</span></p>
+<p>We know <span class="math inline">\(P=1500\)</span> and <span class="math inline">\(r=\frac{8.5}{100}=0.085\)</span>. Since we are using the Banker’s Rule, we have to find the exact time between the given dates but use 360 for converting the days into years. Using the table above, <span class="math inline">\(Days = 357-215=142.\)</span></p>
+<p>Thus,</p>
+<p>$$</p>
+<p><span class="math display">\[\begin{align}
+F&amp;=P(1+rt)\\
+&amp;=1500\left[1+ \left(0.085\times \frac{142}{360}\right)\right]\\
+&amp;=\$1550.29
+\end{align}\]</span></p>
+<p>$$</p>
+<p>Henry must pay $1550.29.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Defintion (Treasury Bill)">
+<p>The United States government often raises money by selling short term debt securities known as treasury bills (“T-billS”). A Treasury bill is a note whose future value, <span class="math inline">\(F\)</span>, is as printed, and whose present value, <span class="math inline">\(P\)</span>, is determined by how much one is willing to pay for the note. Treasury bills are usually sold at an auction. For example, if you buy a 1-year $100 T-bill with a bid of 95%, this means that you pay $95 now (present value) to get the note and it will be worth $100 (future value) in 1 year. (See <a href="https://www.treasurydirect.gov/" class="uri">https://www.treasurydirect.gov/</a>)</p>
+</div>
+</div>
+</section>
+</section>
+<section id="exercises-1" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">8.5</span> Exercises</h2>
+<ol type="1">
+<li><p>Find the exact time between January 3rd and September 3rd. (Question - is this always the same number of days?)</p></li>
+<li><p>Find the approximate time from January 3rd to September 3rd. (Question - is this always the same number of days?)</p></li>
+<li><p>On June 6th, Jason borrows $15,000 at 7.99%. How much is the interest and what is the payoff on August 15? Does it matter whether or not this is a leap year? (Remember to use Banker’s Rule.)</p></li>
+<li><p>You borrow $150 from an acquaintance on September 4 who will charge you 12% interest. When you finally get your student employment papers together and get your first paycheck, it is October 31. How much do you need to pay back on this loan?</p></li>
+<li><p>A 182-day $100,000 Treasury bill is bought with a bid of 97.9%. Find the rate of return (i.e., the interest rate the investor earns.)</p></li>
+<li><p>On 4/12/23, Barney has $3000 in his savings account, which earns only 2.75%. The next interest date is 10/1/18. If Barney withdraws his money early, he will lose all of the interest on the part withdrawn. On 8/15/23, he needs $1500 to pay for astronaut lessons. He finds a bank that will loan him the money at 9%. Should he get the loan or should he withdraw the money from his savings account and why?</p></li>
+<li><p>Mario has charges to his student account of $1500 on 12/10/22 and $6000 on 3/15/2023, and the account charges 10% simple interest. If he wants to pay off both of these with a single payment on 7/21/23, how much does he need to pay? (Notice that this is a two step problem!)</p></li>
+<li><p>Suppose that you have two options for buying a used car: pay $3000 in cash (i.e., immediately) or else wait 6 months and pay $3200. If you are able to earn 18% simple interest on your money, which option is monetarily better for you?</p></li>
+<li><p>You are treasurer for a local non-profit organization that is in the process of making improvements on its building. The contractor gives you two payment options: either pay $27,500 on 9/6/23, or else $28,500 on 4/3/24. If you calculate that you can get 8% annual interest on your money, which is the better deal?</p></li>
+</ol>
+</section>
+<section id="consumer-price-index-and-inflation" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="consumer-price-index-and-inflation"><span class="header-section-number">8.6</span> Consumer Price Index and Inflation</h2>
+<p>Watch the following short video about inflation and consumer price index:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oRdLvp6H3CU" title="How the Consumer-Price Index Measures Inflation | WSJ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p>Most Americans (and world over) are feeling the effects of inflation. You get the feeling that you can no longer afford the things you did about two years ago. For example, in 2021, a gallon of regular gas went for $3.05 on average but right now, it is going for about $4.00. The cost to mail a first-class letter (one ounce) was $0.33 in 2000 but now it’s $1.06.</p>
+<p>While the price of individual items is of some interest, the more important issue is the “cost of living”: how much it costs to pay rent (or make mortgage payments); pay for utilities and insurance; buy groceries, clothing; etc. Economists attempt to measure this with the <strong><em>Consumer Price Index (CPI)</em></strong>.</p>
+<p>Here’s a rough description of the CPI:</p>
+<p>Imagine a “market basket” of all the goods and services that a typical individual needs. Find the cost of these, weight them appropriately (you buy one new pair of shoes each year, a pound of coffee each week, pay your wireless bill once a month [and replace your phone every three years], etc.), and add these costs up. Yes, the Bureau of Labor Statistics does this! By and large, prices are updated on a monthly basis; the market basket is also adjusted over time. (Wireless service was not part of it when the CPI was first developed, for example.)</p>
+<p>The most commonly used CPI, CPI-U, was scaled so that the value over the period 1982–84 was 100. In 2022, the average CPI was 292.66. This says that, by and large, goods that cost $100 in 1984 would cost $292.66 in 2022. Using the CPI allows us to adjust for inflation.</p>
+<p>Below is a CPI-U table dating back to 1913. The value for 2023 is the average CPI through September:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cpi.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">CPI Table (1913 to 2023)</figcaption><p></p>
+</figure>
+</div>
+<p>A more comprehensive table with month-by-month CPI can be found the BLS website: <a href="https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/" class="uri">https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/</a></p>
+<p>One way to use the CPI table above is to compare costs of items at different points in time. This is known as <strong><em>adjusting for inflation</em></strong> and can be done using the formula below:</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="CPI formula">
+<span class="math display">\[\begin{align}
+Dollars(B)&amp;=CPI(B) \times \frac{Dollars(A)}{CPI(A)}\\
+
+\end{align}\]</span>
+<p>Where,</p>
+<p><span class="math inline">\(Dollars(A)=\)</span> Dollars at time A</p>
+<p><span class="math inline">\(Dollars(B)=\)</span> Dollars at time B</p>
+<p><span class="math inline">\(CPI(A)=\)</span> CPI at time A</p>
+<p><span class="math inline">\(CPI(B)=\)</span> CPI at time B</p>
+</div>
+</div>
+<p><strong>Example 6</strong></p>
+<p>The federal minimum wage was $0.25 per hour in 1938. Convert this to 2023 dollars. Has the wage gone up or not?</p>
+<p><strong><em>Solution</em></strong></p>
+<span class="math display">\[\begin{align}
+Dollars(2023)&amp;=CPI(2023) \times \frac{Dollars(1938)}{CPI(1938)}\\
+&amp;= 303.4 \times \frac{0.25}{14.1}\\
+&amp;=5.38
+\end{align}\]</span>
+<p>The current federal minimum wage is $7.25. Thus, the minimum wage has increased by about $1.87 when you account for inflation.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Current vs Real Dollar Amount">
+<p>In example 6 above, 0.25 is the <strong>current</strong> dollar amount while 5.38 is the <strong>Real dollar amount</strong> in 2023. Note that the “real dollar” amount is only needed for comparison to another amount, and it should be associated with a specific year date.</p>
+</div>
+</div>
+</section>
+<section id="exercises-2" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="exercises-2"><span class="header-section-number">8.7</span> Exercises</h2>
+<ol type="1">
+<li><p>Early color televisions came out in 1954 and cost $1295. Convert to today’s dollars.</p></li>
+<li><p>A wedding band (plain, 14 K white gold) cost $199 in 1981. Similar rings now seem to go for about $350. Has the price gone up, or down?</p></li>
+<li><p>The National Association of Colleges and Employers (NACE) reports that the average starting salary for bachelor’s degree graduates in 1960 was $6,084. Convert this to 2023 dollars.</p></li>
+<li><p>IC tuition was $43,978 in 2018–2019. In real dollars, has the price gone up? By how much?</p></li>
+<li><p>In 1969, a pair of jeans cost $4.95. Convert this to today’s dollars.</p></li>
+<li><p>One exception to the price-rising phenomenon involves new-to-market items; as technology evolves, their real prices (i.e., adjusted for inflation) may decrease. For example, when the CD player first came out (Sony, Oct.&nbsp;1962), it retailed for $674. How much is this in current dollars?</p></li>
+<li><p>Back in 1973–1974, an OPEC (Organization of Petroleum Exporting Countries) embargo caused the price of gasoline in the US to go from 38 cents per gallon to a (then-outrageous) 84 cents per gallon. I paid $3.89 per gallon recently when I filled up. Convert $3.89 to 1974 prices.</p></li>
+</ol>
+</section>
+<section id="equations-of-value" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="equations-of-value"><span class="header-section-number">8.8</span> Equations Of Value</h2>
+<p>Would you rather have $ 1,000 today or $ 1,100 in December?</p>
+<p>This problem is more complicated than merely comparing the two amounts. The golden rule of finance states that monies cannot be added or reconciled unless they are valued at the same point in time. Therefore, it might make sense to do one of the following before you can make a decision (of course many other factors that may influence your decision):</p>
+<ul>
+<li>Compute the future value of $ 1,000 (you will need to know the interest rate) and then compare it with $1,100 OR</li>
+<li>Use $1100 as the future value and compute the present value then compare it with $1,000.</li>
+</ul>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Focal Date">
+<p><strong>Focal Date:</strong> The focal date is the date to which monies are moved in order to be reconciled (added, subtracted, etc).</p>
+<ul>
+<li>In order to move monies to a given focal date, you will need to know the interest rate at which money is valued.</li>
+<li>We ignore the effects of inflation in this section and focus only on how available interest rates affect comparisons.</li>
+</ul>
+</div>
+</div>
+<p><strong>Example 7</strong></p>
+<p>You are probably aware that paying a debt early may save you money. Suppose, you owe $3,000 due on Dec 30, 2023. If you decide to pay off this debt early, say Nov, 12, 2023), how much will you pay on Nov, 12, 2023? Assume that money is valued at 5.99% simple interest rate and that there is no penalty for early payment. Use the Banker’s Rule.</p>
+<p><strong><em>Solution</em></strong></p>
+<p><strong>Note:</strong> The $3,000 is due in future so it is a future value. It already has the interest built in. Paying off early means you should pay less than $3,000.</p>
+<p>To solve the problem, you first need to identify the focal date. In this case, the focal date is Nov, 12, 2023. <!--Depending on when you are doing this problem, the solution may be different. I am writing this today (Oct, 1, 2023).--></p>
+<p>To determine how much will be paid on Nov, 12, 2023 to clear the debt, we first compute the exact number of days between 11/12/23 and 12/30/23 using the exact time table given earlier:</p>
+<p><span class="math inline">\(Days=364-316=48\)</span></p>
+<p>This means you save 48 days worth of interest. This is equivalent to moving the money back 48 days from 12/30/23.</p>
+<span class="math display">\[\begin{align}
+F&amp;= P(1+rt) \\
+3000&amp;= P\left[1+\left(\frac{5.99}{100} \times \frac{48}{360}\right)\right]\\
+3000&amp;=P \times 1.007966666\\
+P&amp;=2976.23
+\end{align}\]</span>
+<p><strong><em>Things to note about example 7:</em></strong></p>
+<ul>
+<li><p>You end up paying less than $3,000 because you are paying <strong>early</strong>. In this case you are saving about $23.77. The earlier you pay the more you save.</p></li>
+<li><p>If you pay after the due date (i.e., 12/30/23), you expect to pay more than $3,000. In this case, you will compute <span class="math inline">\(F\)</span> instead of <span class="math inline">\(P\)</span>. Furthermore, most institutions charge a late payment fee which you have to add the computed future value.</p></li>
+</ul>
+<p><strong>Example 8</strong></p>
+<p>Suppose in example 8 you pay $1,800 on 11/12/203 instead of the full amount owed. How much do you still owe?</p>
+<p><strong>Solution</strong></p>
+<p>An easy way is to think of the early payment ($1,800) as an investment that earns interest. The question is, what will be the future value of this “investment” on 12/30/23 at an interest rate of 5.99%?</p>
+<span class="math display">\[\begin{align}
+F&amp;= P(1+rt)\\
+&amp;= 1200\left[1+\left(\frac{5.99}{100} \times \frac{48}{360}\right)\right]\\
+&amp;=1800\times 1.007966666\\
+&amp;=1814.34
+\end{align}\]</span>
+<p>To find the amount you still owe on 12/30/23, you subtract $1,814.34 from $3,000 to get $ 1,185.66.</p>
+</section>
+<section id="exercises-3" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="exercises-3"><span class="header-section-number">8.9</span> Exercises</h2>
+<ol type="1">
+<li><p>On June 2, 2024, you will be required to pay $4500. On March 2, 2024, you decide to pay off the debt. What is your pay off amount? Assume money is worth 6.99%.</p></li>
+<li><p>Your student account shows that you owe $700 due at the end of the semester, on December 15. Assume that the account values money at 6%. If you make an early payment of $450 on October 21, how much will you owe still on December 15?</p></li>
+<li><p>Noreen has figured that her tax obligation for self-employment on 2/15/24 will be about $5,800. She makes a $1500 payment on 8/15/23 and another $1600 payment on 11/15/23. What will she still owe on 2/15/24 if money is worth 3.5%? (Use <strong><em>approximate time</em></strong>)</p></li>
+<li><p>Morgan owes $2000 due in 1 year and $3000 due in 5 years. What is her cash equivalent (i.e., payoff amount) of these two amounts at 3.5%? (Notice that this implies using today as the focal date.)</p></li>
+<li><p>Suppose you owe $2,491.59 on 12/21/23 and you make a payment of $1500 on 10/21/23. How much do you still owe on 12/21/23?</p></li>
+<li><p>Suppose in problem 5 above you off the debt on 02/20/2024 and that the company charges a late payment fee of $2.99 per day. How much will you pay on 02/20/2024?</p></li>
+<li><p>Eli pays $500 for his dog, Fido, on 6/1/23 and agrees to make three <strong>equal payments</strong> on 12/1/23, 6/1/24, and 12/1/24. If the breeder charges 8% for credit, find the amount of each of the three payments. Put the focal date at 12/1/24.</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -233,6 +632,109 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
