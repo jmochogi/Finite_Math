@@ -1,20 +1,20 @@
 ---
 title: "Applications"
 ---
-## Intersecting Lines
-As you saw earlier, graphs are one of the ways commonly used to represent linear functions. By examining graphs of linear functions, we learn a lot about the function. For example, we can quickly tell whether a function is increasing (positive slope), decreasing (negative slope) or neither (zero slope). We can also get a sense of how fast the output values are changing with change in the input values.
-In order to leverage this benefit of graphs to compare multiple linear functions, it is often helpful to graph the functions on the same grid.
 
-**Consider the claim below:** 
+As you saw earlier, graphs are one of the ways commonly used to represent linear functions. By examining graphs of linear functions, we learn a lot about the function. For example, we can quickly tell whether a function is increasing (positive slope), decreasing (negative slope) or neither (zero slope). We can also get a sense of how fast the output values are changing with change in the input values. In order to leverage this benefit of graphs to compare multiple linear functions, it is often helpful to graph the functions on the same grid.
 
-If two linear functions with **different** rates of change are graphed on the same grid, then, the lines must intersect at some point. 
-Do you think this claim is true? Why or why not?
+**Consider the claim below:**
 
-In the world of business and economics, **supply** and **demand** problems are sometimes modeled using linear functions. When the demand and supply meet (intersect) we have an equilibrium point. Consider the following example:
+If two linear functions with **different** rates of change are graphed on the same grid, then, the lines must intersect at some point. Do you think this claim is true? Why or why not?
+
+### Supply and Demand
+
+Supply and demand are two fundamental concepts in economics that are sometimes modelled using linear functions. The supply function shows the relationship between the quantity of a product that producers have available and the price of the product. The demand curve shows the relationship between the quantity of a product that consumers are willing to buy and the price of the product. The point where the **supply** and **demand** functions intersect is called the **equilibrium point**. At this point, the quantity of the product that producers are willing to supply is equal to the quantity that consumers are willing to buy. Consider the following example:
 
 **Example 1**
 
-The supply, in thousands of items, for custom phone cases can be modeled by the equation, $s(p)=0.5+1.2p$ while the demand can be modeled by $d(p)=8.7−0.7p$, where p is in the price in dollars. Find the equilibrium price and quantity, the intersection of the supply and demand curves.
+The supply, in thousands of items, for custom phone cases can be modeled by the equation, $s(p)=0.5+1.2p$ while the demand can be modeled by $d(p)=8.7−0.7p$, where p is in the price in dollars. Find the equilibrium price and quantity.
 
 ***Solution***
 
@@ -43,7 +43,6 @@ grid()
 
 The approximate point of intersection for the graphs is $(4.3,5.6)$. You can get more accurate values using technology. This intersection is a pair $(x,y)$ where the first number is the price (input) and the second if the quantity (output).
 
-
 *Algebraic solution*:
 
 ```{=tex}
@@ -65,9 +64,147 @@ s(4.32)&=0.5+(1.2\times 4.32)\\ \\
 &= 5.68
 \end{align}
 ```
-
 Thus, the two approaches give us the same solution.
 
+### Cost Analysis
 
-## Systems of Equations
+The cost of manufacturing an item often consists of the fixed costs and the variable costs. Fixed costs are costs that do not change with the quantity of items produced while variable costs change with the quantity of items produced. Fixed costs may include setting up equipment, training workers, etc. The total cost of manufacturing $x$ items can be modeled by a linear function of the form $C(x)=b+mx$, where $b$ is the fixed cost and $m$ is the variable cost per item. The fixed cost is the cost incurred even when no items are produced while the variable cost is the cost incurred for each item produced.
 
+The rate of change of the cost, $C$, at a production level, $x$, is equal to the slope of the cost function at the point $x$. This rate of change is the cost of producing one more item at that production level. It is also called the **marginal cost**. In the context of linear functions, the **marginal cost** equals the slope of the cost function. Note that this may not be the same for a non-linear function.
+
+**Example 2**
+
+The marginal cost of producing $x$ phones is \$350.5 per phone, while the cost of producing 100 phones is \$49,150. Find the cost function, $C(x)$, given that it is a linear function.
+
+***Solution***
+
+Since the function is linear, it can be represented as $C(x)=b+mx$, where, $m$ is the slope (marginal cost), and $b$ is the fixed cost. We are given that the marginal cost is \$350.5 per phone. This means that the slope of the function is 350.5. We can use the point-slope formula for linear functions (see section 2.3) as follows:
+
+```{=tex}
+\begin{align}
+  C(x)-49,150&=350.5(x-100) \\ \\
+  C(x)-49,150&=350.5x-35,050\\ \\
+  C(x)&=350.5x-35,050+49,150\\ \\
+  C(x)&=350.5x+14,100\\ \\
+\end{align}
+```
+Thus, the cost function is $C(x)=350.5x+14,100$.
+
+**Example 3**
+
+The fixed costs for a milk processing company are \$10,000. Given that the total cost for producing 1,000 gallons of milk is \$10,000, find the cost function, $C(x)$ where $x$ is the number of gallons produced. Assume that $C(x)$ is a linear function. Find the cost of producing 100,000 gallons of milk.
+
+***Solution***
+
+Left as an exercise for you to try.
+
+### Break-Even Analysis
+
+The break-even point is the point at which the total revenue equals the total cost. It is the point at which the company neither makes a profit nor a loss. The break-even point can be found by setting the total revenue equal to the total cost and solving for the quantity produced. The total revenue is the product of the price of the item and the quantity produced. The total cost is the sum of the fixed costs and the variable costs. The break-even point is the quantity produced at which the total revenue equals the total cost.
+
+Companies use the break-even point to determine the minimum quantity of items they need to produce to cover their costs. If the company produces more than the break-even point, they make a profit. If they produce less than the break-even point, they make a loss. Companies can use the break-even point to make decisions about pricing, production levels, etc.
+
+**Example 4**
+
+A milk farmer finds that the total cost of producing milk in his farm is given by the function $C(x)=0.5x+1000$, where $x$ is the number of gallons of milk produced. The farmer sells each gallon of milk for \$2.
+
+a.  Find the total revenue function, $R(x)$, in terms of $x$.
+
+b.  How many gallons must the farmer sell to break-even?
+
+c.  How many gallons must the farmer sell to make a profit?
+
+***Solution***
+
+a.  The revenue function is the product of the price of the item and the quantity produced. Thus, $R(x)=2x$.
+
+b.  To find the break-even point, we set the total revenue equal to the total cost and solve for $x$. This idea is captured under section 3.01 on intersecting lines. You can graph the two functions $C(x)$ and $R(x)$ and find the point of intersection in the graph. Alternatively, you can solve algebraically as follows:
+
+```{=tex}
+\begin{align}
+  R(x)&=C(x)\\ \\
+  0.5x+1000&=2x\\ \\
+  0.5x-2x&=-1000\\ \\
+  -1.5x&=-1000\\ \\
+  x&=666.67
+\end{align}
+```
+This means that the farmer starts making profit at a production level of 666.67 gallons. Below is a graph of the two functions. You can use desmos to accurately read the point of intersection.
+
+```{r, echo=FALSE}
+# Create a sequence of x-values
+x <- seq(0, 1000, length.out = 100)
+
+# Calculate y-values for each function
+y_f <- 1000 + 0.5 * x
+y_g <- 2 * x
+
+# Create the plot
+plot(x, y_f, type = "l", col = "blue", xlab = "Quantity, x", ylab = "Revenue", main = "Graph of C(x) and R(x)")
+lines(x, y_g, col = "red")
+legend("topright", legend = c("C(x)", "R(x)"), col = c("blue", "red"), lty = 1)
+grid()
+```
+
+Up to the point of intersection, the farmer is making a loss because the blue line (cost function) is higher than the red one (revenue function). After the point of intersection, the farmer is making a profit.
+
+### Exercises
+
+1.  The demand of a given product can be modeled using the linear function, $d(p)=12p+24$. <br><br> Find the price of the item at each of the following demand levels:
+
+    a\) 100 units
+
+    b\) 200 units
+
+    c\) units <br>
+    
+    Find the demand at each of the following price levels:
+    
+    d\) \$10
+
+    e\) \$20
+
+    f\) \$30
+
+2.  The demand and supply of a certain brand of custom-made cards depends on the price of the cards, $p$. Suppose that the demand can be expressed as $d(p)=2.3q+2$ and the supply as $s(p)=5.5−1.5p$ respectively. Find the equilibrium price and quantity.
+
+3.  The supply function for a certain product is given by $s(p)=0.5+1.2p$ while the demand function is given by $d(p)=8.7−0.7p$. Suppose that the equilibrium price is known to be \$3.45 and the demand is 5 units when the price is \$ 3.15. Find an equation for the demand function, assuming it is linear.
+
+4.  The cost of producing $x$ items is given by the function $C(x)=0.7x+500$, where $x$ is the number of units produced, and $C(x)$ is the total cost of production. 
+  
+    a\) Find the marginal cost. 
+    
+    b\) Calculate the total cost for producing 1,000 items
+    
+    c\) How many items would be produced at a total cost of \$2,150?
+  
+5. Jane owns a restaurant in downtown, Ithaca. Each year, her fixed costs stand at approximately \$349,500 while her total costs for serving 30,000 meals stands at \$691,000.
+
+    a\) Find the formula for the cost, $C(x)$ as a function of the number of meals served, $x$.
+    
+    b\) How much would it cost Jane to serve 50,000 meals?
+
+6.  A company produces custom-made shoes. The cost of producing $x$ pairs of the shoes is given by the function $C(x)=0.5x+1000$, while the revenue function is $R(x)=2x$.
+
+    a\) Find the break-even point. Explain in plain language what the break-even point means in this context.
+    
+    b\) What is the marginal cost of producing the shoes? Explain in plain language what the marginal cost means in this context.
+
+7. The cost of producing $x$ pounds of raw Salmon can be expressed as $C(x)=5x+20$. Each pound of the salmon is sold for \$15.
+
+    a\) Find the revenue function, $R(x)$.
+
+    b\) Find the break-even point.
+
+    c\) How many pounds of salmon must be sold to make a profit of \$1,000?
+    
+    d\) Find the profit made if the company sells 2,500 lbs of salmon.
+    
+    
+8. The budget for a certain university system with several campuses projects a fixed cost of \$242,500 at each of its campuses and a marginal cost of \$550 per student.
+
+    a\) Find the cost function, $C(x)$, where $x$ is the number of students            enrolled.
+    
+    b\) The budget projects that there will be 240 students at each campus.            Calculate the total cost at each campus.
+    
+    c\) Due to budget costs, each center is limited to \$500,000. What is the         maximum number of students that can be enrolled at each campus?

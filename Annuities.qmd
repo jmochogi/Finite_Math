@@ -1,4 +1,404 @@
 ---
 title: "Annuities and Sinking Funds"
 ---
-Hey Tex, this is an empty document.
+
+## Introduction to Annuities
+
+Consider the following scenario:
+
+Alex has just started a new job that pays him \$65,000 per year (about \$5,000 per month). By default, his employer deducts 5% of this money (\$250) and saves to Alex's retirement plan which pays an interest of 5% compounded monthly. How much will Alex have in this account after 4 months?
+
+Here are some important things to note about the scenario:
+
+- Unlike the scenarios from the previous chapters, there is **no single** principal amount that is deposited. Rather, there is a recurring deposit of \$ 250 that is made monthly.
+
+- The recurring payment is made at the end of each month (the employer cannot make payments before Alex works)
+
+- The first deposit (i.e., the first \$ 250) that the employer makes will stays in the bank longest, hence earning the most interest.
+
+- The last deposit (i.e., the one made for the fourth month) does not earn any interest. It stays as \$250.
+
+
+At this point, you may have already guessed that the the compound interest formula from the previous chapter could be applied in this scenario. The question is, how? We will answer that in the following sections. Before that, however, let us look at some definitions: 
+
+::: {.callout-tip title="Annuity"}
+An **Annuity** is a sequence of payments (usually equal) dispersed or received at equal intervals of time. In the above example, the payments are made monthly. 
+:::
+
+
+::: {.callout-tip title="Simple Annuity"}
+A **Simple annuity** has the interest compounded at the same frequency as the payments. The above scenario is a simple annuity situation.
+:::
+
+::: {.callout-tip title="Ordinary Annuity"}
+An **Ordinary annuity** has payments at the **end** of each compounding period. In the above scenario, the payments are made at the end of every month. So, the above scenario is an ordinary annuity.
+:::
+
+::: {.callout-tip title="Simple Ordinary Annuity"}
+A **Simple Ordinary Annuity:** is an annuity where payments are made at the end of every payment period and where the interest is compounded at the same frequency as the payments. In our example above, payments are made at the end of every month and compounding happens every month. Thus, our scenario above is a simple ordinary annuity.
+:::
+
+
+## Future Value of an Ordinary Annuities
+
+Now, we want to find the total amount (future value) that will be in Alex's retirement account after six months. To do this, we can use the compound interest formula learned in the previous chapter. However, since there are multiple deposits being made, we have to apply the formula separately for each deposit. See below:
+
+::: {.callout-tip title="Alex's Future Value for the 6 deposits"}
+The first deposit of \$ 250 made at the end of the first month will earn interest five times (at the beginning of the second, third, fourth, fifth, and sixth month). 
+
+We can compute the future value of the first deposit as follows,
+
+\begin{align}
+
+F &= P\left(1+\frac{r}{m}\right)^n\\\\
+  &= 250\left(1+\frac{0.05}{12}\right)^{(12\times \frac{5}{12})}\\\\
+  &= \$ 255.25
+
+\end{align}
+
+
+The second deposit is made and the end of the second month and stays for 4 months. The future value for this deposit can be computed is the same manner as above. See below,
+
+\begin{align}
+
+F &= P\left(1+\frac{r}{m}\right)^n\\\\
+  &= 250\left(1+\frac{0.05}{12}\right)^4\\\\
+  &= \$ 254.19
+\end{align}
+
+For the third deposit, the future value will be 
+
+\begin{align}
+
+F &= P\left(1+\frac{r}{m}\right)^n\\\\
+  &= 250\left(1+\frac{0.05}{12}\right)^3\\\\
+  &= \$ 253.14
+\end{align}
+
+For the fourth deposit, the future value will be 
+
+\begin{align}
+
+F &= P\left(1+\frac{r}{m}\right)^n\\\\
+  &= 250\left(1+\frac{0.05}{12}\right)^2\\\\
+  &= \$ 252.09
+\end{align}
+
+For the fifth deposit, the future value will be 
+
+\begin{align}
+
+F &= P\left(1+\frac{r}{m}\right)^n\\\\
+  &= 250\left(1+\frac{0.05}{12}\right)^1\\
+  &= \$ 251.04
+\end{align}
+
+For the last (sixth) deposit, the future value will be 
+
+\begin{align}
+
+F &= P\left(1+\frac{r}{m}\right)^n\\\\
+  &= 250\left(1+\frac{0.05}{12}\right)^0\\\\
+  &= \$ 250
+\end{align}
+
+Thus, the future value for all deposits is the sum of each of the values above,
+
+\begin{align}
+255.25 + 254.19 + 253.14 + 252.09 + 251.04 + 250 = \$ 1,515.71
+\end{align}
+
+
+Note that of the money were earning no interest, Alex would have a total of 
+
+\begin{align}
+250\times 6 = \$1,500
+\end{align}
+
+Note that Alex earned a total interest of \$15.71 over the six month period.
+
+:::
+
+
+## Formula for the Future Value of an Annuity
+
+If you wanted to know how much Alex would have saved after 10 years, how many times would you have to repeat the process above? Obviously, that will be a long, tedious, and perhaps boring process.
+
+At this point, you may be wondering whether there is a formula for computing the future value of an annuity without breaking the problem down into several steps as above. The answer to this question is **YES**. I will simply state the formula here but we will "prove" it in class via an exploration activity which will make it a lot easier to understand how it works.
+
+::: {.callout-tip title="Formula for Future Value of an Annuity"}
+$$
+F=R\left[\frac{(1+i)^n - 1}{i} \right]
+$$
+
+Where,
+
+$F=$ Future Value
+
+$i=$ Recurring (or repeating) payment
+
+$n=$ total number of payments 
+
+$i=$ interest rate per compounding period, (i.e., $i=\frac{r}{m}$) 
+:::
+
+
+Let us now apply the formula for the earlier stated scenario (Alex's).
+
+Clearly, $R=250$, $n = 6$, and $i=\frac{0.05}{12}$
+
+Thus,
+
+\begin{align}
+F &= R\left[\frac{(1+i)^n - 1}{i} \right]\\\\
+
+&= 250\left[\frac{\left(1+\frac{0.05}{12}\right)^6 - 1}{\frac{0.05}{12}} \right]\\\\
+
+& = \$ 1,515.71
+\end{align}
+
+
+**Example 1**
+
+Maddie is saving towards a new car by making monthly deposits of \$750 in an account that earns an interest rate of 6.5% (12). How much will Maddie have in this account after 3 years?
+
+***Solution***
+
+First, note that this scenario matches the definition of a simple ordinary annuity. Thus, we can use the formula stated earlier. 
+
+We have that $R=750$, $n = 12\times 3=36$, and $i=\frac{0.065}{12}$
+
+Plug these into the formula as follows:
+
+\begin{align}
+F &= R\left[\frac{(1+i)^n - 1}{i} \right]\\\\
+
+&= 750\left[\frac{\left(1+\frac{0.065}{12}\right)^{36} - 1}{\frac{0.065}{12}} \right]\\\\
+& = \$ 29,723.76
+\end{align}
+
+
+**Example 2**
+
+Alexander, age 20, estimates that he will need \$500,000 to live comfortable after retirement (at age 60). Suppose he saves \$180 monthly towards his retirement account and that the account pays interest at the rate of 7.15% (12). Will Alexander meet his retirement goal? If not, how much more should he save monthly to achieve the goal?
+
+***Solution***
+
+First, note that this scenario matches the definition of a simple ordinary annuity. Thus, we can use the formula stated earlier. We need to calculate the future value of Alexanders annuities and check whether that value is at least \$ 500K.
+
+We have that $R=120$, $n = 12\times 40 = 480$, and $i=\frac{0.0715}{12}$
+
+Plug these into the formula as follows:
+
+\begin{align}
+F &= R\left[\frac{(1+i)^n - 1}{i} \right]\\\\
+
+&= 180\left[\frac{\left(1+\frac{0.0715}{12}\right)^{480} - 1}{\frac{0.0715}{12}} \right]\\\\
+
+& = \$ 492, 841.40
+\end{align}
+
+
+Alexander cannot meet the goal. He is short by \$7,158.6
+
+To find how much he should save monthly, we set $F = 500,000$ and solve for $R$. See below:
+
+
+\begin{align}
+500,000 &= R\left[\frac{(1+\frac{0.0715}{12})^{480} - 1}{\frac{0.0715}{12}} \right]\\
+
+500,000 &= R\times 2738.00775298\\\\
+
+R &=\frac{500,000}{2738.00775298}\\\\
+
+& = \$ 182.61
+\end{align}
+
+Thus, Alexander should save \$2.61 more per month to achieve the goal of \$500K. It is like foregoing just a cup of coffee per month.
+
+## Exercises
+
+1. Find the future value if deposits of \$2,000 are made quarterly for three and half years at 9% compounded quarterly.
+
+2. Mr. Brown wants to give his son an annuity of \$ 2,500 per year starting on his twenty first birthday, which he will increase to \$ 5,000 per year on his twenty fifth birthday, with a final payment on his thirtieth birthday. Assuming the interest rate is 6.99 % (1), compute the future value of this annuity (i.e., when this son turns 30).
+
+3. Hannah wishes to accumulate \$ 80,000 in a fund at the end of 20 years. She makes weekly deposits of \$ 90 into an ordinary annuity account at an interest rate of 4.99 %(52). Is Hannah able to meet her target of \$ 80,000?
+
+4. Mark decides that he needs to save \$24,999 in five years to put towards a new vehicle. How much should he invest every month into an ordinary annuity account earning 4.99 % compounded monthly?
+
+5. Find the future value of 35 years worth of \$30 monthly deposits at 3.5%(12).
+
+6. A factory estimates it will have to replace a certain equipment at a cost of \$800,000 in 5 years. To do this they decide to deposit equal monthly payments into an account paying 6.6% compounded monthly. How much should each deposit be?
+
+7. Emma deposits \$2000 annually into a retirement account that earns 6.85% compounded annually. Due to a change in employment, these deposits stop after 10 years, but the account continues to earn interest until Emma retires 25 years after the last deposit is made. How much is in the account when Emma retires?
+
+8. Hannah wishes to accumulate \$ 80,000 by making weekly deposits of \$ 90 into an ordinary annuity account at an interest rate of 4.99 %(52). How long (years) will it tale Hannah take to reach her goal?
+
+9. If you make monthly deposits of \$310 into an ordinary annuity account earning 5.17% compounded monthly, how many deposits must you make so that you will have at least $210,000?
+(Note: your answer should be a whole number/integer)
+
+10. Ed and Trixie would like to have \$30,000 for a down payment on a house. Their budget only allows them to save \$3198.28 per half-year. How many years will it take them to save up the desired amount of \$30,000? Assume that their saving account will pay 9% compounded semi-annually.
+
+11. Alicia paid \$27,000 down on a new house and will pay \$531 per month for 30 years. If the interest rate is 6.99% compounded monthly, find the total amount that Alicia will end up paying for the house.
+
+
+## Present Value of an Annuity
+
+Consider the following scenario:
+
+A millionaire is willing to donate a lump sum of money to some college to sponsor a certain program for two years. The college will deposit this sum in an account that earns 6% interest compounded semiannually (twice a year). The problem here is to find the minimum amount that the donor needs to give for the college to withdraw \$50,000 semiannually for two years.
+
+Note the following:
+
+- The college will make 4 withdrawals over a 2-year period, hence there will be 4 withdrawals.
+
+- The total withdrawn amount will be \$ 200,000. 
+
+- If the money were not earning any interest, the donor will have to give the whole amount (i.e., \$200,000). Thus, we expect that the money to be donated to be less than \$200,000.
+
+
+::: {.callout-tip title="Present Value of an Annuity"}
+The **present value** of an annuity is the amount that would have to be deposited in one lump sum today (at the same compound interest rate) in order to produce exactly the same balance at the end of the annuity.
+:::
+
+Notice that the millionaire donor scenario matches the definition of a present value. The question is, how can we find the lump sum amount (present value) that the donor needs to give? 
+
+To solve this problem, can can use the same approach as for the future value but instead of calculating the future value for each deposit, we calculate the present value for each withdrawal. See below:
+
+::: {.callout-tip title="Present value for each Withdrawal"}
+The first withdrawal of \$ 50,000 is made at after six months. The second is made after one year, and the third after a year and half. The last is made after exactly 2 years.
+
+Note that we are using the present value formula for compound interest, which can be stated as,
+
+\begin{align}
+P &= \frac{F}{(1+i)^n} 
+\end{align}
+
+For the first withdrawal, the present value is, 
+
+\begin{align}
+P &= \frac{50,000}{(1+\frac{0.06}{2})^1}\\\\
+  &= \$48543.69
+\end{align}
+
+For the second withdrawal, the present value is,
+
+\begin{align}
+P &= \frac{50,000}{(1+\frac{0.06}{2})^2}\\\\
+  &= \$47,129.80
+
+\end{align}
+
+For the third withdrawal, 
+
+\begin{align}
+P &= \frac{50,000}{(1+\frac{0.06}{2})^3}\\\\
+  &= 45,757.08
+\end{align}
+
+And for the last (fourth),
+
+\begin{align}
+P &= \frac{50,000}{(1+\frac{0.06}{2})^4} \\\\
+  &= 44,424.35
+\end{align}
+
+Thus, the present value (P) for the above annuity would be,
+
+\begin{align}
+48,543.69 + 47,129.80 + 45,757.08 + 44,424.35 = \$ 185,854.92
+\end{align}
+
+Note that if there was no interest being earned, the donor would have to deposit \$200K for the college to withdraw 50K every six months for two years. The savings made here arise from the fact that the money is earning interest.
+:::
+
+
+## Formula for the Present Value of an Annuity
+
+What if the donor wanted the college to be able to withdraw 50K every six months for a period of 30 years? How much should the donor give? Well, using the above process would be tedious and prone to errors. 
+
+To find the present value of an annuity, we can use the following formula (developed through in-class activity):
+
+::: {.callout-tip title="Formula for Present Value of an Annuity"}
+$$
+P = R\left[\frac{1-(1+i)^{-n}}{i} \right]
+$$
+
+Where,
+
+$P=$ Present Value
+
+$i=$ Recurring (or repeating) payment/withdrawal
+
+$n=$ total number of payments 
+
+$i=$ interest rate per compounding period, (i.e., $i=\frac{r}{m}$) 
+:::
+
+
+Let us use the present value formula for the donor scenario above,
+
+We have, $R=50,000$, $n=4$, and $i=\frac{0.06}{2}=0.03$
+
+Thus,
+
+\begin{align}
+P &= 50000\left[\frac{1-(1+0.03)^{-4}}{0.03} \right]\\\\
+  &=\$ 185,854.92
+\end{align}
+
+
+**Example 3**
+
+Jayne is a freshman in college. She has an online savings account that pays interest at the rate of 7.99%(12). Her parents want to deposit money in this bank account so that Jayne can withdraw \$2,500 every month for four months. What is the minimum amount that should be deposited in Jayne's account?
+
+***Solution***
+
+First, note that this problem is asking for the present value (P) of an annuity. If Jayne's account were paying no interest, she would need 10K deposited (i.e., 2500 times 4). Since the account earns some interest, we know that the parents will need to deposit less than 10K.
+
+We have that $R=2,500$, $n = 4$, and $i=\frac{0.0799}{12}=0.00665833$
+
+Next, plug these values into the formula as follows:
+
+\begin{align}
+P &= 2500\left[\frac{1-(1+0.00665833)^{-4}}{0.00665833} \right]\\\\
+  &=\$ 9,835.73
+\end{align}
+
+
+**Example 4**
+
+Suppose that in example 3 above, Jayne's parents deposited \$ 15,000. How much will Jayne be able to withdraw monthly for four months?
+
+***Solution***
+
+Notice that this problem still requires the use of the present value an an annuity formula. However, the unknown quantity here is $R$. We can proceed as follows:
+
+\begin{align}
+15000 &= R\left[\frac{1-(1+0.00665833)^{-4}}{0.00665833} \right]\\\\
+      &= R \times 3.9342931446\\\\
+  R &= \frac{15000}{3.9342931446}\\\\
+  &= \$ 3,812.63
+\end{align}
+
+Thus, if Jayne's parents deposited \$15,000, Jayne would be able to withdraw about \$ 3,812.63 every month for 4 months.
+
+
+## Exercises
+
+1. James purchased a car on a 5-year credit plan and is making monthly payments of \$349.55. Given that the interest rate being charged is 13.99%(12), find the selling price (cash value) of the car.
+
+2. For the problem in #1, how much interest will James end up paying?
+
+3. The marked price of a house is $229,500. A given bank will give you credit at an interest rate of 11.99% (12) to purchase the house. How much will your monthly payments be assuming you plan to pay over a 20-year period?
+
+4. How much interest will you end up paying for the house in problem #3 above?
+
+5. A certain LG TV set costs $1,299 cash at BJ's store. The cashier tells you that you can qualify for credit card at an interest rate of 19.99% compounded monthly. How much will you end up paying for the TV if you decide to take the credit on a y-year payment plan? How much interest would you end up paying?
+
+6. 
+
+
+
+
+

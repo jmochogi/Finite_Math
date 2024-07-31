@@ -1,4 +1,4 @@
 - source: project
   quarto-pub:
     - id: 42c59d07-e6c2-48a0-8e96-0b90d598226e
-      url: 'https://quartopub.com/sites/jmochogi/fmathematics'
+      url: 'https://jmochogi.quarto.pub/fmathematics'

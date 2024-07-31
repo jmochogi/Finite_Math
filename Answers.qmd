@@ -1,0 +1,13 @@
+# Answers
+
+## [Exercise 1.6: Intro to Linear Functions]{style="color:#4166f5;"}{.unnumbered}
+
+1\) Answers will vary
+
+3\) Answers will vary
+
+5\) $f(x)=-2x+10$
+
+7\) a\) $N(m)=15m+200$;      b) 380 songs after 12 months
+
+## [Exercise 2.6: Rate of Change]{style="color:#4166f5;"}{.unnumbered}

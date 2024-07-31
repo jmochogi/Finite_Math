@@ -50,7 +50,7 @@ In the above section, we described the taxi cost function using words and repres
 
 Below is a table for the function above:
 
-![](images/i.jpeg){width="90%"}
+![](images/i.jpeg){width="85%"}
 
 **Question:** What are the advantages and disadvantages of using a table instead of a formula or verbal description?
 
@@ -67,7 +67,7 @@ data <- data.frame(x = x, y = 2.4 * x + 3.3)
 
 # Create the plot using ggplot with custom y scale
 ggplot(data, aes(x, y)) +
-  geom_line(color = "blue", linewidth = .7) +
+  geom_line(color = "lightblue", linewidth = .6) +
   labs(x = "Miles", y = "Cost", title = "Graph of C(m) = 2.4m + 3.3") +
   scale_y_continuous(limits = c(0, 30)) +
   theme_minimal() +  # Apply a minimalistic theme
@@ -91,13 +91,17 @@ Since as you increase the input value, the output value increases, we say that t
 
 Generally, a linear function is said to be ***increasing*** if the slope $m$ is positive and ***decreasing*** if the slope is negative.
 
+## Domain and Range
+
+In the taxi example presented earlier, one cannot ride negative miles. This means that the input values for the function cannot be negative. Also, the output (the amount of money charged) cannot be negative. The ***Domain*** of a function, $y=f(x)$ is the set of all possible input values ($x$) for the function while the range is is the set of all possible output values for the function. For the taxi example, the domain is all numbers greater than or equal to zero (denoted as $x\ge0$) while the range is $y\ge0$ (notice that we use $y$ or $f(x)$ for the range). When thinking about the domain and range of a function, it is very important to consider the context of the problem.
+
 ## [Exercises]{style="color:#4166f5;"}
 
 1.  Create a real-life scenario that can be modeled by a decreasing linear function.<br><br>
 2.  Write the formula for the function in exercise 1 above.<br><br>
 3.  Describe how the graph of the function in exercise 2 would look like.<br><br>
 4.  What would the graph of the function, $f(x)= 0x+3$ look like?<br><br>
-5.  Find the formula for the linear function, $y=f(x)$, graphed below:
+5.  Find the formula for the linear function, $y=f(x)$, graphed below. Write a real-life scenario that can be modeled by this function.
 
 ```{r, echo=FALSE}
 library(ggplot2)
@@ -119,4 +123,8 @@ ggplot(data, aes(x, y)) +
 
 6.  Find the $y-intercept$ of a linear function whose rate of change is 2.5 and passes through the point $(3,9)$.
 
-7.  Marcus currently owns 200 songs in his iTunes collection. Every month, he adds 15 new songs. Write a formula for the number of songs, $N$, in his iTunes collection as a function of the number of months, $m$. How many songs will he own in a year if the trend continues? <br> <br>
+7.  Marcus currently owns 200 songs in his iTunes collection. Every month, he adds 15 new songs.
+
+    a) Write a formula for the number of songs, $N$, in his iTunes collection as a function of the number of months, $m$. <br>
+    b) Use the function created in (a) above to find the number of songs that Marcus will have in a year if the trend continues. <br> <br>
+

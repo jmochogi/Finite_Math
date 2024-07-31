@@ -4,15 +4,15 @@ title: "Compound Interest"
 
 ## Introduction to Compound Interest
 
-With simple interest, we assumed that we the interest, together with the principal amount lent out or borrowed were paid at maturity (i.e., at the end of the investment/loan period). In a standard bank account, any interest we earn is automatically added to our principal, and we earn interest on that interest in future. 
+With simple interest, we assumed that the interest, together with the principal amount borrowed or lent out were paid at maturity (i.e., at the end of the investment/loan period). In a standard bank account, any interest earned is automatically added to the principal, and we earn interest on that interest in future.
 
 ::: {.callout-tip title="Compounding"}
-The idea of reinvesting earned interest is to earn further interest is referred to as compounding.
+The idea of reinvesting earned interest in order to earn further interest is referred to as compounding.
 :::
 
-An interesting questioning we may want to explore is, "how often does compounding happen within the life cycle of a loan or investment?"
+An interesting question we may want to explore is, "how often does compounding happen within the life cycle of a loan or investment?"
 
-Consider the example in the previous chapter where you were lending a friend \$5,000 to be paid back after one year. We found that, if you charge your friend an interest rate of 10%, they will have to pay \$500 worth of interest by the end of the year. 
+Consider the example in the previous chapter (see section 8.1) where you were lending a friend \$5,000 to be paid back after one year. We found that, if you charge your friend an interest rate of 10%, they will have to pay \$500 worth of interest by the end of the year.
 Now, if your friend keeps the money for one more year, under the compound interest arrangement, they will pay the new interest based on \$ 5,500 (i.e., the original \$ 5000 plus \$ 500 interest from the first year).
 See calculation below:
 
@@ -43,7 +43,7 @@ I&=Prt\\
 In the above example, compounding happens once every year and so we have two compounding periods (Year 1 and Year 2) in total. If compounding were to happen every six months instead (twice a year), we would have a total of four compounding periods. 
 
 ::: {.callout-tip title="Definition: Compounding Period"}
-A compounding period refers to the how often compounding happens within a year. Compounding period is also known as ***interest period***.
+A compounding period refers to how often compounding happens within a year. Compounding period is also known as ***interest period***.
 :::
 
 In the above example, how many compounding periods would you have in total if the compounding period were one month? 
@@ -53,7 +53,7 @@ If we let $n$ be the total number of compounding periods and $m$ be the number o
 $$n=mt
 $$
 :::
-In calculating compound interest, it is important to know the interest rate per compounding period. In the above example where the interest rate is 10% with two compounding, the interest rate per period is $i=\frac{r}{2}$
+In calculating compound interest, it is important to know the interest rate per compounding period. In the above example where the interest rate is 10% with two compoundings, the interest rate per period is $i=\frac{r}{2}$
 
 ::: {.callout-tip title="Interest rate per compounding period"}
 If we let $r$ be the annual interest rate, and $i$ be the rate per period, then,
@@ -64,7 +64,7 @@ $$
 
 ## Future value for Compound Interest
 
-In the previous example, we saw that your friend would pay you a total of \$ 6050 under the compound interest arrangement but only \$ 6,000 under the simple interest arrangement. For the simple interest, you can get the future value directly by using teh formula $F=P(1+rt)$ from the previous chapter. For compound interest, the formula is
+In the previous example, we saw that your friend would pay you a total of \$ 6050 under the compound interest arrangement but only \$ 6,000 under the simple interest arrangement. For the simple interest, you can get the future value directly by using the formula $F=P(1+rt)$ from the previous chapter. For compound interest, the formula is
 
 ::: {.callout-tip title="Interest rate per compounding period"}
 $$
@@ -157,19 +157,18 @@ Suppose you open up a savings account with \$1,000 that pays $6\%(12)$ interest 
 
 ***Solution***
 
-We know that $F=1,500$, $i=\frac{0.06}{12}=0.005$, and $P=1,000$. We do not know $n$.
+We know that $F=1,500$, $i=\frac{0.06}{12}=0.005$, and $P=1,000$. We do not know $n$ (i.e., the total number of compounding periods).
 
 \begin{align}
 1500&=1000(1+0.005)^n\\
 \frac{1500}{1000}&=(1.005)^n\\
 \text{log} (1.5)&=\text{log}(1.005)^n\\
-\text{log} (1.5)&=n\times \text{log}(1.005)^n\\
 \text{log} (1.5)&=n\times \text{log}(1.005)\\
 n&=\frac {\text{log} (1.5)}{\text{log}(1.005)}\\
 &= 81.295586
 \end{align}
 
-Finally, we divide $n$ by 6 (the number of compoundings per year) to get the number of years; $$\frac{81.295586}{6}=13.55 \hspace{0.05in}\text{years}.$$
+Finally, we divide $n$ by 12 (the number of compounding periods per year) to get the number of years; $$\frac{81.295586}{12}\approx 6.77 \hspace{0.05in}\text{years}.$$
 
 ## Calculating the Interest Rate
 

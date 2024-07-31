@@ -2,19 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.28">
+<meta name="generator" content="quarto-1.5.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Finite Mathematics - 8&nbsp; Simple Interest</title>
+<title>Finite Mathematics – 9&nbsp; Simple Interest</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
 </style>
 
 
@@ -26,7 +31,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Compound_Interest.html" rel="next">
-<link href="./Transportation.html" rel="prev">
+<link href="./Mixed_strategies.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -44,7 +49,13 @@ ul.task-list{list-style: none;}
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -53,12 +64,42 @@ ul.task-list{list-style: none;}
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -66,11 +107,16 @@ ul.task-list{list-style: none;}
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Simple_Interest.html">Mathematics of Finance</a></li><li class="breadcrumb-item"><a href="./Simple_Interest.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Simple Interest</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -78,147 +124,181 @@ ul.task-list{list-style: none;}
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
         <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Linear Functions</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Linear Functions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Intro_LF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intro to Linear Functions</span></a>
+  <a href="./Intro_LF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Linear Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ROC.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rate of Change</span></a>
+  <a href="./ROC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rate of Change</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LF_Applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications</span></a>
+  <a href="./LF_Applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Applications</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Linear Programming</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Linear Programming</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometric Method</span></a>
+  <a href="./Geometric_Method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geometric Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Simplex Method</span></a>
+  <a href="./LP_Simplex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Simplex Method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Transportation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></a>
+  <a href="./Transportation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Mathematics of Finance</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Game Theory</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Simple_Interest.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></a>
+  <a href="./Intro_to_GT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Intro to Game Theory</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Compound_Interest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></a>
+  <a href="./Mixed_strategies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Mixed Strategies</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mathematics of Finance</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Simple_Interest.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Simple Interest</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annuities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></a>
+  <a href="./Compound_Interest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Compound Interest</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annuities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Annuities and Sinking Funds</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./Answers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Answers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#intro-to-simple-interest" id="toc-intro-to-simple-interest" class="nav-link active" data-scroll-target="#intro-to-simple-interest"> <span class="header-section-number">8.1</span> Intro to Simple Interest</a></li>
-  <li><a href="#future-value" id="toc-future-value" class="nav-link" data-scroll-target="#future-value"> <span class="header-section-number">8.2</span> Future Value</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"> <span class="header-section-number">8.3</span> Exercises</a></li>
-  <li><a href="#exact-and-approximate-time" id="toc-exact-and-approximate-time" class="nav-link" data-scroll-target="#exact-and-approximate-time"> <span class="header-section-number">8.4</span> Exact and Approximate Time</a>
+  <li><a href="#intro-to-simple-interest" id="toc-intro-to-simple-interest" class="nav-link active" data-scroll-target="#intro-to-simple-interest"><span class="header-section-number">9.1</span> Intro to Simple Interest</a></li>
+  <li><a href="#future-value" id="toc-future-value" class="nav-link" data-scroll-target="#future-value"><span class="header-section-number">9.2</span> Future Value</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">9.3</span> Exercises</a></li>
+  <li><a href="#exact-and-approximate-time" id="toc-exact-and-approximate-time" class="nav-link" data-scroll-target="#exact-and-approximate-time"><span class="header-section-number">9.4</span> Exact and Approximate Time</a>
   <ul class="collapse">
-  <li><a href="#exact-time-table" id="toc-exact-time-table" class="nav-link" data-scroll-target="#exact-time-table"> <span class="header-section-number">8.4.1</span> Exact Time Table</a></li>
+  <li><a href="#exact-time-table" id="toc-exact-time-table" class="nav-link" data-scroll-target="#exact-time-table"><span class="header-section-number">9.4.1</span> Exact Time Table</a></li>
   </ul></li>
-  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"> <span class="header-section-number">8.5</span> Exercises</a></li>
-  <li><a href="#consumer-price-index-and-inflation" id="toc-consumer-price-index-and-inflation" class="nav-link" data-scroll-target="#consumer-price-index-and-inflation"> <span class="header-section-number">8.6</span> Consumer Price Index and Inflation</a></li>
-  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2"> <span class="header-section-number">8.7</span> Exercises</a></li>
-  <li><a href="#equations-of-value" id="toc-equations-of-value" class="nav-link" data-scroll-target="#equations-of-value"> <span class="header-section-number">8.8</span> Equations Of Value</a></li>
-  <li><a href="#exercises-3" id="toc-exercises-3" class="nav-link" data-scroll-target="#exercises-3"> <span class="header-section-number">8.9</span> Exercises</a></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"><span class="header-section-number">9.5</span> Exercises</a></li>
+  <li><a href="#consumer-price-index-and-inflation" id="toc-consumer-price-index-and-inflation" class="nav-link" data-scroll-target="#consumer-price-index-and-inflation"><span class="header-section-number">9.6</span> Consumer Price Index and Inflation</a></li>
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2"><span class="header-section-number">9.7</span> Exercises</a></li>
+  <li><a href="#equations-of-value" id="toc-equations-of-value" class="nav-link" data-scroll-target="#equations-of-value"><span class="header-section-number">9.8</span> Equations Of Value</a></li>
+  <li><a href="#exercises-3" id="toc-exercises-3" class="nav-link" data-scroll-target="#exercises-3"><span class="header-section-number">9.9</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Simple_Interest.html">Mathematics of Finance</a></li><li class="breadcrumb-item"><a href="./Simple_Interest.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Simple Interest</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Interest</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Simple Interest</span></h1>
 </div>
 
 
@@ -226,41 +306,44 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
+
 </header>
 
-<section id="intro-to-simple-interest" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="intro-to-simple-interest"><span class="header-section-number">8.1</span> Intro to Simple Interest</h2>
+
+<section id="intro-to-simple-interest" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="intro-to-simple-interest"><span class="header-section-number">9.1</span> Intro to Simple Interest</h2>
 <p>If you lend someone $5000 today and that person pays you back in 1 year, you probably want them to pay you more than $ 5000 (say, $ 5,500). Borrowing money is not free. We use the term <strong>Present value</strong> (abbreviated as <span class="math inline">\(P\)</span>) to refer to the value of money at the moment and <strong>Future Value</strong> (abbreviated as <span class="math inline">\(F\)</span>) to refer to the value of the money at a future date.</p>
 <p>We use the term <strong>Interest</strong> (abbreviated as <span class="math inline">\(I\)</span>) to refer to the difference between the <strong>future value</strong> and the <strong>present value</strong>. You can think of interest as the <strong><em>value gained</em></strong> by the present value over a time period, <span class="math inline">\(t\)</span>. In other words, interest is the difference between the future value and the present value of the money.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Interest">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Interest
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Interest">
+<div class="callout-body-container callout-body">
 <p><span class="math display">\[I=F-P\]</span></p>
 </div>
 </div>
 <p>If the person to whom you lend the money keeps it for two years instead of one, what would be the interest? What if they keep it for 10 years? Well, this will depend on the terms of payment that the two of you agree on. assuming you agree on a flat rate or $500 <strong>every</strong> year, they would pay a total interest of <span class="math inline">\((10\times500=\$5000)\)</span> if they keep the money for ten years and $1000 for two years.</p>
 <p>The term <strong>interest rate</strong> refers to the proportion (percentage) of a loan that is charged as interest to the borrower. Interest rates are typically expressed as an annual percentage of the amount borrowed. For example, in the above scenario, the interest rate would be <span class="math display">\[\frac{500}{5000} \times 100=10\%\]</span> This means that <span class="math inline">\(10\%\)</span> of the present value <span class="math inline">\((0.1\times5000=500)\)</span> is paid as interest every year. We usually use the letter <span class="math inline">\(r\)</span> to denote interest rate. Thus, for an interest rate of <span class="math inline">\(r\)</span>, a present value <span class="math inline">\(P\)</span> and time <span class="math inline">\(t\)</span> years, one should expect to pay an interest of <span class="math inline">\(P\times r \times t=Prt\)</span>.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Total Interest over time, t (years)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Total Interest over time, t (years)
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Total Interest over time, t (years)">
+<div class="callout-body-container callout-body">
 <p><span class="math display">\[I=Prt\]</span> where,</p>
 <ul>
 <li><p><span class="math inline">\(r=\)</span> annual interest rate</p></li>
@@ -274,19 +357,19 @@ Tip
 <li>In the above scenario, we use the original fixed amount($,5000) to compute interest for each subsequent year. This type of interest is known as <strong>Simple Interest</strong>. In some cases, interest is computed by updating the present value on, say a yearly basis, effectively assuming that you are “re-borrowing” every time the principal is updated. For example, you may decide to update the principal to $5,500 in the second year and then charge your friend 10% of $5,500. We will explore this kind of interest in the next chapter.</li>
 </ul>
 </section>
-<section id="future-value" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="future-value"><span class="header-section-number">8.2</span> Future Value</h2>
+<section id="future-value" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="future-value"><span class="header-section-number">9.2</span> Future Value</h2>
 <p>The future value is the sum of the amount originally borrowed (present value) and the interest that is accrued over time.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Total Future Value over time, t (years)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Total Future Value over time, t (years)
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Total Future Value over time, t (years)">
+<div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
 F&amp;=P+Prt\\
 &amp;=P(1+rt)
@@ -327,8 +410,8 @@ Interest&amp;=Prt\\
 &amp;=\$280
 \end{align}\]</span></p>
 </section>
-<section id="exercises" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.3</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.3</span> Exercises</h2>
 <ol type="1">
 <li><p>Find the interest paid when $150,000 is borrowed at 4.3% (annual interest rate) for 14 weeks. (Note that there are 52 weeks in a year.)</p></li>
 <li><p>At the beginning of September 2019, Morgan invests $5000 at 4.5%. Find the interest and the future value of the investment 9 months later.</p></li>
@@ -346,61 +429,61 @@ Interest&amp;=Prt\\
 </ol>
 <!--14. You are treasurer for a local non-profit organization that is in the process of making improvements on its building. The contractor gives you two payment options: either pay \$27,500 on 9/6/18, or else \$28,500 on 4/3/19. If you calculate that you can get 8% annual interest on your money, which is the better deal? Take this problem after exact/approximate time section -->
 </section>
-<section id="exact-and-approximate-time" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="exact-and-approximate-time"><span class="header-section-number">8.4</span> Exact and Approximate Time</h2>
+<section id="exact-and-approximate-time" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="exact-and-approximate-time"><span class="header-section-number">9.4</span> Exact and Approximate Time</h2>
 <p>Consider the following scenario:</p>
 <p><em>While paying off student loans, you notice that the amount of interest you have to pay off each month changes by month. You expect this to go down, since the amount you owe goes down (so there is less money to charge interest on). But some months the amount of interest actually goes up. How is that possible?</em></p>
 <p>It turns out that the above scenario is caused by the fact that some months are longer (have more days) than others. Financial institutions take into consideration the <strong>number of days</strong> while computing the interest they charge their clients. The number of days can be either <strong>approximate</strong> or <strong>exact</strong>.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Defitnition (Approximate Time)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Defitnition (Approximate Time)
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Defitnition (Approximate Time)">
+<div class="callout-body-container callout-body">
 <p><strong><em>Approximate time:</em></strong> assumes that every month has 30 days. In order to compute the approximate time that has passed between two calendar dates, count the number of full months in the loan period, and multiply them by 30. Then add in the extra days included in the loan (less than a month) period using exact time.</p>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Defitnition (Exact Time">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Defitnition (Exact Time
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Defitnition (Exact Time">
+<div class="callout-body-container callout-body">
 <p><strong><em>Exact time:</em></strong> refers to the exact count of number of days that have passed.</p>
 </div>
 </div>
 <p>Now, how about the number of days in a year? In the world of banking, sometimes they use 360 as the number of days in a year and sometimes they use 365 (you may see this in <strong><em>terms and conditions</em></strong> section for various products such as credit cards). Remember that in the formula for interest <span class="math inline">\((I=Prt)\)</span>, time, <span class="math inline">\(t\)</span>, is expressed in years. When banks convert days to years they will either divide by 360 or by 365. Note that using 360 days in a year benefits the bank because the quantity <span class="math inline">\(t\)</span> will be higher and thus the interest paid increases.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Defitnition (Oedinary Interest">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Defitnition (Oedinary Interest
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Defitnition (Oedinary Interest">
+<div class="callout-body-container callout-body">
 <p>*<strong>Ordinary interest:</strong> calculates interest by assuming a total of 360 days in a year. (i.e., this is the denominator of your fraction of a year when calculating time.)</p>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Defintion (Banker's Rule)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Defintion (Banker’s Rule)
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Defintion (Banker's Rule)">
+<div class="callout-body-container callout-body">
 <p>Banker’s Rule says that, when you are calculating the length of a loan on the order of days, you use exact time but with ordinary interest. In other words, you calculate t (the length of the loan) using exact time, but use 360 as the number of days in a year.</p>
 </div>
 </div>
@@ -413,13 +496,13 @@ Tip
 <p>Find the exact time (days) between August 29 and December 14</p>
 <p><strong><em>Solution</em></strong></p>
 <p>Left as an exercise.</p>
-<section id="exact-time-table" class="level3" data-number="8.4.1">
-<h3 data-number="8.4.1" class="anchored" data-anchor-id="exact-time-table"><span class="header-section-number">8.4.1</span> Exact Time Table</h3>
+<section id="exact-time-table" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="exact-time-table"><span class="header-section-number">9.4.1</span> Exact Time Table</h3>
 <p>The table below gives the serial numbers for each day of the year. For example, Jan 1 has serial number 1 while Feb 1 has serial number 32. What this means is that you can easily find the exact number of days between two dates by subtracting their serial numbers.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tt.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Serial Numbers for Dates</figcaption><p></p>
+<figcaption>Serial Numbers for Dates</figcaption>
 </figure>
 </div>
 <p>From the table above, Dec 14 is day number 348 of the year. Similarly, Aug 28 is day number 241. So, the exact number of days between these two dates is <span class="math display">\[348-241=107.\]</span></p>
@@ -428,31 +511,31 @@ Tip
 <p>First, the question is asking us to find the future value <span class="math inline">\((F)\)</span>. The formula for future value was given as <span class="math inline">\(F=P(1+rt).\)</span></p>
 <p>We know <span class="math inline">\(P=1500\)</span> and <span class="math inline">\(r=\frac{8.5}{100}=0.085\)</span>. Since we are using the Banker’s Rule, we have to find the exact time between the given dates but use 360 for converting the days into years. Using the table above, <span class="math inline">\(Days = 357-215=142.\)</span></p>
 <p>Thus,</p>
-<p>$$</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[
+\begin{align}
 F&amp;=P(1+rt)\\
 &amp;=1500\left[1+ \left(0.085\times \frac{142}{360}\right)\right]\\
 &amp;=\$1550.29
-\end{align}\]</span></p>
-<p>$$</p>
+\end{align}
+\]</span></p>
 <p>Henry must pay $1550.29.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Defintion (Treasury Bill)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Defintion (Treasury Bill)
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Defintion (Treasury Bill)">
+<div class="callout-body-container callout-body">
 <p>The United States government often raises money by selling short term debt securities known as treasury bills (“T-billS”). A Treasury bill is a note whose future value, <span class="math inline">\(F\)</span>, is as printed, and whose present value, <span class="math inline">\(P\)</span>, is determined by how much one is willing to pay for the note. Treasury bills are usually sold at an auction. For example, if you buy a 1-year $100 T-bill with a bid of 95%, this means that you pay $95 now (present value) to get the note and it will be worth $100 (future value) in 1 year. (See <a href="https://www.treasurydirect.gov/" class="uri">https://www.treasurydirect.gov/</a>)</p>
 </div>
 </div>
 </section>
 </section>
-<section id="exercises-1" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">8.5</span> Exercises</h2>
+<section id="exercises-1" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">9.5</span> Exercises</h2>
 <ol type="1">
 <li><p>Find the exact time between January 3rd and September 3rd. (Question - is this always the same number of days?)</p></li>
 <li><p>Find the approximate time from January 3rd to September 3rd. (Question - is this always the same number of days?)</p></li>
@@ -465,8 +548,8 @@ Tip
 <li><p>You are treasurer for a local non-profit organization that is in the process of making improvements on its building. The contractor gives you two payment options: either pay $27,500 on 9/6/23, or else $28,500 on 4/3/24. If you calculate that you can get 8% annual interest on your money, which is the better deal?</p></li>
 </ol>
 </section>
-<section id="consumer-price-index-and-inflation" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="consumer-price-index-and-inflation"><span class="header-section-number">8.6</span> Consumer Price Index and Inflation</h2>
+<section id="consumer-price-index-and-inflation" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="consumer-price-index-and-inflation"><span class="header-section-number">9.6</span> Consumer Price Index and Inflation</h2>
 <p>Watch the following short video about inflation and consumer price index:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oRdLvp6H3CU" title="How the Consumer-Price Index Measures Inflation | WSJ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
 </iframe>
@@ -479,21 +562,21 @@ Tip
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/cpi.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">CPI Table (1913 to 2023)</figcaption><p></p>
+<figcaption>CPI Table (1913 to 2023)</figcaption>
 </figure>
 </div>
 <p>A more comprehensive table with month-by-month CPI can be found the BLS website: <a href="https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/" class="uri">https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/</a></p>
 <p>One way to use the CPI table above is to compare costs of items at different points in time. This is known as <strong><em>adjusting for inflation</em></strong> and can be done using the formula below:</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="CPI formula">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+CPI formula
 </div>
 </div>
-<div class="callout-body-container callout-body" title="CPI formula">
+<div class="callout-body-container callout-body">
 <span class="math display">\[\begin{align}
 Dollars(B)&amp;=CPI(B) \times \frac{Dollars(A)}{CPI(A)}\\
 
@@ -514,22 +597,22 @@ Dollars(2023)&amp;=CPI(2023) \times \frac{Dollars(1938)}{CPI(1938)}\\
 &amp;=5.38
 \end{align}\]</span>
 <p>The current federal minimum wage is $7.25. Thus, the minimum wage has increased by about $1.87 when you account for inflation.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Current vs Real Dollar Amount">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Current vs Real Dollar Amount
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Current vs Real Dollar Amount">
+<div class="callout-body-container callout-body">
 <p>In example 6 above, 0.25 is the <strong>current</strong> dollar amount while 5.38 is the <strong>Real dollar amount</strong> in 2023. Note that the “real dollar” amount is only needed for comparison to another amount, and it should be associated with a specific year date.</p>
 </div>
 </div>
 </section>
-<section id="exercises-2" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="exercises-2"><span class="header-section-number">8.7</span> Exercises</h2>
+<section id="exercises-2" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="exercises-2"><span class="header-section-number">9.7</span> Exercises</h2>
 <ol type="1">
 <li><p>Early color televisions came out in 1954 and cost $1295. Convert to today’s dollars.</p></li>
 <li><p>A wedding band (plain, 14 K white gold) cost $199 in 1981. Similar rings now seem to go for about $350. Has the price gone up, or down?</p></li>
@@ -540,24 +623,24 @@ Tip
 <li><p>Back in 1973–1974, an OPEC (Organization of Petroleum Exporting Countries) embargo caused the price of gasoline in the US to go from 38 cents per gallon to a (then-outrageous) 84 cents per gallon. I paid $3.89 per gallon recently when I filled up. Convert $3.89 to 1974 prices.</p></li>
 </ol>
 </section>
-<section id="equations-of-value" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="equations-of-value"><span class="header-section-number">8.8</span> Equations Of Value</h2>
+<section id="equations-of-value" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="equations-of-value"><span class="header-section-number">9.8</span> Equations Of Value</h2>
 <p>Would you rather have $ 1,000 today or $ 1,100 in December?</p>
 <p>This problem is more complicated than merely comparing the two amounts. The golden rule of finance states that monies cannot be added or reconciled unless they are valued at the same point in time. Therefore, it might make sense to do one of the following before you can make a decision (of course many other factors that may influence your decision):</p>
 <ul>
 <li>Compute the future value of $ 1,000 (you will need to know the interest rate) and then compare it with $1,100 OR</li>
 <li>Use $1100 as the future value and compute the present value then compare it with $1,000.</li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Focal Date">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Focal Date
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Focal Date">
+<div class="callout-body-container callout-body">
 <p><strong>Focal Date:</strong> The focal date is the date to which monies are moved in order to be reconciled (added, subtracted, etc).</p>
 <ul>
 <li>In order to move monies to a given focal date, you will need to know the interest rate at which money is valued.</li>
@@ -596,8 +679,8 @@ F&amp;= P(1+rt)\\
 \end{align}\]</span>
 <p>To find the amount you still owe on 12/30/23, you subtract $1,814.34 from $3,000 to get $ 1,185.66.</p>
 </section>
-<section id="exercises-3" class="level2" data-number="8.9">
-<h2 data-number="8.9" class="anchored" data-anchor-id="exercises-3"><span class="header-section-number">8.9</span> Exercises</h2>
+<section id="exercises-3" class="level2" data-number="9.9">
+<h2 data-number="9.9" class="anchored" data-anchor-id="exercises-3"><span class="header-section-number">9.9</span> Exercises</h2>
 <ol type="1">
 <li><p>On June 2, 2024, you will be required to pay $4500. On March 2, 2024, you decide to pay off the debt. What is your pay off amount? Assume money is worth 6.99%.</p></li>
 <li><p>Your student account shows that you owe $700 due at the end of the semester, on December 15. Assume that the account values money at 6%. If you make an early payment of $450 on October 21, how much will you owe still on December 15?</p></li>
@@ -655,6 +738,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -682,6 +792,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           toggle.classList.remove("alternate");
         }
       }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
     }
   }
   const isFileUrl = () => { 
@@ -711,13 +831,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -734,7 +856,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -742,31 +866,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    setTimeout(function() {
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -776,55 +896,333 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Transportation.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Transportation Problem</span></span>
+      <a href="./Mixed_strategies.html" class="pagination-link" aria-label="Mixed Strategies">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Mixed Strategies</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Compound_Interest.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Compound Interest</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Compound_Interest.html" class="pagination-link" aria-label="Compound Interest">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Compound Interest</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2024, Geteregechi, J.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This site is built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
 
 
 

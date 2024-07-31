@@ -6,8 +6,8 @@ book:
   author: "Joash Geteregechi"
   date: "8/4/2023"
   chapters:
-    - index.qmd
-    - intro.qmd
+    - index.qmd #This is the preface page
+   # - intro.qmd
     - part: "Linear Functions"
       chapters:
       - Intro_LF.qmd
@@ -18,18 +18,35 @@ book:
       - Geometric_Method.qmd
       - LP_Simplex.qmd
       - Transportation.qmd
+    - part: "Game Theory"
+      chapters: 
+      - Intro_to_GT.qmd
+      - Mixed_strategies.qmd
+      #- GT_extended.qmd
     - part: "Mathematics of Finance"
       chapters: 
       - Simple_Interest.qmd
       - Compound_Interest.qmd
       - Annuities.qmd
-    - summary.qmd
+    - Answers.qmd
     - references.qmd
-
+  sidebar:
+    background: "#4187aa"
+    #collapse-level: 1
+    
+  page-footer:
+    background: "#4187aa"
+    left: |
+      &copy; Copyright 2024, Geteregechi, J.
+    right: |
+      This site is built with [Quarto](https://quarto.org/)
+      
 bibliography: references.bib
 
 format:
   html:
+    code-copy: false
+    #mainfont: "Open Sans"
     theme: 
       light: cosmo
       dark: superhero

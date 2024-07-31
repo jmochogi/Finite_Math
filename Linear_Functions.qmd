@@ -300,6 +300,10 @@ grid()
 
 The approximate point of intersection for the graphs is $(4.3,5.6)$. You can get more accurate values using technology. This intersection is a pair $(x,y)$ where the first number is the price (input) and the second if the quantity (output). Thus, the equilibrium price is \$4.3 and the quantity is 5.6 units. This answer is the same as the one using the algebraic approach.
 
+## Domain and Range
+
+In the taxi example given earlier, one cannot travel negative miles (the input). Also, the output (the amount of money charged) cannot be negative. Thus, negative numbers do not make sense in this case. The ***Domain*** of a function, $y=f(x)$ is the set of all possible input values ($x$) for the function while the range is is the set of all possible output values for the function. For the taxi example, the domain is all numbers greater than or equal to zero (denoted as $x\ge0$) while the range is $y\ge0$ (notice that we use $y$ or $f(x)$ for the range). When thinking about the domain and range of a functions, it is very important to consider the context of the problem.
+
 ## Exercises
 
 1.  A report by the US Geological Survey indicates that glaciers in Glacier National Park, Montana, are shrinking. Recent estimates indicate the area covered by glaciers has decreased from over $25.5 \hspace{.04in} km^2$ in $1850$ to about $16.5\hspace{.04in}km^2$ in $1995$. Let $A=f(t)$ give the area (in square km) $t$ years after 2000, and assume $f(t)=16.2-0.062t$. <br>
