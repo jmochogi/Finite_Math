@@ -116,7 +116,7 @@ Before we look at the stepping stone method, we define the term ***indicator val
 
 ***Definition:***
 
-The indicator values of a cell, $C$ not currently circled is the cost change associated with increasing or decreasing the amounts shipped in a circuit of cells starting at cell $C$. It is computed by summing with alternating signs the cost of the cells in the circuit.
+The indicator values of a cell, $C$, not currently circled, is the cost change associated with increasing or decreasing the amounts shipped in a circuit of cells starting at cell $C$. It is computed by summing with alternating signs the cost of the cells in the circuit.
 
 ***Example 3***
 
@@ -268,7 +268,7 @@ b)
 
     a)  Using the northwest corner rule, find the initial solution.<br><br>
     b)  Calculate the indicator value for each non-circled cell. <br><br>
-    c)  Is the current solution optimal?<br><br>
+    c)  Is the current solution optimal? How do you know?<br><br>
     d)  If your answer to part (c) above is "NO", find an optimal solution.
 
 4.  The following tableau shows the cost of returning cars from cities that have more cars than necessary to cities that have too few cars.<br>![](images/t4.jpeg){width="60%" fig-align="center"}<br>
@@ -279,7 +279,7 @@ b)
 
 5.  Consider the tableau below<br><br> ![](images/t5.jpeg){width="60%" fig-align="center"}<br>
 
-    a)  Apply the northwest corner rule to the following tableau<br><br>
-    b)  Find the cost associated with the solution in (a) above. <br><br>
+    a)  Use the northwest corner rule to find an initial shipment plan for the above tableau. <br><br>
+    b)  Find the cost associated with the shipment plan in (a) above. <br><br>
     c)  Compute the indicator value for each non circled cell.<br><br>
     d)  Is the solution found in part (b) optimal? If not, find an optimal solution.

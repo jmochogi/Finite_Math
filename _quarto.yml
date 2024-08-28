@@ -33,8 +33,14 @@ book:
   sidebar:
     background: "#4187aa"
     #collapse-level: 1
+    pinned: true
+    align: center
+    style: docked
+
+execute:
+  freeze: auto
     
-  page-footer:
+page-footer:
     background: "#4187aa"
     left: |
       &copy; Copyright 2024, Geteregechi, J.

@@ -1,13 +1,96 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
 # Answers
 
-## [Exercise 1.6: Intro to Linear Functions]{style="color:#4166f5;"}{.unnumbered}
+## [Exercise 1.6: Intro to Linear Functions]{style="color:#4166f5;"} {.unnumbered}
 
-1\) Answers will vary
+1\)  Answers will vary
 
-3\) Answers will vary
+3\)  Answers will vary
 
-5\) $f(x)=-2x+10$
+5\)  $f(x)=-2x+10$
 
-7\) a\) $N(m)=15m+200$;      b) 380 songs after 12 months
+7\)  a\) $N(m)=15m+200$;
+    b) 380 songs after 12 months
 
-## [Exercise 2.6: Rate of Change]{style="color:#4166f5;"}{.unnumbered}
+## [Exercise 2.6: Rate of Change]{style="color:#4166f5;"} {.unnumbered}
+
+1\)  a\) $P=90t+2000$; b) $P=2t+2000$
+
+3\)  $x=2$
+
+5\)  $y=2x+3$
+
+7\)  $y=2x+3$
+
+## [Exercise 3.4: LF Applications]{style="color:#4166f5;"} {.unnumbered}
+
+1\)  a\) \$6.33; b) \$14.67; c) \$10.5; d) 144 units; e) 264
+    units; f) 384 units<br>
+
+3\)  a\) $d(p)=9.2-1.2p$
+
+5\)  a\) $C(x)=11.38x+349,500$; b) \$399,511.38
+
+7\)  a\) $R(x)=1.5x$; b) (20,30); c) 1,020; d) \$2,480
+
+## [Exercise 4.4: LP - Geometric Method]{style="color:#4166f5;"} {.unnumbered}
+
+1\)  a\) $6x+4y\leq300$;
+    b\) $30x+72y\leq420$;
+    c\) $12x+10y\leq640$; $4x+3y\leq480$
+    
+3\)  a\) (2,4) Yes; (10,6) No.;
+     b\) (2,4) Yes; (10,6) No.;
+     c\) (2,4) No; (10,6) No.
+     
+5\)  a\) (0,0); (3,0); (0,6) and (4,5)<br>
+     (b\) (0,6) and (4,5); profit is \$48.
+     
+     
+7\) 28.
+
+9\) 2 batches grade A and 5 grade B; 3.6 batches of A and 1 batch of B.
+
+
+11\) 7 chairs and 16 tables.
+    
+    
+## [Exercise 6.4: Transportation Problem]{style="color:#4166f5;"} {.unnumbered}
+
+1\) Answers will vary.
+
+3\) a\) \$23; b) $\text{Indicator}_{(II,1)}= -13$, $\text{Indicator}_{(I,2)}= 4$ ;
+c\) No! (II,1) has negative indicator value. d\) \$10
+
+
+5\) a\) Ship 1 unit via $(I,1)$, 2 via $(I,2)$, 2 via $(I,3)$, 4 via $(II,3)$ and 1 via $(III,3)$; <br>
+    c\) $\text{Indicator}_{(II,1)}= 5$; $\text{Indicator}_{(II,1)}= -4$  b\) \$37. d\) No; \$33.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -103,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -124,8 +123,8 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
         <div class="sidebar-tools-main">
@@ -278,10 +277,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#supply-and-demand" id="toc-supply-and-demand" class="nav-link active" data-scroll-target="#supply-and-demand"><span class="header-section-number">3.0.1</span> Supply and Demand</a></li>
-  <li><a href="#cost-analysis" id="toc-cost-analysis" class="nav-link" data-scroll-target="#cost-analysis"><span class="header-section-number">3.0.2</span> Cost Analysis</a></li>
-  <li><a href="#break-even-analysis" id="toc-break-even-analysis" class="nav-link" data-scroll-target="#break-even-analysis"><span class="header-section-number">3.0.3</span> Break-Even Analysis</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3.0.4</span> Exercises</a></li>
+  <li><a href="#supply-and-demand" id="toc-supply-and-demand" class="nav-link active" data-scroll-target="#supply-and-demand"><span class="header-section-number">3.1</span> <span style="color:#4166f5;">Supply and Demand</span></a></li>
+  <li><a href="#cost-analysis" id="toc-cost-analysis" class="nav-link" data-scroll-target="#cost-analysis"><span class="header-section-number">3.2</span> <span style="color:#4166f5;">Cost Analysis</span></a></li>
+  <li><a href="#break-even-analysis" id="toc-break-even-analysis" class="nav-link" data-scroll-target="#break-even-analysis"><span class="header-section-number">3.3</span> <span style="color:#4166f5;">Break-Even Analysis</span></a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3.4</span> <span style="color:#4166f5;">Exercises</span></a></li>
   </ul>
 </nav>
     </div>
@@ -310,8 +309,8 @@ window.Quarto = {
 <p>As you saw earlier, graphs are one of the ways commonly used to represent linear functions. By examining graphs of linear functions, we learn a lot about the function. For example, we can quickly tell whether a function is increasing (positive slope), decreasing (negative slope) or neither (zero slope). We can also get a sense of how fast the output values are changing with change in the input values. In order to leverage this benefit of graphs to compare multiple linear functions, it is often helpful to graph the functions on the same grid.</p>
 <p><strong>Consider the claim below:</strong></p>
 <p>If two linear functions with <strong>different</strong> rates of change are graphed on the same grid, then, the lines must intersect at some point. Do you think this claim is true? Why or why not?</p>
-<section id="supply-and-demand" class="level3" data-number="3.0.1">
-<h3 data-number="3.0.1" class="anchored" data-anchor-id="supply-and-demand"><span class="header-section-number">3.0.1</span> Supply and Demand</h3>
+<section id="supply-and-demand" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="supply-and-demand"><span class="header-section-number">3.1</span> <span style="color:#4166f5;">Supply and Demand</span></h2>
 <p>Supply and demand are two fundamental concepts in economics that are sometimes modelled using linear functions. The supply function shows the relationship between the quantity of a product that producers have available and the price of the product. The demand curve shows the relationship between the quantity of a product that consumers are willing to buy and the price of the product. The point where the <strong>supply</strong> and <strong>demand</strong> functions intersect is called the <strong>equilibrium point</strong>. At this point, the quantity of the product that producers are willing to supply is equal to the quantity that consumers are willing to buy. Consider the following example:</p>
 <p><strong>Example 1</strong></p>
 <p>The supply, in thousands of items, for custom phone cases can be modeled by the equation, <span class="math inline">\(s(p)=0.5+1.2p\)</span> while the demand can be modeled by <span class="math inline">\(d(p)=8.7−0.7p\)</span>, where p is in the price in dollars. Find the equilibrium price and quantity.</p>
@@ -346,8 +345,8 @@ s(4.32)&amp;=0.5+(1.2\times 4.32)\\ \\
 \end{align}\]</span>
 <p>Thus, the two approaches give us the same solution.</p>
 </section>
-<section id="cost-analysis" class="level3" data-number="3.0.2">
-<h3 data-number="3.0.2" class="anchored" data-anchor-id="cost-analysis"><span class="header-section-number">3.0.2</span> Cost Analysis</h3>
+<section id="cost-analysis" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="cost-analysis"><span class="header-section-number">3.2</span> <span style="color:#4166f5;">Cost Analysis</span></h2>
 <p>The cost of manufacturing an item often consists of the fixed costs and the variable costs. Fixed costs are costs that do not change with the quantity of items produced while variable costs change with the quantity of items produced. Fixed costs may include setting up equipment, training workers, etc. The total cost of manufacturing <span class="math inline">\(x\)</span> items can be modeled by a linear function of the form <span class="math inline">\(C(x)=b+mx\)</span>, where <span class="math inline">\(b\)</span> is the fixed cost and <span class="math inline">\(m\)</span> is the variable cost per item. The fixed cost is the cost incurred even when no items are produced while the variable cost is the cost incurred for each item produced.</p>
 <p>The rate of change of the cost, <span class="math inline">\(C\)</span>, at a production level, <span class="math inline">\(x\)</span>, is equal to the slope of the cost function at the point <span class="math inline">\(x\)</span>. This rate of change is the cost of producing one more item at that production level. It is also called the <strong>marginal cost</strong>. In the context of linear functions, the <strong>marginal cost</strong> equals the slope of the cost function. Note that this may not be the same for a non-linear function.</p>
 <p><strong>Example 2</strong></p>
@@ -366,8 +365,8 @@ s(4.32)&amp;=0.5+(1.2\times 4.32)\\ \\
 <p><strong><em>Solution</em></strong></p>
 <p>Left as an exercise for you to try.</p>
 </section>
-<section id="break-even-analysis" class="level3" data-number="3.0.3">
-<h3 data-number="3.0.3" class="anchored" data-anchor-id="break-even-analysis"><span class="header-section-number">3.0.3</span> Break-Even Analysis</h3>
+<section id="break-even-analysis" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="break-even-analysis"><span class="header-section-number">3.3</span> <span style="color:#4166f5;">Break-Even Analysis</span></h2>
 <p>The break-even point is the point at which the total revenue equals the total cost. It is the point at which the company neither makes a profit nor a loss. The break-even point can be found by setting the total revenue equal to the total cost and solving for the quantity produced. The total revenue is the product of the price of the item and the quantity produced. The total cost is the sum of the fixed costs and the variable costs. The break-even point is the quantity produced at which the total revenue equals the total cost.</p>
 <p>Companies use the break-even point to determine the minimum quantity of items they need to produce to cover their costs. If the company produces more than the break-even point, they make a profit. If they produce less than the break-even point, they make a loss. Companies can use the break-even point to make decisions about pricing, production levels, etc.</p>
 <p><strong>Example 4</strong></p>
@@ -375,12 +374,12 @@ s(4.32)&amp;=0.5+(1.2\times 4.32)\\ \\
 <ol type="a">
 <li><p>Find the total revenue function, <span class="math inline">\(R(x)\)</span>, in terms of <span class="math inline">\(x\)</span>.</p></li>
 <li><p>How many gallons must the farmer sell to break-even?</p></li>
-<li><p>How many gallons must the farmer sell to make a profit?</p></li>
+<li><p>How many gallons must the farmer sell to make a profit of $5,000?</p></li>
 </ol>
 <p><strong><em>Solution</em></strong></p>
 <ol type="a">
 <li><p>The revenue function is the product of the price of the item and the quantity produced. Thus, <span class="math inline">\(R(x)=2x\)</span>.</p></li>
-<li><p>To find the break-even point, we set the total revenue equal to the total cost and solve for <span class="math inline">\(x\)</span>. This idea is captured under section 3.01 on intersecting lines. You can graph the two functions <span class="math inline">\(C(x)\)</span> and <span class="math inline">\(R(x)\)</span> and find the point of intersection in the graph. Alternatively, you can solve algebraically as follows:</p></li>
+<li><p>We find the break even quantity by setting <span class="math inline">\(R(x)=C(x)\)</span> then solving for <span class="math inline">\(x\)</span>. This idea is captured under section 3.1 on intersecting lines.</p></li>
 </ol>
 <span class="math display">\[\begin{align}
   R(x)&amp;=C(x)\\ \\
@@ -389,7 +388,12 @@ s(4.32)&amp;=0.5+(1.2\times 4.32)\\ \\
   -1.5x&amp;=-1000\\ \\
   x&amp;=666.67
 \end{align}\]</span>
-<p>This means that the farmer starts making profit at a production level of 666.67 gallons. Below is a graph of the two functions. You can use desmos to accurately read the point of intersection.</p>
+<p>The farmer must sell at 666.67 gallons to break even. To find the break-even revenue, we evaluate the revenue function at <span class="math inline">\(x=666.67\)</span>.</p>
+<span class="math display">\[\begin{align}
+  R(666.67)&amp;= 2\times 666.67\\ \\
+  &amp;=1333.34\\ \\
+\end{align}\]</span>
+<p>Alternatively, you can graph the two functions <span class="math inline">\(C(x)\)</span> and <span class="math inline">\(R(x)\)</span> and find the point of intersection in the graph. The point of intersection is the break-even point.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -400,20 +404,30 @@ s(4.32)&amp;=0.5+(1.2\times 4.32)\\ \\
 </div>
 </div>
 <p>Up to the point of intersection, the farmer is making a loss because the blue line (cost function) is higher than the red one (revenue function). After the point of intersection, the farmer is making a profit.</p>
+<ol start="3" type="a">
+<li>To make a profit of $5,000, the total revenue must exceed the total cost by $5,000. Thus, we set <span class="math inline">\(R(x)=C(x)+5,000\)</span> then solve for <span class="math inline">\(x\)</span>.</li>
+</ol>
+<span class="math display">\[\begin{align}
+  2x&amp;=0.5x+6000\\ \\
+  2x-0.5x&amp;=6000\\ \\
+  1.5x&amp;=6000\\ \\
+  x&amp;=4000
+\end{align}\]</span>
+<p>The farmer must sell 4,000 gallons to make a profit of $5,000.</p>
 </section>
-<section id="exercises" class="level3" data-number="3.0.4">
-<h3 data-number="3.0.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.0.4</span> Exercises</h3>
+<section id="exercises" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.4</span> <span style="color:#4166f5;">Exercises</span></h2>
 <ol type="1">
 <li><p>The demand of a given product can be modeled using the linear function, <span class="math inline">\(d(p)=12p+24\)</span>. <br><br> Find the price of the item at each of the following demand levels:</p>
 <p>a) 100 units</p>
 <p>b) 200 units</p>
-<p>c) units <br></p>
+<p>c) 150 units <br></p>
 <p>Find the demand at each of the following price levels:</p>
 <p>d) $10</p>
 <p>e) $20</p>
 <p>f) $30</p></li>
 <li><p>The demand and supply of a certain brand of custom-made cards depends on the price of the cards, <span class="math inline">\(p\)</span>. Suppose that the demand can be expressed as <span class="math inline">\(d(p)=2.3q+2\)</span> and the supply as <span class="math inline">\(s(p)=5.5−1.5p\)</span> respectively. Find the equilibrium price and quantity.</p></li>
-<li><p>The supply function for a certain product is given by <span class="math inline">\(s(p)=0.5+1.2p\)</span> while the demand function is given by <span class="math inline">\(d(p)=8.7−0.7p\)</span>. Suppose that the equilibrium price is known to be $3.45 and the demand is 5 units when the price is $ 3.15. Find an equation for the demand function, assuming it is linear.</p></li>
+<li><p>The supply function for a certain product is given by <span class="math inline">\(s(p)=0.5+1.2p\)</span>. Suppose that the equilibrium price is known to be $3.63 and the demand is 2 units when the price is $ 1.25. Find an equation for the demand function, <span class="math inline">\(d(p)\)</span> assuming it is linear.</p></li>
 <li><p>The cost of producing <span class="math inline">\(x\)</span> items is given by the function <span class="math inline">\(C(x)=0.7x+500\)</span>, where <span class="math inline">\(x\)</span> is the number of units produced, and <span class="math inline">\(C(x)\)</span> is the total cost of production.</p>
 <p>a) Find the marginal cost.</p>
 <p>b) Calculate the total cost for producing 1,000 items</p>
@@ -424,11 +438,11 @@ s(4.32)&amp;=0.5+(1.2\times 4.32)\\ \\
 <li><p>A company produces custom-made shoes. The cost of producing <span class="math inline">\(x\)</span> pairs of the shoes is given by the function <span class="math inline">\(C(x)=0.5x+1000\)</span>, while the revenue function is <span class="math inline">\(R(x)=2x\)</span>.</p>
 <p>a) Find the break-even point. Explain in plain language what the break-even point means in this context.</p>
 <p>b) What is the marginal cost of producing the shoes? Explain in plain language what the marginal cost means in this context.</p></li>
-<li><p>The cost of producing <span class="math inline">\(x\)</span> pounds of raw Salmon can be expressed as <span class="math inline">\(C(x)=5x+20\)</span>. Each pound of the salmon is sold for $15.</p>
+<li><p>The cost of producing <span class="math inline">\(x\)</span> pounds of fresh strawberries can be expressed as <span class="math inline">\(C(x)=0.5x+20.\)</span> Each pound of the strawberry is sold for $1.5.</p>
 <p>a) Find the revenue function, <span class="math inline">\(R(x)\)</span>.</p>
 <p>b) Find the break-even point.</p>
-<p>c) How many pounds of salmon must be sold to make a profit of $1,000?</p>
-<p>d) Find the profit made if the company sells 2,500 lbs of salmon.</p></li>
+<p>c) How many pounds of straberry must be sold to make a profit of $1,000?</p>
+<p>d) Find the profit made if the company sells 2,500 lbs of strawberries.</p></li>
 <li><p>The budget for a certain university system with several campuses projects a fixed cost of $242,500 at each of its campuses and a marginal cost of $550 per student.</p>
 <p>a) Find the cost function, <span class="math inline">\(C(x)\)</span>, where <span class="math inline">\(x\)</span> is the number of students enrolled.</p>
 <p>b) The budget projects that there will be 240 students at each campus. Calculate the total cost at each campus.</p>
@@ -953,19 +967,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>© Copyright 2024, Geteregechi, J.</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-<p>This site is built with <a href="https://quarto.org/">Quarto</a></p>
-</div>
-  </div>
-</footer>
 
 
 

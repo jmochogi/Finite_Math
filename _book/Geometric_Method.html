@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -137,7 +136,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -158,8 +157,8 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
         <div class="sidebar-tools-main">
@@ -438,11 +437,11 @@ window.Quarto = {
 <li>Use a dotted line if the inequality is strictly less <span class="math inline">\((&lt;)\)</span> or greater <span class="math inline">\((&gt;)\)</span> and shade the region representing the constraints. For example, if <span class="math inline">\(y&gt;2\)</span>, we draw a dotted line for <span class="math inline">\(y=2\)</span> and shade the region <strong>above</strong> the line on the graph (this is the region that obeys the constraint).</li>
 <li>Use a bold line if the inequality allows equality.</li>
 </ol>
-<p>Below is a graph of the feasible region for our problem above. We have shaded the region where x values and y values are greater than 0, as well as the region where <span class="math inline">\(5x+2y\)</span> is less than or equal to 60.</p>
+<p>Below is a graph of the feasible region for our problem above. We have shaded out the unwanted region so the feasible region (white space) is easy to see. Points in the feasible region (e.g., the green one) are possible solutions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/a.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Updated Feasible Region</figcaption>
+<p><img src="images/a.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Feasible Region</figcaption>
 </figure>
 </div>
 <p>All points within the region labelled “feasible region” are possible solutions to our problem in the sense that they do not violate the constraints. For example, the feasible point <span class="math inline">\((8,4)\)</span> requires the company to manufacture 8 skateboards and 4 dolls. This “solution” does not violate any of the constraints given in the problem. To find the profit associated with this point, we use the objective (profit) function to compute the profit as follows:</p>
@@ -527,7 +526,7 @@ P&amp;=1.00 x+0.55y\\
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/b.jpeg" class="img-fluid figure-img" style="width:90.0%"></p>
+<p><img src="images/b.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
 <figcaption>Updated Feasible Region</figcaption>
 </figure>
 </div>
@@ -542,7 +541,7 @@ P&amp;=1.00 x+0.55y\\
 <section id="exercises" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.4</span> <span style="color:#4166f5;">Exercises</span></h2>
 <ol type="1">
-<li><p>For each description in exercises a-c, create a mixture table and write one or more resource constraint inequalities. The unknown to use for each product is given in parenthesis:</p>
+<li><p>For each description in exercises a to c, create a mixture table and write one or more resource constraint inequalities. The letter to use for each product is given in parenthesis:</p>
 <ol type="a">
 <li><p>Manufacturing one package of hot dogs(x) requires 6 oz of beef, and manufacturing one package of bologna (y) requires 4 oz of beef. There are 300 oz of beef available. <br></p></li>
 <li><p>It takes 30 ft of 12-in. board to make one bookcase (x); it takes 72 ft of 12-in. board to make one table(y). There are 420 ft of 12-in. board available.<br></p></li>
@@ -560,25 +559,25 @@ y\ge 0\\
 x\ge 0\\
 y\ge 0\\
 x+2y\le12\\
-x+2y\le8
+2x+y\le8
 \end{align}\]</span>
 <p>c)</p>
 <span class="math display">\[\begin{align}
-x\ge 2\\
+x\ge 3\\
 y\ge 6\\
 3x+2y\le30
 \end{align}\]</span></li>
-<li><p>Determine whether the points <span class="math inline">\((2,4)\)</span> and/or <span class="math inline">\((10,6)\)</span> are points of the feasible region in exercises 4, 5, and 6. <br></p></li>
+<li><p>Determine whether the points <span class="math inline">\((2,4)\)</span> and/or <span class="math inline">\((10,6)\)</span> are points of the feasible region in exercises #2 a, b, and c.&nbsp;<br></p></li>
 <li><p>Determine the maximum value of <span class="math inline">\(P\)</span> given by <span class="math inline">\(P=3x+2y\)</span> subject to the constraints <span class="math inline">\(x\ge 0\)</span>, <span class="math inline">\(y\ge 0\)</span>, <span class="math inline">\(x\le 7\)</span>, and <span class="math inline">\(y\le 5\)</span>. <br></p></li>
 <li><p>A linear programming problem has the following constraints: <span class="math inline">\(x\ge0\)</span>, <span class="math inline">\(y\ge0\)</span>, <span class="math inline">\(5x-y\le15\)</span>, and <span class="math inline">\(4y+x\le24\)</span>.</p>
 <ol type="a">
 <li>Without graphing, determine the corner points of the feasible region for the LP problem? <br></li>
-<li>Sketch a graph of the feasible region.<br></li>
+<li>Identify a point that would result in maximum profit given that the profit function is <span class="math inline">\(P=2x+8y\)</span>. What is the maximum profit?<br></li>
 </ol></li>
 <li><p>Nuts Galore sells two spiced nut mixtures: Grade A and Grade B. Grade A requires 7 oz of peanuts and for every 8 oz of almonds. Grade B requires 9 oz of peanuts for every 8 oz of almonds. There are 630 oz of peanuts 640 oz of almonds available. Grade A makes Nuts Galore a profit of $1.70, and Grade B makes a profit of $2.40 per unit assembled. How many units of Grade A and Grade B nut mixtures should be made to maximize the company’s profit, assuming that all the units can be sold?<br></p></li>
 <li><p>Find the maximum value of <span class="math inline">\(P\)</span> where <span class="math inline">\(P=3x+2y\)</span> subject to the constraints <span class="math inline">\(x\ge3\)</span>, <span class="math inline">\(y\ge2\)</span>, <span class="math inline">\(x+y\le10\)</span>, and <span class="math inline">\(2x+3y\le24\)</span>. <br></p></li>
 <li><p>A clothing manufacturer has 600 yd of cloth available to make shirts and decorated vests. Each shirt requires 3 yd of material and provides a profit of $5. Each vest requires 2 yd of material and provides a profit of $2. The manufacturer wants to guarantee that under all circumstances, there are minimums of 100 shirts and 30 vests produced. How many of each garment should be made to maximize the profit? If there are no minimum quantities, how, if at all, does the optimal production policy change?<br></p></li>
-<li><p>A paper recycling company uses scrap cloth and scrap paper to make two different grades of recycled paper. A single batch of grade A recycled paper is made from 25 lb of scrap cloth and 10 lb of scrap paper, whereas one batch of grade B recycled paper is made from 10 lb of scrap cloth and 20 lb of scrap paper. The company has 100 lb of scrap cloth and 120 lb of scrap paper on hand. A batch of grade A paper brings a profit of $500, whereas a batch of grade B paper brings a profit of $250. What amounts of each grade should be made? How, if at all, do the maximum profit and optimal production policy change if the company is required to produce at least one batch of each type?<br></p></li>
+<li><p>A paper recycling company uses scrap cloth and scrap paper to make two different grades of recycled paper. A single batch of grade A recycled paper is made from 25 lb of scrap cloth and 10 lb of scrap paper, whereas one batch of grade B recycled paper is made from 10 lb of scrap cloth and 20 lb of scrap paper. The company has 100 lb of scrap cloth and 120 lb of scrap paper on hand. A batch of grade A paper brings a profit of $500, whereas a batch of grade B paper brings a profit of $250. What amounts of each grade should be made to maximize profit? How, if at all, do the maximum profit and optimal production policy change if the company is required to produce at least one batch of each type?<br></p></li>
 <li><p>Courtesy Calls makes telephone calls for businesses and charities. A profit of $0.50 is made for each business calls and $0.40 for each charity call.It takes 4 min (on average) to make a business call and 6 min (on average) to make a charity call. If there are 240 min of calling time to be distributed each day, how should that time be spent so that Courtesy Calls makes a maximum profit? What changes, if any, occur in the maximum profit and optimal production policy if they must make at least 12 business calls and 10 charity call every day?<br></p></li>
 <li><p>A factory manufactures chairs and tables, each requiring the use of three operations: Cutting, Assembly, and Finishing. The first operation can be used at most 39 hours; the second at most 42 hours; and the third at most 23 hours. A chair requires 1 hour of cutting, 2 hours of assembly, and 1 hour of finishing; a table needs 2 hours of cutting, 1 hour of assembly, and 1 hour of finishing. If the profit is $20 per unit for a chair and $30 for a table, how many units of each should be manufactured to maximize profit?</p></li>
 </ol>
@@ -1101,19 +1100,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>© Copyright 2024, Geteregechi, J.</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-<p>This site is built with <a href="https://quarto.org/">Quarto</a></p>
-</div>
-  </div>
-</footer>
 
 
 

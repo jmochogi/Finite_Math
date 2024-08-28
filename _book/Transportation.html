@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -137,7 +136,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -158,8 +157,8 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
         <div class="sidebar-tools-main">
@@ -421,7 +420,7 @@ Shipment \hspace{.05in}Cost&amp;= 3(8)+5(9)+1(1)+1(3)+1(5)\\
 <h2 data-number="6.3" class="anchored" data-anchor-id="the-stepping-stone-method"><span class="header-section-number">6.3</span> <span style="color:#4166f5;">The Stepping Stone Method</span></h2>
 <p>Before we look at the stepping stone method, we define the term <strong><em>indicator value</em></strong>.</p>
 <p><strong><em>Definition:</em></strong></p>
-<p>The indicator values of a cell, <span class="math inline">\(C\)</span> not currently circled is the cost change associated with increasing or decreasing the amounts shipped in a circuit of cells starting at cell <span class="math inline">\(C\)</span>. It is computed by summing with alternating signs the cost of the cells in the circuit.</p>
+<p>The indicator values of a cell, <span class="math inline">\(C\)</span>, not currently circled, is the cost change associated with increasing or decreasing the amounts shipped in a circuit of cells starting at cell <span class="math inline">\(C\)</span>. It is computed by summing with alternating signs the cost of the cells in the circuit.</p>
 <p><strong><em>Example 3</em></strong></p>
 <p>Since our ultimate goal is to improve the solution in the previous example, we are going to use the final tableau earlier (left side of figure below) to compute the indicator value. Suppose we want the indicator value for cell <span class="math inline">\((I, 3)\)</span>. Notice that this cell is currently not circled.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -552,7 +551,7 @@ Shipment \hspace{.05in}Cost
 <ol type="a">
 <li>Using the northwest corner rule, find the initial solution.<br><br></li>
 <li>Calculate the indicator value for each non-circled cell. <br><br></li>
-<li>Is the current solution optimal?<br><br></li>
+<li>Is the current solution optimal? How do you know?<br><br></li>
 <li>If your answer to part (c) above is “NO”, find an optimal solution.</li>
 </ol></li>
 <li><p>The following tableau shows the cost of returning cars from cities that have more cars than necessary to cities that have too few cars.<br><img src="images/t4.jpeg" class="img-fluid quarto-figure quarto-figure-center" style="width:60.0%"><br></p>
@@ -563,8 +562,8 @@ Shipment \hspace{.05in}Cost
 </ol></li>
 <li><p>Consider the tableau below<br><br> <img src="images/t5.jpeg" class="img-fluid quarto-figure quarto-figure-center" style="width:60.0%"><br></p>
 <ol type="a">
-<li>Apply the northwest corner rule to the following tableau<br><br></li>
-<li>Find the cost associated with the solution in (a) above. <br><br></li>
+<li>Use the northwest corner rule to find an initial shipment plan for the above tableau. <br><br></li>
+<li>Find the cost associated with the shipment plan in (a) above. <br><br></li>
 <li>Compute the indicator value for each non circled cell.<br><br></li>
 <li>Is the solution found in part (b) optimal? If not, find an optimal solution.</li>
 </ol></li>
@@ -1088,19 +1087,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>© Copyright 2024, Geteregechi, J.</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-<p>This site is built with <a href="https://quarto.org/">Quarto</a></p>
-</div>
-  </div>
-</footer>
 
 
 
