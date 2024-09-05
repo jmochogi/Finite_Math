@@ -109,13 +109,13 @@ Thus, the future value for all deposits is the sum of each of the values above,
 \end{align}
 
 
-Note that of the money were earning no interest, Alex would have a total of 
+Note that if no interest was being earned, Alex would have a total of: 
 
 \begin{align}
 250\times 6 = \$1,500
 \end{align}
 
-Note that Alex earned a total interest of \$15.71 over the six month period.
+Note that Alex earned \$15.71 interest over the six month period.
 
 :::
 

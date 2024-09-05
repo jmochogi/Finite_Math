@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -158,7 +124,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/flogo.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Finite Mathematics</a> 
         <div class="sidebar-tools-main">
@@ -311,7 +280,7 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-to-linear-programming" id="toc-introduction-to-linear-programming" class="nav-link active" data-scroll-target="#introduction-to-linear-programming"><span class="header-section-number">4.1</span> <span style="color:#4166f5;">Introduction to linear Programming</span></a></li>
+  <li><a href="#introduction-to-linear-programming" id="toc-introduction-to-linear-programming" class="nav-link active" data-scroll-target="#introduction-to-linear-programming"><span class="header-section-number">4.1</span> <span style="color:#4166f5;">Introduction to Linear Programming</span></a></li>
   <li><a href="#mixture-problems-charts" id="toc-mixture-problems-charts" class="nav-link" data-scroll-target="#mixture-problems-charts"><span class="header-section-number">4.2</span> <span style="color:#4166f5;">Mixture Problems &amp; Charts</span></a></li>
   <li><a href="#the-geometric-method" id="toc-the-geometric-method" class="nav-link" data-scroll-target="#the-geometric-method"><span class="header-section-number">4.3</span> <span style="color:#4166f5;">The Geometric Method</span></a>
   <ul class="collapse">
@@ -347,31 +316,40 @@ window.Quarto = {
 
 
 <section id="introduction-to-linear-programming" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="introduction-to-linear-programming"><span class="header-section-number">4.1</span> <span style="color:#4166f5;">Introduction to linear Programming</span></h2>
+<h2 data-number="4.1" class="anchored" data-anchor-id="introduction-to-linear-programming"><span class="header-section-number">4.1</span> <span style="color:#4166f5;">Introduction to Linear Programming</span></h2>
 <p>Managers are often called upon to make complicated decisions. For example, production managers often make decisions on what products to manufacture and in what quantities. In making such decisions, the manager must consider the available resources and how to utilize them for maximum profit. Note that resources are not limited to raw materials. They can include labor (human hours), farmland, machinery, etc. Resources, in general, are always limited and management must decide how to allocate them in order to get the maximum possible profit.</p>
 <p>Linear programming (LP) is one of the most important methods used in management science to solve problems of the kind describe above. LP involves maximizing or minimizing a quantity, usually profit or cost, under some given constraints.</p>
 </section>
 <section id="mixture-problems-charts" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="mixture-problems-charts"><span class="header-section-number">4.2</span> <span style="color:#4166f5;">Mixture Problems &amp; Charts</span></h2>
-<p>A mixture problem is a problem which includes combining limited resources to manufacture products that will generate maximum profit for the company.</p>
+<p>A mixture problem is a problem which includes combining limited resources to manufacture products that will generate maximum profit for the company. We use the term <strong>constraints</strong> to refer to the limitations that the company faces in making production decisions.</p>
 <p>These problems are common because most products that we use involve combining multiple resources in their production. Although there are other considerations in making production decisions, availability of resources is one of the most important constraints.</p>
-<p>An <strong><em>optimal production policy (OPP)</em></strong> is a policy that,</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">(</span><span class="dt">i</span><span class="er">)</span> <span class="dt">does</span> <span class="dt">not</span> <span class="dt">violate</span> <span class="dt">the</span> <span class="dt">constraints</span> <span class="dt">under</span> <span class="dt">which</span> <span class="dt">the</span> <span class="dt">company</span> <span class="dt">operates</span> <span class="dt">and</span><span class="er">,</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="er">(</span><span class="dt">ii</span><span class="er">)</span> <span class="dt">yields</span> <span class="dt">maximum</span> <span class="dt">profit.</span></span></code></pre></div>
-<p><strong>Example 1</strong></p>
-<p>A toy manufacturer can manufacture only skateboards and, only dolls, or some kind of skateboards and dolls. Skateboards require 5 units of plastic and can be sold for a profit of $ 1, while dolls require 2 units of plastic and can be sold for $0.55 profit. Only 60 units of plastic are available.</p>
-<ol type="a">
-<li>Make a mixture chart to model this situation.</li>
-<li>What numbers of skateboards and/or dolls should the company make to maximize profit?</li>
-</ol>
-<p>Before we solve this problem, note that it is a mixture problem because:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Defitnition - Optimal Production Policy (OPP)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Defitnition - Optimal Production Policy (OPP)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An <strong><em>Optimal Production Policy</em></strong> is a policy that,</p>
 <ul>
-<li><p>Definite resources are available in limited quantities. The resource here is container units of plastic.</p></li>
-<li><p>Definite products can be made by combining (mixing) the resources. The products here are skateboards and dolls.</p></li>
+<li><p>does not violate the constraints under which the company operates and,</p></li>
+<li><p>yields maximum profit.</p></li>
 </ul>
+</div>
+</div>
+<p><strong>Example 1</strong></p>
+<p>A toy company can manufacture only skateboards and only dolls, or some kind of skateboards and dolls. Skateboards require 5 units of plastic and can be sold for a profit of $1, while dolls require 2 units of plastic and can be sold for $0.55 profit. Only 60 units of plastic are available.</p>
+<ol type="a">
+<li>Make a <strong>mixture chart</strong> to model this situation.</li>
+<li>What numbers of skateboards and/or dolls should the company make to maximize profit (i.e., what is the OPP)?</li>
+</ol>
 <p><strong><em>Solution</em></strong></p>
 <ol type="a">
-<li>A mixture is a simple table that shows the resources, products, and profit. The chart displays the “verbal” information into a format that makes it easier to convert the problem to mathematical form (equations) that we can then solve. The rows of the mixture chart contain the products while the columns contain the resources and the profit margin. <br> Below is a mixture chart for the problem above:</li>
+<li>A <strong>mixture chart</strong> is a simple table that shows the resources, products, and profit. The chart displays the “verbal” information into a format that makes it easier to convert the problem into mathematical form (equations and inequalities) that we can then solve. The rows of the mixture chart contain the products while the columns contain the resources and the profit margin. <br> Below is a mixture chart for the problem above:</li>
 </ol>
 <table class="caption-top table">
 <caption><strong>Mixture Chart for dolls and skateboards problem</strong></caption>
@@ -401,40 +379,51 @@ window.Quarto = {
 </tbody>
 </table>
 <ol start="2" type="a">
-<li><p>There are several methods of solving linear programming problems such as the one provided above. Many of the methods follow the following general steps:</p>
+<li><p>We are not ready to solve this part yet. There are several methods of solving this linear programming problem and many of the methods follow the following general steps:</p>
 <ul>
 <li>Translating the problem into a mathematical form,</li>
 <li>Identifying a set of possible solutions (feasible region) and,</li>
 <li>Identifying a solution that would give us maximum profit, i.e., the optimal b production policy.</li>
 </ul>
-<p>We will consider the geometric approach first and discuss its advantages as well as limitations then present a more general method in the next chapter. After you have understood how these methods work, you will have an opportunity to use technology (e.g., Excel spreadsheets, and web applications) to solve LP problems. Note, however, that technology may not help you in translating the problem into mathematical terms. That part is done by humans (YOU).</p></li>
+<p>We will consider the <strong><em>geometric approach</em></strong> first and discuss its advantages as well as limitations then present a more general method in the next chapter. In the geometric approach, we create inequalities then graph them to visualize the <strong><em>feasible region</em></strong> then read off solutions from the region. After you have understood how these methods work, you will have an opportunity to use technology (e.g., Excel spreadsheets, and web applications) to solve LP problems. Note, however, that technology may not help you in translating the problem into mathematical terms. That part is done by humans (YOU!).</p></li>
 </ol>
 </section>
 <section id="the-geometric-method" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="the-geometric-method"><span class="header-section-number">4.3</span> <span style="color:#4166f5;">The Geometric Method</span></h2>
 <p>The geometric method of solving linear programming problems involves creating a graph to visualize the <strong>feasible region</strong> (the set of likely solutions) and then identifying the correct solution from the feasible region. Since the inequalities involve linear functions, the feasible region is polygonal in shape. The type of polygon formed (triangle, quadrilateral, pentagon, etc) depends on the number of constraints you have.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">A</span> <span class="dt">feasible</span> <span class="dt">set</span> <span class="er">(</span><span class="dt">region</span><span class="er">)</span> <span class="dt">for</span> <span class="dt">an</span> <span class="dt">LP</span> <span class="dt">problem</span> <span class="dt">is</span> <span class="dt">the</span> <span class="dt">collection</span> <span class="dt">of</span> <span class="dt">all</span> <span class="dt">physical</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">possible</span> <span class="dt">solution</span> <span class="dt">choices</span> <span class="dt">that</span> <span class="dt">can</span> <span class="dt">be</span> <span class="dt">made.</span> </span></code></pre></div>
-<p>Let us proceed with the solution to Example 1. We will start by converting the problem into mathematical terms (inequalities and equations), creating a feasible region, and then use a technique called the <strong>corner point principle</strong> to choose the best solution from the feasible region.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Defitnition - Feasible Region ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Defitnition - Feasible Region
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A <strong>feasible region</strong> for a linear programming problem is the collection of all physical possible solution choices that can be made.</p>
+</div>
+</div>
+<p>Let us proceed with the solution to Example 1. The first step is to create a mixture chart (done in part a). Next, we will convert the problem into mathematical terms (inequalities and equations), and then create a feasible region. Finally, we use a technique called the <strong>corner point principle</strong> to choose the best solution from the feasible region.</p>
 <section id="converting-mixture-chart-into-mathematical-form" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="converting-mixture-chart-into-mathematical-form"><span class="header-section-number">4.3.1</span> <span style="color:#4166f5;">Converting Mixture Chart into Mathematical Form</span></h3>
-<p>First, we know that we cannot manufacture negative number of objects (skateboards of dolls). So, negative numbers are not permitted in this context. Note however, that 0 is a possible number. Thus, we have two inequalities;</p>
+<p>Recall that we use the variable, <span class="math inline">\(x\)</span> for skateboards, and <span class="math inline">\(y\)</span> for dolls. We know that we cannot manufacture negative number of objects (skateboards of dolls). So, negative numbers are not permitted in this context. Note, however, that 0 is a possible number. Thus, we have two inequalities;</p>
 <p><span class="math display">\[x \ge 0 \hspace{.04in} \text{and} \hspace{.04in} y \ge 0\]</span></p>
 <p>The symbol <span class="math inline">\(&gt;\)</span> means grater than while <span class="math inline">\(\ge\)</span> means greater than or equal to.</p>
 <p>We call the above two inequalities <strong><em>minimum constraints</em></strong> because they tell us the minimum that we can have for each product.</p>
-<p>Since we have a limited supply of resources (in this case 60 units of plastic) we must also have inequalities for <strong><em>resource constraints</em></strong>. Since we need 5 units of plastic to manufacture ONE skateboard, we will need <span class="math inline">\(5x\)</span> units to manufacture x units of skateboards. Similarly, we will need <span class="math inline">\(2y\)</span> units of plastic to manufacture y dolls. In total, we need <span class="math inline">\(5x+2y\)</span> units of plastic to manufacture the dolls and skateboard. This value must not exceed 60. Thus, we have the inequality,</p>
+<p>Since we have a limited supply of resources (in this case only 60 units of plastic) we must also have inequalities for <strong><em>resource constraints</em></strong>. Since we need 5 units of plastic to manufacture ONE skateboard, we will need <span class="math inline">\(5x\)</span> units to manufacture x units of skateboards. Similarly, we will need <span class="math inline">\(2y\)</span> units of plastic to manufacture y dolls. In total, we need <span class="math inline">\(5x+2y\)</span> units of plastic to manufacture the dolls and skateboard. This value must not exceed 60. Thus, we have the inequality,</p>
 <p><span class="math display">\[5x+2y\le60\]</span></p>
 <p>Notice that this time, we use the symbol for less than or equal to.</p>
 <p>In this problem, we only have 3 inequalities but in a realistic problem, there would be hundreds or even thousands of them.</p>
-<p>The last step in formulating the mathematical model is to make the <strong>objective function</strong>. This is the function that connects the profit to the resources. Since we know that each skateboard results in $1.00 profit, we know that x dolls will result in a profit of <span class="math inline">\(\$1x\)</span> and y dolls will result in a profit of <span class="math inline">\(\$0.55x\)</span>. We do not know what the profit is but we know it is a function of both dolls and skateboards. We can denote the profit as <span class="math inline">\(P\)</span>. So, we have the equation,</p>
-<p><span class="math display">\[P=1x+0.55y\]</span> Notice that the objective function is an <strong>equation</strong> (not inequality) that gives a <strong>specific</strong> amount of profit as we vary the number of skateboards and dolls. In other words, <span class="math inline">\(P\)</span> changes as we change <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So we can determine the value of <span class="math inline">\(x\)</span> and<span class="math inline">\(y\)</span> that would produce maximum <span class="math inline">\(P\)</span>.</p>
+<p>The last step in formulating the mathematical model is to make the <strong>objective function</strong>. This is the function that connects the profit to the resources. Since we know that each skateboard results in $1.00 profit, we know that <span class="math inline">\(x\)</span> dolls will result in a profit of <span class="math inline">\(\$1x\)</span> and <span class="math inline">\(y\)</span> dolls will result in a profit of <span class="math inline">\(\$0.55x\)</span>. We do not know what the profit is but we know it is a function of both dolls and skateboards. We can denote the profit as <span class="math inline">\(P\)</span>. So, we have the equation,</p>
+<p><span class="math display">\[P=1x+0.55y\]</span> Notice that the objective function is an <strong>equation</strong> (not inequality) that gives a <strong>specific</strong> amount of profit as we vary the number of skateboards and dolls. In other words, <span class="math inline">\(P\)</span> changes as we change <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So we can determine the value of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that would produce maximum profit.</p>
 </section>
 <section id="visualizing-the-feasible-region" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="visualizing-the-feasible-region"><span class="header-section-number">4.3.2</span> <span style="color:#4166f5;">Visualizing the Feasible Region</span></h3>
 <p>After creating the inequalities from the mixture chart, we can draw a picture to help us visualize the feasible region geometrically. Graphs are the most commonly used tools for visualizing the feasible region.</p>
 <p>Notice that all the three inequalities (i.e., the minimum and resource constraints) are linear in the sense that when you graph them (assuming an equal sign) you will get a straight line. To take care of the fact that the inequalities admit a broad range of values, we,</p>
 <ol type="a">
-<li>Use a dotted line if the inequality is strictly less <span class="math inline">\((&lt;)\)</span> or greater <span class="math inline">\((&gt;)\)</span> and shade the region representing the constraints. For example, if <span class="math inline">\(y&gt;2\)</span>, we draw a dotted line for <span class="math inline">\(y=2\)</span> and shade the region <strong>above</strong> the line on the graph (this is the region that obeys the constraint).</li>
+<li>Use a dotted line if the inequality is strictly less <span class="math inline">\((&lt;)\)</span> or greater <span class="math inline">\((&gt;)\)</span> and shade the region that does not represent the constraints. For example, if <span class="math inline">\(y&gt;2\)</span>, we draw a dotted line for <span class="math inline">\(y=2\)</span> and shade the region containing points that do not obey this constraint.</li>
 <li>Use a bold line if the inequality allows equality.</li>
 </ol>
 <p>Below is a graph of the feasible region for our problem above. We have shaded out the unwanted region so the feasible region (white space) is easy to see. Points in the feasible region (e.g., the green one) are possible solutions.</p>
@@ -456,14 +445,17 @@ P&amp;=1.00 x+0.55y\\
 &amp;=2+(0.55\times 20)\\
 &amp;=\$13.0
 \end{align}\]</span></p>
-<p>Choosing a point in the feasible region that would result in maximum profit (optimal production policy) is not a trivial task. However, there is an genius technique known as <strong><em>The Corner Point Principle</em></strong> which we discuss next.</p>
+<p>Choosing a point in the feasible region that would result in maximum profit (optimal production policy) is not a trivial task. However, there is a genius technique known as <strong><em>The Corner Point Principle</em></strong> which we discuss next.</p>
 </section>
 <section id="the-corner-point-principle" class="level3" data-number="4.3.3">
 <h3 data-number="4.3.3" class="anchored" data-anchor-id="the-corner-point-principle"><span class="header-section-number">4.3.3</span> <span style="color:#4166f5;">The Corner Point Principle</span></h3>
 <p>The corner point principle has been touted as one of the most important insights into the theory of linear programming. The principle states that,</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">In</span> <span class="dt">a</span> <span class="dt">linear</span> <span class="dt">programming</span> <span class="dt">problem</span><span class="er">,</span> <span class="dt">the</span> <span class="dt">maximum</span> <span class="dt">value</span> <span class="dt">for</span> <span class="dt">the</span> <span class="dt">profit</span> <span class="dt">formula</span> <span class="dt">always</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">corresponds</span> <span class="dt">to</span> <span class="dt">a</span> <span class="dt">corner</span> <span class="dt">point</span> <span class="dt">of</span> <span class="dt">the</span> <span class="dt">feasible</span> <span class="dt">region.</span></span></code></pre></div>
-<p>For our feasible region above, there are <strong>three corners</strong>. These corners have coordinates <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((0,30\)</span>, and <span class="math inline">\((12,0)\)</span>. So, we use the profit function to compute the profit associated with each of these 3 points and choose the highest as our optimal production policy. See the calculations below:</p>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p><span style="color:red;">In a linear programming problem, the maximum value for the profit formula always corresponds to a corner point of the feasible region.</span></p>
+</blockquote>
+</blockquote>
+<p>For our feasible region above, there are <strong>three corners</strong>. These corners have coordinates <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((0,30\)</span>, and <span class="math inline">\((12,0)\)</span>. So, we use the profit function, <span class="math inline">\(P=x+.55y\)</span>, to compute the profit associated with each of these 3 points and choose the highest as our optimal production policy. See the calculations below:</p>
 <p>For <span class="math inline">\((0,0)\)</span>, the profit would be <span class="math inline">\(P=1.00 (0)x+0.55(0)=\$0.00\)</span></p>
 <p>For <span class="math inline">\((0,30)\)</span>, the profit would be, <span class="math inline">\(P=1.00 (0)x+0.55(30)=\$16.50\)</span></p>
 <p>For <span class="math inline">\((12,0)\)</span>, the profit would be, <span class="math inline">\(P=1.00 (12)x+0.55(0)=\$12.00\)</span></p>

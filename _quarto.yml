@@ -33,6 +33,7 @@ book:
   sidebar:
     background: "#4187aa"
     #collapse-level: 1
+    logo: "images/flogo.jpeg"
     pinned: true
     align: center
     style: docked
